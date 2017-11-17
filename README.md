@@ -8,23 +8,22 @@ The task is to implement an app that lists shops nearby.
 
 You can choose one the options listed below : 
 
-- Option 1 (Java) :
+- Java/Spring :
   - Backend : Spring Boot
   - Frontend : Angular 4 || ReactJS || VueJS
   - Database : MongoDB
-- Option 2 (Javascript)
+- Javascript
   - Frontend : ReactJS || VueJS
   - Backend : NodeJS (ExpressJS)
   - Database : MongoDB
-- Option 3 (Python)
+- Python/Django
   - Backend : Django
   - Frontend : Angular 4 || ReactJS || VueJS
   - Database : MongoDB
-- Option 4 (RoR) 
+- RoR 
   - Backend : Rails
   - Frontend : Angular 4 || ReactJS || VueJS
   - Database : MongoDB
-
 
 
 ## Features
