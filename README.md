@@ -55,7 +55,7 @@ You can choose one the options listed below :
 A MongoDB dump with ~300 shops is provided. To import the data, you need to extract the zip file then execute the command below :
  
 
-    mongoimport dump-shops
+    mongorestore --db shops shops/
 
 →→ A shop database will be created with a shops collection.
 
