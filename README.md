@@ -24,6 +24,10 @@ You can choose one the options listed below :
   - Backend : Rails
   - Frontend : Angular 4 || ReactJS || VueJS
   - Database : MongoDB
+- PHP 
+  - Backend : Laravel || Symfony
+  - Frontend : Angular 4 || ReactJS || VueJS
+  - Database : MongoDB || MySQL
 
 
 ## Features
