@@ -117,7 +117,7 @@ If you have any questions or feedback, don't hesitate to contact us via zakaria@
 - https://github.com/gdi2290/awesome-angular
 - https://news.thisdot.co/angular-news-angular-4-lazy-loading-best-practices-native-mobile-apps-with-nativescript-c336097ef028
 
-### Java/Spring Challenge
+### Java/Spring
 
 - https://github.com/cxxr/better-java
 - https://github.com/stunstunstun/awesome-spring-boot
