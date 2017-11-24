@@ -122,5 +122,11 @@ If you have any questions or feedback, don't hesitate to contact us via zakaria@
 - https://github.com/cxxr/better-java
 - https://github.com/stunstunstun/awesome-spring-boot
 
+### PHP / Laravel / Symfony
+
+- https://github.com/sitepoint-editors/awesome-symfony
+- https://github.com/TimothyDJones/awesome-laravel
+- https://github.com/chiraggude/awesome-laravel
+
 
 That’s it ! May the force be with you !! 🖖 
