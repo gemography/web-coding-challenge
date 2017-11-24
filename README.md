@@ -63,7 +63,7 @@ A MongoDB dump with ~300 shops is provided. To import the data, you need to extr
 
 →→ A shop database will be created with a shops collection.
 
-→ → Dump File : https://drive.google.com/a/hiddenfounders.com/file/d/1ZHsVrm5QnASe6IgsnUn89osEeXPtiVwh/view?usp=sharing
+→ → Dump File : [here](dump-shops.zip)
 
 
 
