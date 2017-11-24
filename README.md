@@ -124,6 +124,7 @@ If you have any questions or feedback, don't hesitate to contact us via zakaria@
 
 ### PHP / Laravel / Symfony
 
+- https://github.com/ziadoz/awesome-php
 - https://github.com/sitepoint-editors/awesome-symfony
 - https://github.com/TimothyDJones/awesome-laravel
 - https://github.com/chiraggude/awesome-laravel
