@@ -10,24 +10,24 @@ You can choose one the options listed below :
 
 - Java/Spring :
   - Backend : Spring Boot
-  - Frontend : Angular 4 || ReactJS || VueJS
-  - Database : MongoDB
+  - Frontend : Angular 4 or ReactJS or VueJS
+  - Database : MySQL or MongoDB
 - Javascript
-  - Frontend : ReactJS || VueJS
+  - Frontend : ReactJS or VueJS
   - Backend : NodeJS (ExpressJS)
   - Database : MongoDB
 - Python/Django
   - Backend : Django
-  - Frontend : Angular 4 || ReactJS || VueJS
-  - Database : MongoDB
+  - Frontend : Angular 4 or ReactJS or VueJS
+  - Database : MySQL or PostgreSQL
 - RoR 
   - Backend : Rails
-  - Frontend : Angular 4 || ReactJS || VueJS
-  - Database : MongoDB
+  - Frontend : Angular 4 or ReactJS or VueJS
+  - Database : MySQL or PostgreSQL
 - PHP 
-  - Backend : Laravel || Symfony
-  - Frontend : Angular 4 || ReactJS || VueJS
-  - Database : MongoDB || MySQL
+  - Backend : Laravel or Symfony
+  - Frontend : Angular 4 or ReactJS or VueJS
+  - Database : MySQL
 
 
 ## Features
