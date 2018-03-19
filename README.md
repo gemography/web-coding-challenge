@@ -76,12 +76,12 @@ A MongoDB dump with ~300 shops is provided. To import the data, you need to extr
 
 ## Once you're done with the app
 
-Put the code of your project on Github and send the URL to zakaria@hiddenfounders.com
+Put the code of your project on Github and send the URL to zakaria@hiddenfounders.recruitee.com
 
 
 ## Questions?
 
-If you have any questions or feedback, don't hesitate to contact us via zakaria@hiddenfounders.com
+If you have any questions or feedback, don't hesitate to contact us via zakaria@hiddenfounders.recruitee.com
 
 
 ## Useful links & resources
