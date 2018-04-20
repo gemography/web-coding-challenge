@@ -1,6 +1,6 @@
 # Web Coding Challenge
 
-The [coding challenge](coding-challenge.md) is optional if you already have some code that you're proud of and can share with us. if so, please reach out to zakaria@hiddenfounders.recruitee.com
+The [coding challenge](coding-challenge.md) is optional if you already have some code that you're proud of and can share with us.
 
 Coding Challenge Specs
 ----------------
