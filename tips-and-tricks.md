@@ -40,6 +40,3 @@
 - https://github.com/sitepoint-editors/awesome-symfony
 - https://github.com/TimothyDJones/awesome-laravel
 - https://github.com/chiraggude/awesome-laravel
-
-
-That’s it ! May the force be with you !! 🖖 
