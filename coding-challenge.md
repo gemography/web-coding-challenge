@@ -1,5 +1,5 @@
 # Coding Challenge Guidelines
-If you don't have code to share, you can work on our coding challenge described below.
+If you don't already have code to share, you can work on our coding challenge described below.
 
 Please organize, design and document your code as if it were going into production, then send us a link to the hosted repository (e.g. Github, Bitbucket, Gitlab...).
 
