@@ -31,7 +31,8 @@ Questions?
 
 If you have any questions or feedback, don't hesitate to contact us via zakaria@hiddenfounders.recruitee.com
 
-
 Useful links
 ---------------
 [Useful links can be found here.](tips-and-tricks.md)
+
+That’s it ! May the force be with you !! 🖖 
