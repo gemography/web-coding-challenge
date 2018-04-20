@@ -28,4 +28,6 @@ Useful links
 ---------------
 [Useful links can be found here.](tips-and-tricks.md)
 
+
+------------
 That’s it ! May the force be with you !! 🖖 
