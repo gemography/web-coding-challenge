@@ -11,7 +11,7 @@ We believe good engineering is about using the right tool for the right job, and
 
 The **front-end** should ideally be a single page app with a single index.html linking to external JS/CSS/etc. 
 
-For the **back-end**, you are free to **use any web framework**, but here's some of the technologies our teams are familiar with: 
+For the **back-end**, you can **use any web framework**, but here's some of the technologies our teams are familiar with: 
 
 * Python
 * JavaScript
