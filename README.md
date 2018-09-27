@@ -22,7 +22,7 @@ The aspects of your code we will review include:
 
 Once you're done with the coding challenge
 ---------------
-Send a link to the hosted repository (e.g. Github, Bitbucket, Gitlab...) to zakaria@hiddenfounders.recruitee.com
+Send a link to the hosted repository (e.g. Github, Bitbucket, Gitlab...) to zack@hiddenfounders.recruitee.com
 
 Useful links
 ---------------
