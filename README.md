@@ -18,11 +18,7 @@ The aspects of your code we will review include:
 * **Architecture**: how clean is the separation between the front-end and the back-end?
 * **Code quality**: is the code simple, easy to understand, and maintainable?  Are there any code smells or other red flags? Does object-oriented code follows principles such as the single responsibility principle? Is the coding style consistent with the language's guidelines? Is it consistent throughout the codebase?
 * **Version Control**: are you commiting early and often ? how good are your git commit messages ? 
-* **Correctness**: does the application do what was asked? If there is anything missing, does the README explain why it is missing?
-
-Once you're done with the coding challenge
----------------
-Send a link to the hosted repository (e.g. Github, Bitbucket, Gitlab...) to zack@hiddenfounders.recruitee.com
+* **Correctness**: does the application do what was asked? If there is anything missing, does the README explain why it is missing? 
 
 Useful links
 ---------------
