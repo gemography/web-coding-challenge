@@ -2,9 +2,9 @@
 
 The [coding challenge](coding-challenge.md) is optional if you already have some code that you're proud of and can share with us.
 
-Coding Challenge Guidelines
+Coding Challenge Requirements
 ----------------
-[Guidelines can be found here.](coding-challenge.md)
+[Requirements can be found here.](coding-challenge.md)
 
 How we review
 ----------------
