@@ -1,0 +1,161 @@
+common:
+    chooseCity: Vous travaillez sur les données de
+    insufficient_right: 
+        text: Vous n'avez pas les droits d'accès à cette page.
+        back: Retour
+        logout: Se déconnecter
+session:
+    city:
+        not_found: La session a expirée (ville sélecctionnée inconnu)
+
+utilisateur:
+    menu:
+      afficher: Statistique Utilisateurs
+      groupe: Groupes
+      users: Utilisateurs
+      register: Créer un utilisateur
+      userConnected : Utilisateurs Connectés
+      
+    list:
+        title: Liste des utilisateurs de
+        titleAllUsers: Nombre total d'utilisateurs 
+        titleStat: Statistique Utilisateurs 
+        titleAllUserAt: Le nombre total d'utilisateurs à
+        titleAllUsersCity: Nombre d'utilisateurs de la Ville Courante 
+        titleUsersConnectedNumber: Nombre d'utilisateurs connectés
+        titleUsersConnectedNumberAt: Nombre d'utilisateurs connectés à
+        titleUsersConnectedNumberByCity: Nombre d'utilisateurs connectés de la ville courante
+        titleUsersConnectedByCity : Liste des utilisateurs connectés de 
+        table:
+            firstName: Noms
+            lastName: Prénoms
+            login: Login
+            adress: Adresse
+            role: Role
+            action : Action
+            addedDate: Date d'ajout
+            edit_action : Modifier
+            block_action: Bloquer
+            deblock_action: Débloquer
+            active_action: Activer
+            desactive_action: Désactiver
+            etat: Désactiver
+            disconnect : Déconnecter
+            no_result: Aucun utilisateur trouvé
+    rechercheForm:
+        title : Liste des utilisateurs correspondant à votre recherche
+        rechercher: Prénoms ou Nom
+        submit: Rechercher 
+        etat : Etat 
+        all : Tous
+        block : Bloqués
+        desactive : Désactivés  
+        list:
+          table:
+              Noms: Noms
+              Prenoms: Prenoms
+              login: login
+              name: Role
+              address: Adresse
+              action: Actions
+              no_result: Aucun utilisateur trouvé  
+    editForm: 
+        titleUserEdit : Modifier le role d'un utilisateur
+        userid : Identifiant
+        login : Login
+        salt : Salt
+        password : Mot de Passe
+        firstName : Prénoms
+        lastName : Nom
+        email : Email
+        registrationDate : Date d'enregistrement
+        latitude : Latitude
+        longitude: Longitude
+        isActive : Est Activé
+        isBlocked : Est Bloqué
+        state : Etat
+        lastLoginDate : Derniére connection
+        numeroRue : Numéro de Rue
+        address : Addresse
+        language : Langue
+        city : Ville
+        role : Role
+        save : Sauvegarder                    
+
+                    
+authentication:
+    form: 
+        login: Login ou email
+        password: Mot de passe 
+        submit: Se connecter
+        
+registration:
+    form: 
+        email: Email     
+        city: Ville
+        firstName: Prénom
+        lastName: Nom
+        login: Login
+        password: Mot de passe 
+        confirmation: Confirmation
+        submit: S'inscriire
+
+abus:
+    menu:
+      afficher: Tous les Abus
+      eventCommentAbus: Abus sur les évenements
+      placeCommentAbus: Abus sur les places
+      messageCommentAbus: Abus sur les Message Publics
+    list : 
+       titleAll: Liste des abus signalés
+       number: Nombre total d'entités signalés comme abus
+       numberEvent: Nombre de commentaires d'évenements signalés sur 
+       numberPlace : Nombre de commentaires de places signalés sur
+       numberPublicMessage : Nombre de messages publics signalés sur
+       titleEvent: Liste des commentaires signalés sur les évenements
+       titlePlace: Liste des commentaires signalés sur les places
+       titlePublicMessage : Liste des messages publics signalés 
+       table : 
+           type: Type
+           content: Texte abusif signalé
+           titleEvent : Titre de l'évenement
+           titlePlace : Nom de la Place
+           idEvent: Identifiant
+           delete_action : Supprimer
+           action : Action
+           no_result : Aucun abus trouvé   
+city:
+    menu:
+      afficher : Toutes les villes
+      ajouter : Ajouter une ville
+    list : 
+       titleAll: Liste de toutes les villes
+       titleAdd: Ajouter une nouvelle ville
+       titleEdit : Modifier une ville 
+       number : Nombre total de villes
+       table : 
+           name: Nom de la ville
+           delete_action : Supprimer
+           edit_action : Modifier
+           action : Action
+           no_result : Aucun abus trouvé
+    form :            
+           name : Nom de la ville
+           latitude : Latitude
+           longitude : Longitude
+           latitudeInf : Latitude Inférieure
+           latitudeSup : Latitude Supérieure
+           longitudeInf : Longitude Inférieure
+           longitudeSup : Longitude Supérieure
+           defaultAddress : Adresse par defaut
+           defaultZipcode : Code Zip
+           defaultAddressLongitude: Longitude par défaut
+           defaultAddressLatitude : Latitude par defaut
+           titleAddCity : Ajouter une nouvelle ville
+           titleEditCity: Modifier une ville
+           save : Sauvegarder
+                
+#defaut authentication message customization
+The presented password cannot be empty.: Le champ mot de passe est obligatoire
+The presented password is invalid.: Le mot de passe ou le login est incorrect
+Bad credentials: Les données saisies sont incorrectes

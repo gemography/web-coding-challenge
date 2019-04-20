@@ -1,0 +1,30 @@
+<?php
+
+namespace CTRV\PlaceBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class PlaceTypeRepository extends EntityRepository
+{
+//retourne les types de places spécifiés selon la ville
+public function getTypePlaces(){
+	$qb= $this->createQueryBuilder("p")
+	//->where("p.city=?1")
+	->orderBy('p.id','DESC')
+	//->setParameter(1,$city)
+	;
+	return $qb->getQuery()->getResult();
+} 
+//retourne les données dy type de places spécifiés selon la ville
+public function getTypePlacesById($id){
+	$qb= $this->createQueryBuilder("p")
+	->where("p.id=?1")
+	->orderBy('p.id','DESC')
+	->setParameter(1,$id)
+	;
+	return $qb->getQuery()->getResult();
+}  
+}

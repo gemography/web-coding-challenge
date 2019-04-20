@@ -1,0 +1,55 @@
+common:
+    chooseCity: Ville
+    insufficient_right: 
+        text: Vous n'avez pas les droits d'accès à cette page.
+        back: Retour
+        logout: Se déconnecter
+session:
+    city:
+        not_found: La session a expirée (ville sélecctionnée inconnu)
+utilisateur:
+    menu:
+      afficher: Statistique Utilisateurs
+      groupe: Groupes
+      users: Utilisateurs
+      
+    list:
+        title: Liste des utilisateurs de
+        title1: Nombre total d'utilisateurs 
+        title2: Statistique Utilisateurs 
+        title3: Le nombre total d'utilisateurs à
+        title4: Nombre d'utilisateurs de la Ville Courante 
+        title5: Nombre d'utilisateurs connectés
+        title6: Nombre d'utilisateurs connectés de la ville courante
+        table:
+            firstName: Noms
+            lastName: Prénoms
+            login: Login
+            adress: Adresse
+            role: Role
+            action: Actions
+            etat: Désactiver
+            no_result: Aucun utilisateur trouvé
+
+                    
+authentication:
+    form: 
+        login: Login ou email
+        password: Mot de passe 
+        submit: Se connecter
+        
+registration:
+    form: 
+        email: Email     
+        city: Ville
+        firstName: Prénom
+        lastName: Nom
+        login: Login
+        password: Mot de passe 
+        confirmation: Confirmation
+        submit: S'inscriire
+
+#defaut authentication message customization
+The presented password cannot be empty.: Le champ mot de passe est obligatoire
+The presented password is invalid.: Le mot de passe ou le login est incorrect
+Bad credentials: Les données saisies sont incorrectes

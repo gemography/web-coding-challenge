@@ -1,0 +1,51 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.list.title{% endtrans %}</h3>
+		
+		<form id="choose_place_type" action="" method="post">
+			{{ form_widget(form) }}
+		</form>
+		<div align="right"><a class="btn btn-mini" href="{{ path("addNew_place") }}">{% trans %}place.menu.add{% endtrans %}</a></div><br>
+		<div id="places-list"> <!-- le tableau sera affiché ici en js --></div>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvplace/js/place.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		var urlAction = "{{ path('loadPlacesByType') }}";
+		var page = 1;
+		var placeTypeId = $("#choose_place_type_placeType").val();
+		loadPlacesByType (urlAction,placeTypeId,page,$("#places-list"));
+
+		//si on change de type de place
+		$("#choose_place_type").change(function() {
+			page = 1;
+			placeTypeId = $("#choose_place_type_placeType").val();
+			loadPlacesByType (urlAction,placeTypeId,page,$("#places-list"));
+		});
+		
+		//si on change de page
+		/*$(".pagination li a").click (function () {
+			placeTypeId = $("#choose_place_type_placeType").val();
+			page = $(this).parent().attr("data-page");
+			loadPlacesByType (urlAction,placeTypeId,page,$("#places-list"));
+			return false;
+		});*/
+	});
+</script>
+
+{% endblock body %}

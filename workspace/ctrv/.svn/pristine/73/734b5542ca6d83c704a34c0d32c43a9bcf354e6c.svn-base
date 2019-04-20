@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.titleStat{% endtrans %}</h3>
+		
+		<div class="well">
+			<h4>{% trans %}utilisateur.list.titleAllUsers{% endtrans %} : {{ nb_users }}</h4>
+	  		<h4>{% trans %}utilisateur.list.titleUsersConnectedNumber{% endtrans %} : {{ nb_connected_users }}</h4>
+  		</div>
+  		
+	  	<div class="well">
+		  	<h4>{% trans %}utilisateur.list.titleAllUsersCity{% endtrans %} : {{ nb_users_by_city }}</h4>
+	  		<h4>{% trans %}utilisateur.list.titleUsersConnectedNumberByCity{% endtrans %} : {{ nb_connected_users_by_city }}</h4>
+  		</div>
+	        
+	</div>
+
+{% endblock body %}

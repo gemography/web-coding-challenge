@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="49" key="CommitDialog.location.y"/>
+	<item value="102" key="CommitDialog.location.x"/>
+	<item value="1163" key="CommitDialog.size.x"/>
+	<item value="473" key="CommitDialog.size.y"/>
+	<section name="CommitWizard">
+		<item value="false" key="ShowCompare"/>
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+	</section>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://subversion.assembla.com/svn/administration_cityrover"/>
+		</list>
+	</section>
+</section>

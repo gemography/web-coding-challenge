@@ -1,0 +1,67 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}event.list.titlePublicEvent{% endtrans %}</h3>
+		<div id="events-list">
+		{% if entities is not empty  %}
+			<table class="table table-bordered table-condensed table-hover">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}event.list.table.title{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.description{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.adresse{% endtrans %}</th>
+						<th>{% trans %}event.list.table.author{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.addedDate{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.title }}</td>
+			            <td>{{ entity.description }}</td>
+			            <td>{{ entity.street }}</td>
+			            <td>{{ entity.auteur }}</td>
+			            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+			            <td>{{ entity.addedDate|date(format) }}</td>
+			            <td>
+					        <a class="event-to-delete btn btn-mini" data-event-id="{{entity.id}}">{% trans %}event.list.table.delete_action{% endtrans %}</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+				
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'event' } %}
+		
+		{% else %}
+			<div class="center">{% trans %}event.list.table.no_result{% endtrans %}</div>				
+		{% endif %}
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvevent/js/event.js') }}"></script>
+
+<script>
+	$(function() {
+
+		var url_delete_event_action = "{{ path('event_delete', { 'id': 'event_id_to_delete' }) }}";
+		$(".event-to-delete").click( function () {
+			url_delete_event_action = url_delete_event_action.replace('event_id_to_delete',$(this).attr('data-event-id'));
+			deleteEvent (url_delete_event_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

@@ -1,0 +1,31 @@
+<?php
+
+namespace CTRV\PlaceBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Doctrine\ORM\EntityRepository;
+
+class PlaceDescriptionForm extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            
+            ->add('description','textarea',array('label'=>'place.ajouterForm.description','required'=>true))
+            ;
+    }
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => 'CTRV\PlaceBundle\Entity\Place'
+        ));
+    }
+
+    public function getName()
+    {
+        return 'ctrv_placebundle_placeLatLongform';
+    }
+}

@@ -1,0 +1,22 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class EventRepository extends EntityRepository
+{
+	public function getEvent ($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.city=?1")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+	
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

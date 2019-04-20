@@ -1,0 +1,65 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menuAbus.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}abus.list.titleEvent{% endtrans %}</h3>
+		<div class="right"><h4>{% trans %}abus.list.numberEvent{% endtrans %} {{ city|capitalize }}  : {{ nb_entities }}</h4></div><br>
+		{% if entities is not empty  %}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>{% trans %}abus.list.table.type{% endtrans %}</th>
+            <th>{% trans %}abus.list.table.content{% endtrans %}</th>
+            <th>{% trans %}abus.list.table.titleEvent{% endtrans %}</th>
+            <th>{% trans %}abus.list.table.action{% endtrans %}</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{entity.entityType}}</td>
+            <td>{{entity.content}}</td>
+            <td>{{entity.title}}</td>
+            <td>
+		        <a class="comment-to-delete btn btn-mini" data-comment-id="{{entity.id}}">{% trans %}abus.list.table.delete_action{% endtrans %}</a>
+            </td>
+            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'eventCommentAbuse' } %}
+
+		{% else%}
+			<div class="center">{% trans %}abus.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/comment.js') }}"></script>
+<script>
+	$(function() {
+
+		var url_delete_comment_action = "{{ path('comment_delete', { 'id': 'comment_id_to_delete' }) }}";
+		$(".comment-to-delete").click( function () {
+			url_delete_comment_action = url_delete_comment_action.replace('comment_id_to_delete',$(this).attr('data-comment-id'));
+			deleteComment (url_delete_comment_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+
+
+{% endblock body %}

@@ -1,0 +1,51 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		{% trans %}utilisateur.rechercheForm.title{% endtrans %}
+		
+		<form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+		</form>
+	
+		
+		<div id="user-list">
+		
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		//appel initial ajax
+		var urlAction = "{{ path('rechercher_user_result') }}";
+		loadSearchedUsers (urlAction, "", $('#user-list') );
+
+		
+		//lorqu'on appui sur entre
+		$('#userrecherche_motcle').keypress(function(e) {
+	 		if(e.which == 13) {
+			        //appel ajax
+		 		loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(), $('#user-list') );
+	    	}
+		    return false;
+		});
+
+
+		
+	});
+</script>
+
+
+{% endblock body %}

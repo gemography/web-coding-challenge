@@ -1,0 +1,103 @@
+common:
+    chooseCity: Vous travaillez sur les données de
+    insufficient_right: 
+        text: Vous n'avez pas les droits d'accès à cette page.
+        back: Retour
+        logout: Se déconnecter
+session:
+    city:
+        not_found: La session a expirée (ville sélecctionnée inconnu)
+
+utilisateur:
+    menu:
+      afficher: Statistique Utilisateurs
+      groupe: Groupes
+      users: Utilisateurs
+      register: Créer un utilisateur
+      
+      
+    list:
+        title: Liste des utilisateurs de
+        titleAllUsers: Nombre total d'utilisateurs 
+        titleStat: Statistique Utilisateurs 
+        titleAllUserAt: Le nombre total d'utilisateurs à
+        titleAllUsersCity: Nombre d'utilisateurs de la Ville Courante 
+        titleUsersConnected: Nombre d'utilisateurs connectés
+        titleUsersConnectedCity: Nombre d'utilisateurs connectés de la ville courante
+        table:
+            firstName: Noms
+            lastName: Prénoms
+            login: Login
+            adress: Adresse
+            role: Role
+            block_action: Bloquer
+            deblock_action: Débloquer
+            active_action: Activer
+            desactive_action: Désactiver
+            etat: Désactiver
+            no_result: Aucun utilisateur trouvé
+    rechercheForm:
+        title : Liste des utilisateurs correspondant à votre recherche
+        rechercher: Prénoms ou Nom
+        submit: Rechercher 
+        etat : Etat 
+        all : Tous
+        block : Bloqués
+        desactive : Désactivés  
+        list:
+          table:
+              Noms: Noms
+              Prenoms: Prenoms
+              login: login
+              name: Role
+              address: Adresse
+              action: Actions
+              no_result: Aucun utilisateur trouvé        
+
+                    
+authentication:
+    form: 
+        login: Login ou email
+        password: Mot de passe 
+        submit: Se connecter
+        
+registration:
+    form: 
+        email: Email     
+        city: Ville
+        firstName: Prénom
+        lastName: Nom
+        login: Login
+        password: Mot de passe 
+        confirmation: Confirmation
+        submit: S'inscriire
+
+abus:
+    menu:
+      afficher: Tous les Abus
+      eventCommentAbus: Abus sur les évenements
+      placeCommentAbus: Abus sur les places
+      messageCommentAbus: Abus sur les Message Publics
+    list : 
+       titleAll: Liste des abus signalés
+       number: Nombre total d'entités signalés comme abus
+       numberEvent: Nombre de commentaires d'évenements signalés sur 
+       numberPlace : Nombre de commentaires de places signalés sur
+       numberPublicMessage : Nombre de messages publics signalés sur
+       titleEvent: Liste des commentaires signalés sur les évenements
+       titlePlace: Liste des commentaires signalés sur les places
+       titlePublicMessage : Liste des messages publics signalés 
+       table : 
+           type: Type
+           content: Texte abusif signalé
+           titleEvent : Titre de l'évenement
+           titlePlace : Nom de la Place
+           idEvent: Identifiant
+           delete_action : Supprimer
+           action : Action
+           no_result : Aucun abus trouvé   
+     
+#defaut authentication message customization
+The presented password cannot be empty.: Le champ mot de passe est obligatoire
+The presented password is invalid.: Le mot de passe ou le login est incorrect
+Bad credentials: Les données saisies sont incorrectes

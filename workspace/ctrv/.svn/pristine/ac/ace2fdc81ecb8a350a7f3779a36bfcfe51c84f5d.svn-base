@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+<br/><br/>
+
+{% if error %}
+	<div class="error">{{ error.message|trans({},'messages') }}</div>
+{#     <div>{{ error.message }}</div>#}
+{% endif %}
+
+
+<div class="center">
+	<form class="form-vertical" action="{{ path('_security_check') }}" method="post">
+	
+		<div class="control-group">
+		    <label class="control-label required" for="username">{% trans %}authentication.form.login {% endtrans %}</label>
+		    <div class="control">
+		    	<input required="required" type="text" id="username" name="_username" value="{{ last_username }}" />
+			</div>
+		</div>
+		
+		<div class="control-group">
+		    <label class="control-label required" for="password">{% trans %}authentication.form.password {% endtrans %}</label>
+		    <div class="control">
+		    	<input required="required" type="password" id="password" name="_password" />
+		    </div>
+		</div>
+	    {#
+	        If you want to control the URL the user is redirected to on success (more details below) 
+	        <input type="hidden" name="_target_path" value="{{ path('home') }}" />#}
+	        	
+		{{ forms.input('authentication.form.submit') }}
+		
+	</form>
+</div>
+{% endblock body %}

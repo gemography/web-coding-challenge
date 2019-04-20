@@ -1,0 +1,40 @@
+ctrv_tracker:
+    resource: "@CTRVTrackerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ctrv_flow:
+    resource: "@CTRVFlowBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ctrv_event:
+    resource: "@CTRVEventBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ctrv_place:
+    resource: "@CTRVPlaceBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+ctrv_common:
+    resource: "@CTRVCommonBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+_security_login:
+  pattern: /login
+  defaults: { _controller: CTRVCommonBundle:Auth:login }
+ 
+_security_check:
+  pattern: /login_check
+ 
+_security_logout:
+    pattern: /logout
+    
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
+

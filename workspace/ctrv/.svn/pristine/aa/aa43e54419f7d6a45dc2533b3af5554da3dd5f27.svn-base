@@ -1,0 +1,40 @@
+jms_security_extra:
+    secure_all_services: false
+    expressions: true
+
+security:
+    encoders:
+        CTRV\CommonBundle\Entity\User:
+            id: password_service
+#            algorithm:        sha1 # on cree un encoder personnalisé 
+#            encode_as_base64: false
+#            iterations:       1
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        administrators:
+            entity: { class: CTRVCommonBundle:User }
+            #entity: { class: CTRVCommonBundle:User, property: login }# commenter car on l'a implementer dans userrepository
+
+    firewalls:
+#        admin: { pattern: /admin/.*, form_login: true }
+        login: { pattern: /login, anonymous: true, form_login: true, context: primary_auth }
+        login_check: { pattern: /login_check, anonymous: true, form_login: true, context: primary_auth }
+        logout: { pattern: /logout, form_login: true, logout: true, context: primary_auth }
+        
+        secured_area:
+            pattern:    ^/ #tous les path
+            anonymous: true # false oblige l'authentification sur tout le site
+            form_login:
+                login_path:  /login
+                check_path:  ~
+                failure_path: /login
+            logout:
+                path:   /logout
+                target: /
+            context: primary_auth
+               
+

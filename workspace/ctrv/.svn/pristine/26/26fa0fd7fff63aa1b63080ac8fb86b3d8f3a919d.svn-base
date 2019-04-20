@@ -1,0 +1,53 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3></h3>
+		
+		{% if entities is not empty  %}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Type de Commentaire</th>
+            <th>Contenu</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{entity.entityType}}</td>
+            <td>{{entity.content}}</td>
+            <td>
+		        <a class="user-to-delete btn" data-agenda-id="{{entity.id}}">Supprimer</a>
+            </td>
+            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+		{% else%}
+			<div class="center">{% trans %}Aucun abus trouvé{% endtrans %}</div>				
+		{% endif %}		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+
+
+
+{% endblock body %}

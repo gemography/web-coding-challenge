@@ -1,0 +1,209 @@
+<?php
+
+namespace CTRV\CommonBundle\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\CommonBundle\Entity\User;
+use CTRV\CommonBundle\Form\UserRechercheType;
+
+
+/**
+ * User controller.
+ *
+ * @Route("/utilisateur")
+ */
+class UserController extends Controller
+{
+	
+	/**
+     * Charge les donnees de tous les users spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+     * @Route("/list", name="utilisateur")
+     * @Template()
+     */
+    public function loadUserAction () {
+    	
+    	$em = $this->getDoctrine()->getEntityManager();
+    	
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	$form = $this->container->get('form.factory')->create(new UserRechercheType());
+    	$page = $this->getRequest()->get("page",1);
+    	
+    	
+    	$entities = $this->get("user_service")->getUsers($currentCity);
+    	
+    	//pagination
+        $nb_entities = count($entities);
+        $nb_entities_page = Constants::users_number_per_page;
+        $nb_pages = ceil($nb_entities/$nb_entities_page);
+        $offset = ($page-1) * $nb_entities_page;
+        
+        $entities = array_slice($entities, $offset,$nb_entities_page);
+       	
+       	return  array (
+            'entities' => $entities,
+        	'nb_pages' => $nb_pages,
+        	'page' => $page,
+        	'nb_entities' => $nb_entities,
+       			'city'=>$currentCity,
+       			'users' => $entities,
+       			'form' => $form->createView()
+        );
+    }  
+    
+    /**
+     * Charge les données de tous les utilisateurs Connectés spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+     * @Route("/connected", name="userConnected")
+     * @Template()
+     */
+    public function loadUserConnectedAction () {
+    	 
+    	$em = $this->getDoctrine()->getEntityManager();
+    	 
+    	$page = $this->getRequest()->get("page",1);
+    	 
+    	 $entities = $this->get("user_service")->getUsersConnected();
+    	 
+    	return  array (
+    			'entities' => $entities,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    /**
+     * Charge les donnees de tous les users Connectés de la ville courante spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+     * @Route("/connectedCity", name="userConnectedCity")
+     * @Template()
+     */
+    public function loadUserConnectedCityAction () {
+    
+    	$em = $this->getDoctrine()->getEntityManager();
+    
+    	$currentCity = $this->get('session_service')->getCity();
+    
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    
+    	$entities = $this->get("user_service")->getUsersConnectedCity($currentCity);
+    
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::users_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    /**
+     * Charge les données de tous les utilisateurs du systéme
+     * @Route("/all", name="userAll")
+     * @Template()
+     */
+    public function allUserAction () {
+    
+    	$em = $this->getDoctrine()->getEntityManager();
+    
+    	$currentCity = $this->get('session_service')->getCity();
+    
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    
+    	$page = $this->getRequest()->get("page",1);
+
+    	$entities = $this->get("user_service")->getAllUsers();
+    	$entities1 = $this->get("user_service")->getUsers($currentCity);
+    	$entities2 = $this->get("user_service")->getUsersConnected();
+    	$entities3 = $this->get("user_service")->getUsersConnectedCity($currentCity);
+        
+    	//récupération des utilisateurs
+    	$nb_entities = count($entities);
+    	$nb_entities1 = count($entities1);
+    	$nb_entities2 = count($entities2);
+    	$nb_entities3 = count($entities3);
+    	return  array (
+    			
+    			'nb_entities' => $nb_entities,
+    			'nb_entities1' => $nb_entities1,
+    			'nb_entities2' => $nb_entities2,
+    			'nb_entities3' => $nb_entities3
+    	);
+    }
+    
+    /**
+     * Charge les données des utilisateurs spécifié sur la barre de recherche
+     * 
+     */
+    public function rechercherAction()
+    {
+    	$request = $this->container->get('request');
+    	if($request->isXmlHttpRequest())
+    	{
+    		$motcle = '';
+    		$motcle = $request->request->get('motcle');
+    		$em = $this->container->get('doctrine')->getEntityManager();
+    		if($motcle != '')
+    		{
+    			$qb = $this->createQueryBuilder("a")
+    			->from('CTRV\CommonBundle\Entity\User')
+    			->where("a.firstName LIKE :motcle OR a.lastName LIKE :motcle")
+    			->orderBy('a.firstName', 'ASC')
+    			->setParameter('motcle', '%'.$motcle.'%');
+    			$users = $qb->getQuery()->getResult();
+    			
+    			}
+    			else {
+    				$users = $em->getRepository('CTRVCommonBundle:User')->findAll();
+    			}
+    			return array(
+    					'users' => $users
+    			);
+    			}
+    			else {
+    				return $this->loadUserAction();
+    			}
+    			}
+    
+    
+    /**
+     * Desactiver un utilisateur
+     *
+     * @Route("/{id}/desactive", name="user_desactive" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function desactiveAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $qb = Doctrine_Query::create()
+        ->update('User')
+        ->set('isActive', '0')
+        ->where("id=?1")
+		->setParameter(1, $id);
+		return $qb->getSqlQuery();
+        
+        return new Response(json_encode(array('result'=>true)));
+    }
+
+}

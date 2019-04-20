@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+
+{% block body %}
+	<form class="form-horizontal" action="{{ path('register')}}" method="post" {{ form_enctype(form) }}>
+	    {{ form_widget(form) }}
+	    {{ forms.input('registration.form.submit','home') }}
+	</form>
+{% endblock body %}

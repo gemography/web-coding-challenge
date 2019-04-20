@@ -1,0 +1,9 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("userAll") }}">{% trans %}utilisateur.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("groupe") }}">{% trans %}utilisateur.menu.groupe{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("utilisateur") }}">{% trans %}utilisateur.menu.users{% endtrans %}</a></li><br>
+		
+	</ul>
+</div>

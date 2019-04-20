@@ -1,0 +1,60 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+           {% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title{% endtrans %} {{ city|capitalize }}</h3>
+		
+		<div class="right"><h4>{% trans %}utilisateur.list.title3{% endtrans %} {{ city|capitalize }} : {{ nb_entities }}</h4></div><br>
+	    
+	    <form class="form-vertical">
+				{{ form_widget(form) }}
+		</form>
+		
+		<div id="user-list"></div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		$('#userrecherche_motcle').focus();//on pose le curseur initialement sur ce champ
+
+		var serachValSize = $('#userrecherche_motcle').val().length;
+
+		//appel initial ajax
+		var urlAction = "{{ path('rechercher_user_result') }}";
+		loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(),$('#userrecherche_Etat').val(),1, 'user-list' );
+
+		var timeout = null;
+		var duration = {{ constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::TIME_BEFORE_SEARCH') }};
+
+		//lorqu'on appui sur entre
+		$('#userrecherche_motcle').keyup(function() {
+			var serachValNewSize = $('#userrecherche_motcle').val().length;
+
+			if(serachValNewSize!=serachValSize) { //on lance que si la zone de saisie a été modifié
+
+				var serachVal = $('#userrecherche_motcle').val();
+				var etat = $('#userrecherche_Etat').val();
+				var container_id = 'user-list';
+				var page = 1;
+				clearTimeout(timeout);//on annule les appels datant de moins de 350ms
+				timeout = setTimeout("loadSearchedUsers('"+urlAction+"','"+serachVal+"','"+etat+"','"+page+"','"+container_id+"')",duration);
+		 		
+				serachValSize = $('#userrecherche_motcle').val().length;
+			}
+		});
+		
+	});
+</script>
+{% endblock body %}

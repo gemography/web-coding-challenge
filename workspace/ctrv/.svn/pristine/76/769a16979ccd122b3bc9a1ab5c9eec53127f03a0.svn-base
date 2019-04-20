@@ -1,0 +1,4 @@
+services:
+    mail_service:
+        class: CTRV\FlowBundle\Service\PublicMessageService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]

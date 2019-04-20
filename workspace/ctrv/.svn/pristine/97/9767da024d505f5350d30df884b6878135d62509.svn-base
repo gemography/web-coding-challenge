@@ -1,0 +1,62 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.list.titlePlaceWithoutDescription{% endtrans %}</h3>
+		<div id="places-list"> <!-- le tableau sera affiché ici en js -->
+		{% if entities is not empty  %}
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+        	<th>{% trans %}place.list.table.title{% endtrans %}</th>
+            <th>{% trans %}place.list.table.adresse{% endtrans %}</th>
+            <th>{% trans %}place.list.table.town{% endtrans %}</th>
+            <th>{% trans %}place.list.table.siteUrl{% endtrans %}</th>
+            <th>{% trans %}place.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.title }}</td>
+            <td>{{ entity.street }}</td>
+            <td>{{ entity.town }}</td>
+            <td>{{ entity.siteUrl }}</td>
+            <td>
+		       <a class="place-to-delete btn btn-mini" data-place-id="{{entity.id}}">{% trans %}place.list.table.delete_action{% endtrans %}</a>
+		       <a href="{{ path ("saisir_description", { 'id': entity.id }) }}" class="place-to-update btn btn-mini" data-place-id="{{entity.id}}">{% trans %}place.list.table.update_action{% endtrans %}</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'placeWithoutDescription' } %}
+
+{% else%}
+	<div class="center">{% trans %}place.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+		
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvplace/js/place.js') }}"></script>
+<script>
+	$(function() {
+
+		var url_delete_place_action = "{{ path('place_delete', { 'id': 'place_id_to_delete' }) }}";
+		$(".place-to-delete").click( function () {
+			url_delete_place_action = url_delete_place_action.replace('place_id_to_delete',$(this).attr('data-place-id'));
+			deletePlace (url_delete_place_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

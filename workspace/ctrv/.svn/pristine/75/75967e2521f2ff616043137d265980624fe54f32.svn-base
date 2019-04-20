@@ -1,0 +1,49 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle:Agenda:menuAgenda.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}agenda.list.title{% endtrans %}</h3>
+		
+		
+		
+		<div id="event-list"> <!-- le tableau sera affiché ici en js --></div>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvevent/js/agenda.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		var urlAction = "{{ path('agenda') }}";
+		var page = 1;
+		var agendaTypeId = $("#load_agenda").val();
+		loadEventByType (urlAction,agendaTypeId,page,$("#agenda-list"));
+
+		//si on change de type de place
+		$("#choose_agenda_type").change(function() {
+			page = 1;
+			agendaTypeId = $("#load_agenda").val();
+			loadAgendaByType (urlAction,agendaTypeId,page,$("#agenda-list"));
+		});
+		
+		//si on change de page
+		$(".pagination li a").click (function () {
+			eventTypeId = $("#load_agenda").val();
+			page = $(this).parent().attr("data-page");
+			loadEventByType (urlAction,eventTypeId,page,$("#agenda-list"));
+			return false;
+		});
+	});
+</script>
+
+{% endblock body %}

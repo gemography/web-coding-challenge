@@ -1,0 +1,12 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("place") }}">{% trans %}place.menu.moderate{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path('placeComment') }}">{% trans %}placeComment.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("rechercher_place") }}">{% trans %}place.menu.search{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("import_place") }}">{% trans %}place.menu.import{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("loadTypePlaces") }}">{% trans %}place.menu.type{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="">{% trans %}place.menu.setLatLng{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="">{% trans %}place.menu.setPlaceDescription{% endtrans %}</a></li>
+	</ul>
+</div>

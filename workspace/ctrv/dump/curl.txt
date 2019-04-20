@@ -1,0 +1,59 @@
+/**
+	 * @Route("/import",name="import_place")
+	 * @Template()
+	 */
+	public function importAction () {
+				
+// 		$service_url = 'http://webservice.com/v1/getAllUser?search_key=d&userid=52';
+// 		$curl = curl_init($service_url);
+		
+// 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// // 		curl_setopt($curl, CURLOPT_HTTPGET, true);
+// 		$curl_response = json_decode(curl_exec($curl));
+// 		curl_close($curl);
+// 		var_dump(($curl_response));
+		
+		
+// 		$service_url = 'http://webservice.com/v1/registerUser';
+// 		$curl = curl_init($service_url);
+// 		$curl_post_data = array(
+// 				"firstname"=>"amady",
+// 				"lastname"=>"faye",
+// 				"email"=>"faye@faye",
+// 				"login"=>"faye",
+// 				"password"=>"faye",
+// 				"registration_date"=>"2012/01/10",
+// 				"userid"=>"sssss52",
+// 				"city_id"=>1
+// 		);
+// 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// 		curl_setopt($curl, CURLOPT_POST, true);
+// 		curl_setopt($curl, CURLOPT_POSTFIELDS, $curl_post_data);
+// 		$curl_response = json_decode(curl_exec($curl));
+// 		curl_close($curl);
+// 		var_dump($curl_response);die;
+
+		$form = $this->createForm(new ImportPlaceType(), new ImportPlace());
+		
+		if( $this->get('request')->getMethod() == 'POST' ) {
+			
+			$form->bindRequest($this->get('request'));
+		
+			if( $form->isValid() ) {
+				
+				$importPlace = $form->getData();
+				$fileName = $importPlace->city.'.'.$importPlace->file->guessExtension();
+				$importPlace->file->move($importPlace->getUploadRootDir(), $fileName);
+				$importPlace->file = null;
+				
+				//executer le job 
+				$city = $importPlace->city->getName();
+				$placeType = $importPlace->placeType;
+				
+				var_dump($placeType);	die;
+			}
+		}
+
+		return array('form'=>$form->createView());
+	}
+    

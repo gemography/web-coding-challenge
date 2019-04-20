@@ -1,0 +1,81 @@
+@CHARSET "ISO-8859-1";
+
+
+h3 {
+	text-align: center;
+	font-size: 1.6em;
+}
+
+/* * pour indiquer champs obligatoire */
+.required:AFTER {
+	content: " *";
+	color:red;
+	font-weight: bold;
+  	font-size: 1.4em;
+}
+
+.header-img {
+	padding: 0px;
+	margin: 0px;
+	border-radius: 5px;
+	background-image: url("/bundles/ctrvcommon/images/header.jpg");
+	background-repeat:repeat-x;
+	height: 90px;
+}
+.header-title {
+	color: #22bbf0;
+	padding-top: 20px;
+}
+
+/* affichage des sous menu sur hover et non au click */
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;    
+}
+.navbar .dropdown-menu {
+ margin-top: 0px;
+ color: #22bbf0; 
+}
+
+/*couleur text menu*/
+/* .navbar .nav > li > a { */
+/*  	color: #22bbf0;  */
+/* } */
+/* .dropdown-menu > li > a { */
+/* 	color: #22bbf0;  */
+/* } */
+/* #choose_city_form .control-label { */
+/* 	color: #22bbf0; */
+/* } */
+
+/* .navbar-inner { */
+/* 	background: black; */
+/* } */
+
+
+
+.ctrv-loader {
+  	width: 128px;
+  	height: 300px;
+  	margin: 0 auto;
+	background: url('/bundles/ctrvcommon/images/loading.gif') no-repeat center center;;
+}
+
+.center {
+	text-align:center;
+}
+
+/* supprimer du background sur les boutons de validation de formulaire*/
+.form-actions {
+	background: none;
+	border: none;
+}
+
+/* formnulaire de choix de la ville */
+.chooseCity {
+	margin-top: 8px;
+}
+
+.pagination-select {
+	margin-left: 15px;
+	width: 60px;
+}

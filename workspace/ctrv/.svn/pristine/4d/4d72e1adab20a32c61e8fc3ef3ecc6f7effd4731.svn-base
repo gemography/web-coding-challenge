@@ -1,0 +1,55 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Serveur: localhost
+-- Généré le : Jeu 25 Avril 2013 à 16:29
+-- Version du serveur: 5.5.8
+-- Version de PHP: 5.3.5
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `projet`
+--
+
+
+INSERT INTO `city` (`id`, `name`, `latitude`, `longitude`, `latitude_inf`, `latitude_sup`, `longitude_inf`, `longitude_sup`) VALUES
+(1, 'toulouse', '45', '2', NULL, NULL, NULL, NULL),
+(4, 'grenoble', '', '', NULL, NULL, NULL, NULL);
+
+
+INSERT INTO `event_type` (`id`, `label`) VALUES
+(1, 'soiree');
+
+
+INSERT INTO `message_type` (`id`, `label`) VALUES
+(1, 'CONTACT_DEMAND'),
+(2, 'REQUEST_GROUP_FROM_USER'),
+(3, 'REQUEST_GROUP_FROM_ADMIN'),
+(4, 'GROUP'),
+(5, 'SINGLE'),
+(6, 'REQUEST_BECOME_PARTICIPANT'),
+(7, 'PUBLIC_MESSAGE_ANSWER'),
+(8, 'EVENT_UPDATED');
+
+
+INSERT INTO `place_type` (`id`, `label`) VALUES
+(1, 'restaurant'),
+(2, 'boutique');
+
+
+INSERT INTO `role` (`id`, `name`) VALUES
+(1, 'ROLE_USER'),
+(2, 'ROLE_ADMIN'),
+(3, 'ROLE_PROFESSIONAL');
+
+
+SET FOREIGN_KEY_CHECKS=1;

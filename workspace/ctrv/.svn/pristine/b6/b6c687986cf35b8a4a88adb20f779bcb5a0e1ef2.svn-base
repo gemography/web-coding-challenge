@@ -1,0 +1,83 @@
+<?php
+
+namespace CTRV\FlowBundle\Entity;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class PublicMessageRepository extends EntityRepository
+{
+/**
+ * Retourne la liste des Messages Publics de la ville courante
+ */    
+	public function getPublicMessage ($city, $first, $last) {
+		$qb = $this->createQueryBuilder("pm")
+		->where("pm.sender is not null")
+		->andWhere("pm.city=?1")
+		->orderBy('pm.date', 'DESC')
+		->setParameter(1, $city)
+		->setFirstResult($first)
+		->setMaxResults($last)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	
+	/**
+	 * Retourne le nombre de Messages Publics de la ville courante
+	 */
+	public function getPublicMessageNumber ($city) {
+		$qb = $this->createQueryBuilder("pm")
+		->select("count(pm)")
+		->where("pm.sender is not null")
+		->andWhere("pm.city=?1")
+		->orderBy('pm.date', 'DESC')
+		->setParameter(1, $city)
+		;
+		return $qb->getQuery()->getSingleScalarResult();
+	}
+	
+	/**
+	 * Retourne la liste de tous les messages publics signalés
+	 */
+	public function getMessagePublicAbuse($city, $first, $last){
+		$qb= $this->createQueryBuilder("pm")
+		->select('pm.id')
+		->from('CTRV\CommonBundle\Entity\Abuse','a')
+		->addSelect('pm.content,a.entityType')
+		->where("a.entityId=pm.id")
+		->andWhere("a.entityType=?1")
+		->andWhere("pm.city=?2")
+		->orderBy('pm.id','DESC')
+		->setParameter(1,Constants::MESSAGEPUBLIC_COMMENT_ABUSE)
+		->setParameter(2,$city)
+		->groupBy('a.entityId')
+		->setFirstResult($first)
+		->setMaxResults($last)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * Retourne le nombre de messages publics signalés
+	 */
+	public function getMessagePublicAbuseNumber($city){
+		$qb= $this->createQueryBuilder("pm")
+		->select('pm.id')
+		->from('CTRV\CommonBundle\Entity\Abuse','a')
+		->addSelect('pm.content,a.entityType')
+		->where("a.entityId=pm.id")
+		->andWhere("a.entityType=?1")
+		->andWhere("pm.city=?2")
+		->orderBy('pm.id','DESC')
+		->setParameter(1,Constants::MESSAGEPUBLIC_COMMENT_ABUSE)
+		->setParameter(2,$city)
+		->groupBy('a.entityId')
+		;
+		return count($qb->getQuery()->getResult());
+	}
+}

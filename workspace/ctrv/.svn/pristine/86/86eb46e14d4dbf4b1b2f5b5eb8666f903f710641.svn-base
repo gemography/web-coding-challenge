@@ -1,0 +1,8 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path('list_mail') }}">{% trans %}mail.menu.template{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="">{% trans %}mail.menu.send{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path('loadTypeMails') }}">{% trans %}mail.menu.type{% endtrans %}</a></li><br>
+	</ul>
+</div>

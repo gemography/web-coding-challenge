@@ -1,0 +1,65 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuAgenda.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}agendaComment.list.title{% endtrans %}</h3>
+		
+		{% if entities is not empty  %}
+			<table class="table table-bordered">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}agendaComment.list.table.author{% endtrans %}</th>
+			            <th>{% trans %}agendaComment.list.table.content{% endtrans %}</th>
+			            
+			            <th>{% trans %}agendaComment.list.table.addedDate{% endtrans %}</th>
+			            <th>{% trans %}agendaComment.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.auteur }}</td>
+			            <td>{{ entity.content }}</td>
+			            
+			            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+			            <td>{{ entity.date|date(format) }}</td>
+			            <td>
+					        <a class="agenda-to-delete btn" data-agendaComment-id="{{entity.id}}">Supprimer</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+		
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'agendaComment' } %}
+
+		{% else%}
+			<div class="center">{% trans %}agendaComment.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/agendaComment.js') }}"></script>
+
+<script>
+	$(function() {
+
+		var url_delete_agendaComment_action = "{{ path('comment_delete', { 'id': 'agendaComment_id_to_delete' }) }}";
+		$(".agendaComment-to-delete").click( function () {
+			url_delete_agendaComment_action = url_delete_agendaComment_action.replace('agendaComment_id_to_delete',$(this).attr('data-agendaComment-id'));
+			deleteAgendaComment (url_delete_agendaComment_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

@@ -1,0 +1,13 @@
+<?php
+
+namespace CTRV\PlaceBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class PlaceTypeRepository extends EntityRepository
+{
+    
+}

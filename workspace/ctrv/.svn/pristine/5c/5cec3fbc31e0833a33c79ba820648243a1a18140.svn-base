@@ -1,0 +1,21 @@
+<?php
+
+namespace CTRV\CommonBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Doctrine\ORM\EntityRepository;
+
+class UserRechercheType extends AbstractType{
+
+public function buildForm(FormBuilderInterface $builder, array $options){
+
+	$builder->add('motcle','text', array('label' => 'Prénoms ou Nom'));
+}
+public function getName(){
+
+	return 'userrecherche';
+}
+
+}

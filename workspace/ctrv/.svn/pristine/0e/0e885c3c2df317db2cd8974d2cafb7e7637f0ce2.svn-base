@@ -1,0 +1,113 @@
+{% set number_page_before_and_after = 5 %}
+
+{% if(nb_pages>1) %}
+	<div class="pagination center">
+    	<ul>
+			{# Afficher le lien "Précédent" #}
+			{% if page>1 %} {#si on est pas à la premiere page#}
+				<li data-page="{{ page-1 }}">
+    				{% if href_active=='true' %}
+    					<a href="{{ path(url_path, {'page': page-1}) }}"><img src="{{ asset('img/icon_precedent.png') }}"></a>
+    				{% else %}
+    					<a><img src="{{ asset('img/icon_precedent.png') }}"></a>
+    				{% endif %}
+	    		</li>
+	    		{% if page-number_page_before_and_after>1 %}
+					<li>
+	    				<a>...</a>
+		    		</li>
+	    		{% endif %}
+			{% endif %}
+			
+			{# Afficher les liens avant la page actuelle #}
+			{% for p in range(page-number_page_before_and_after, nb_pages) %}
+				{% if p<page and p>0 %}
+    			<li data-page="{{ p }}">
+    				{% if href_active=='true' %}
+    					<a href="{{ path(url_path, {'page': p}) }}">{{ p }}</a>
+    				{% else %}
+    					<a>{{ p }}</a>
+    				{% endif %}
+    			</li>
+    			{% endif %}
+			{% endfor %}
+			
+			{# Afficher le lien de la page actuelle #}
+			<li data-page="{{ page }}" class="active">
+    			{% if href_active=='true' %}
+    				<a href="{{ path(url_path, {'page': page}) }}">{{ page	 }}</a>
+    			{% else %}
+    				<a>{{ page }}</a>
+    			{% endif %}
+    		</li>
+			
+			{# Afficher les liens apres la page actuelle #}
+			{% if page<nb_pages %}
+				{% for p in range(page+1, nb_pages) %}
+					{% if p<(number_page_before_and_after+page+1) %}
+		    			<li data-page="{{ p }}">
+		    				{% if href_active=='true' %}
+		    					<a href="{{ path(url_path, {'page': p}) }}">{{ p }}</a>
+		    				{% else %}
+		    					<a>{{ p }}</a>
+		    				{% endif %}
+		    			</li>
+	    			{% endif %}
+				{% endfor %}
+			{% endif %}
+			
+			{# Afficher le lien "Suivant" #}
+			{% if page<nb_pages %} {# si on est pas à la derniere  page #}
+				
+				{% if page+number_page_before_and_after<nb_pages %}
+					<li>
+	    				<a>...</a>
+		    		</li>
+	    		{% endif %}
+	    		
+				<li data-page="{{ page+1 }}">
+    				{% if href_active=='true' %}
+    					<a href="{{ path(url_path, {'page': page+1}) }}"><img src="{{ asset('img/icon_suivant.png') }}"></a>
+    				{% else %}
+    					<a><img src="{{ asset('img/icon_suivant.png') }}"></a>
+    				{% endif %}
+	    		</li>
+			{% endif %}
+			
+			{# Affichage de la liste des pages dans une select box #}
+			<select class="pagination-select" id="choose_page">
+	    		{% for p in range(1, nb_pages) %}
+	    			<option value="{{ p }}" path-url="{{ url(url_path, {'page': 'page_to_replace'}) }}">{{ p }}</option>
+	    		{% endfor %}
+    		</select>
+    	</ul>
+	</div>
+{% endif %}
+
+
+<script>
+	$(function() {
+
+		$("#choose_page").val("{{ page }}");
+
+		var  href_active = "{{ href_active }}";
+		
+		$("#choose_page").change( function () {
+			
+			var selectedPage = $(this).val();
+
+			if (href_active == "true") {
+				var path_url = "{{ url(url_path, {'page': 'selectedPage'}) }}";
+				path_url = path_url.replace('selectedPage',selectedPage);
+				$(location).attr('href',path_url);
+
+			} else {
+				//a gérer sur la page appelante ajax
+
+			}
+		});
+				
+		
+		
+	});
+</script>

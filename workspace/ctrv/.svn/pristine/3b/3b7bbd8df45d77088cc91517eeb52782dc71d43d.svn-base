@@ -1,0 +1,20 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class EventTypeRepository extends EntityRepository
+{
+	//retourne les types d'évenements 
+	public function getTypeEvents(){
+		$qb= $this->createQueryBuilder("p")
+		->orderBy('p.code','ASC')
+		;
+		return $qb->getQuery()->getResult();
+	}
+    
+}

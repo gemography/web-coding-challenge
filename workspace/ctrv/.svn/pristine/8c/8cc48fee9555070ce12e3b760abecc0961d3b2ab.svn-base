@@ -1,0 +1,4 @@
+place:
+    import:
+        form:
+            file_format: Le format du fichier est incorrect. Le format attendu est xls

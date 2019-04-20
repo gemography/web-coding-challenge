@@ -1,0 +1,24 @@
+menu:
+    home: Accueil
+    flow: Flow
+    groupe: Gestion des groupes
+    utilisateur: Gestion des utilisateurs 
+    attraction: Attraction
+    agenda: Agenda
+    place: Place
+    tracker: Tracker
+    myStore: MyStore
+    option: Option
+    evenement: Evénements
+    agendaComment: Commentaires des Agendas
+    eventComment: Commentaires des Evénements
+    placeComment: Commentaires des Places
+    publicMessage: Messages Publics
+    login: Se connecter
+    logout: Se déconnecter
+    register: Créer un utilisateur
+        
+general:
+    form:
+        cancel: Annuler
+    

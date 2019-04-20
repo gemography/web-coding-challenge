@@ -1,0 +1,48 @@
+{# css and less files #}
+{# <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />#}
+<link rel="stylesheet/less" href="{{ asset('bundles/ctrvcommon/css/bootstrap/bootstrap.less') }}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('bundles/ctrvcommon/css/common.css') }}" type="text/css" />
+
+{# js lib#}
+<script type="text/javascript" src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/less.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/tinymce/jscripts/tiny_mce/tiny_mce.js') }}"></script>
+
+{# bootrap css files#}
+{% javascripts 'bundles/ctrvcommon/bootstrap/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{# <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>#}
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/common.js') }}"></script>
+
+
+{# tinymce #}
+<script type="text/javascript">
+	tinyMCE.init({
+	        //mode : "textareas",
+	        mode : "exact",
+	        language : "fr",
+	        elements : "ctrv_mailbundle_mailtemplatetype_content",
+	        theme : "advanced",
+	        plugins : "jbimages,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+	        skin : "o2k7",
+	        skin_variant : "silver",
+	        // Theme options - button# indicated the row# only
+	        theme_advanced_buttons1 : "preview,undo,redo,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+	        theme_advanced_buttons2 : "forecolor,backcolor,|,bullist,numlist,|,outdent,indent,blockquote,|,sub,sup,|,charmap,iespell,|,link,unlink,code,|,insertdate,inserttime",
+	        theme_advanced_buttons3 : "jbimages,media,tablecontrols,|,hr,removeformat,visualaid",
+	        theme_advanced_toolbar_location : "top",
+	        theme_advanced_toolbar_align : "left",
+	        theme_advanced_statusbar_location : "bottom",
+	        theme_advanced_resizing : false,
+	        theme_advanced_path : false,
+	        height : "450",
+		    width : "100%",
+	    	content_css : "/css/tiny_mce_default.css",
+	    	theme_advanced_font_sizes: "10px,12px,13px,14px,16px,18px,20px,22px,24px",
+	    	font_size_style_values : "8px,10px,12px,13px,14px,16px,18px,20px,22px,24px"
+	    	//relative_urls : false //a activer en prod
+
+	});
+</script>

@@ -1,0 +1,87 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use CTRV\CommonBundle\Entity\Comment;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CTRV\CommonBundle\Entity\AgendaComment
+ *
+ * @ORM\Table(name="agenda_comment")
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="CTRV\EventBundle\Entity\AgendaCommentRepository")
+ */
+class AgendaComment extends Comment
+{
+	
+	/**
+	 * @var integer $id
+	 *
+	 * @ORM\Column(name="comment_id", type="integer", nullable=false)
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="NONE")
+	 */
+	private $id;
+	
+    
+    /**
+     * @var integer $agendaId
+     * @ORM\ManyToOne(targetEntity="Agenda",inversedBy="comments")
+     * @JoinColumn(name="agenda_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $agenda;
+
+
+
+  
+
+    /**
+     * Set id
+     *
+     * @param integer $id
+     * @return AgendaComment
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set agenda
+     *
+     * @param CTRV\CommonBundle\Entity\Agenda $agenda
+     * @return AgendaComment
+     */
+    public function setAgenda(Agenda $agenda = null)
+    {
+        $this->agenda = $agenda;
+    
+        return $this;
+    }
+
+    /**
+     * Get agenda
+     *
+     * @return CTRV\CommonBundle\Entity\Agenda 
+     */
+    public function getAgenda()
+    {
+        return $this->agenda;
+    }
+}

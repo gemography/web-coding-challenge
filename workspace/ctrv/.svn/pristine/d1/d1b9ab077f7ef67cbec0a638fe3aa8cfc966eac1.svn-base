@@ -1,0 +1,36 @@
+<?php
+
+namespace CTRV\FlowBundle\Service;
+
+use CTRV\FlowBundle\Entity\PublicMessage;
+
+use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bundle\TwigBundle\TwigEngine;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+class PublicMessageService {
+	
+	protected $mailer;
+	protected $doctrine;
+	protected $em;
+	protected $service_container;
+	protected $templating;
+	
+	
+	public function __construct(\Swift_Mailer $mailer,RegistryInterface $doctrine, ContainerInterface $service_container, TwigEngine $templating,TranslatorInterface $translator) {
+		
+		$this->mailer = $mailer;
+		$this->doctrine = $doctrine;
+		$this->em = $doctrine->getEntityManager();
+		$this->service_container = $service_container;
+		$this->templating = $templating;
+		$this->translator = $translator;
+	}
+//retoune la liste des messages publics de la ville courante	
+    public function getPublicMessage($currentCity) {
+		$entities = $this->em->getRepository('CTRVFlowBundle:PublicMessage')
+		->getPublicMessage($this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));      
+		 return $entities;
+	}
+}

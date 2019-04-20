@@ -1,0 +1,486 @@
+<?php
+
+namespace CTRV\PlaceBundle\Service;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use CTRV\PlaceBundle\Entity\Place;
+
+use CTRV\CommonBundle\Entity\Abuse;
+
+use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bundle\TwigBundle\TwigEngine;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+
+class PlaceService {
+	
+	protected $mailer;
+	protected $doctrine;
+	protected $em;
+	protected $service_container;
+	protected $templating;
+	
+	
+	public function __construct(\Swift_Mailer $mailer,RegistryInterface $doctrine, ContainerInterface $service_container, TwigEngine $templating,TranslatorInterface $translator) {
+		
+		$this->mailer = $mailer;
+		$this->doctrine = $doctrine;
+		$this->em = $doctrine->getEntityManager();
+		$this->service_container = $service_container;
+		$this->templating = $templating;
+		$this->translator = $translator;
+	}
+	
+	/**
+	 * Retourne la liste des places ajoutés par les utilisateurs
+	 * @param unknown_type $placeTypeId
+	 * @param unknown_type $currentCity
+	 */
+	public function getPlaceAddedByUsers ($placeTypeId, $currentCity) {
+		$entities = $this->em->getRepository('CTRVPlaceBundle:Place')
+			->getPlaceAddedByUsers($this->em->getRepository('CTRVPlaceBundle:PlaceType')->find($placeTypeId),
+				$this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+
+	/**
+	 * Retourne la liste des places sans latitude ou longitude
+	 * @param unknown_type $currentCity
+	 */
+	public function getPlacesWithoutLatLong ($currentCity, $first, $last) {
+		$entities = $this->em->getRepository('CTRVPlaceBundle:Place')
+		->getPlacesWithoutLatLong($currentCity->getId(), $first, $last);
+		return $entities;
+	}
+
+	/**
+	 * Retourne la liste des places sans description
+	 * @param unknown_type $currentCity
+	 */
+	public function getPlacesWithoutDescription ($currentCity, $first, $last) {
+		$entities = $this->em->getRepository('CTRVPlaceBundle:Place')
+		->getPlacesWithoutDescription($currentCity->getId(), $first, $last);
+		return $entities;
+	}
+
+	/**
+	 * Retourne la liste des types de places
+	 * @return unknown
+	 */ 
+	public function getTypePlaces() {
+		$entities = $this->em->getRepository('CTRVPlaceBundle:PlaceType')->getTypePlaces();
+		return $entities;
+	
+	}
+	
+	/**
+	 * Sauvegarde les données de place du fichier excel d'input dans la bdd apres récupération de la latitude et longitude
+	 * @param unknown_type $p_file
+	 * @param unknown_type $p_city
+	 * @param unknown_type $p_place_type
+	 */
+	public function savePlaceDataFromFile ($p_file, $p_city, $p_place_type, $googleMapSearchActive = false, $openStreetMapSearchActive = false) {
+
+		$placeAddedNumber = 0; 
+		$placeAleradyExistNumber = 0;
+		$latLngFoundNumber=0;
+		$placesNumber=0;
+		
+		$maxRequestReached = ! $googleMapSearchActive;
+		$maxRequestReachedOpenStreet = !$openStreetMapSearchActive;
+		
+		//$object = new \PHPExcel_Reader_Excel2007();$object->
+		$objet = \PHPExcel_IOFactory::createReaderForFile($p_file);
+		$excel = $objet->load($p_file);
+		/* @var $excel \PHPExcel */
+		$sheet = $excel->getActiveSheet();
+		
+		foreach ($sheet->getRowIterator(2) as $row) { //on commence à lire à partir de la ligne 2
+			
+			$placesNumber++;
+			
+			$cellIterator = $row->getCellIterator();
+			// This loops all cells, even if it is not set By default, only cells that are set will be iterated.
+			$cellIterator->setIterateOnlyExistingCells(false);
+
+			$siteUrl = null;
+			$title = null;
+			$activity = null;
+			$street = null;
+			$town = null;
+			
+			//parcours des colonnes du fichier excel
+			foreach ($cellIterator as $cell) { /* @var $cell \PHPExcel_Cell */
+// 				$line = intval($cell->getRow());
+				$column = $cell->getColumn();
+				if ($column == "A") {
+					$title = $cell->getValue();
+				} else if ($column == "B") {
+					$activity = $cell->getValue();
+				} else if ($column == "C") {
+					$street = $this->traitAddress($cell->getValue());
+				} else if ($column == "E") {
+					$town = $cell->getValue();
+				} else if ($column == "F") {
+					$tel = $cell->getValue();
+				} else if ($column == "K") {
+					$siteUrl = $cell->getValue();
+				}
+			}
+			
+			//on cree la place
+			$place = new Place();
+			$place->setActivity($activity);
+			$place->setTitle($title);
+			$place->setStreet($street);
+			$place->setTown($town);
+			$place->setTel($tel);
+			$place->setSiteUrl($siteUrl);
+			$place->setCity($this->em->getRepository("CTRVCommonBundle:City")->find($p_city->getId()));
+			$place->setPlaceType($this->em->getRepository("CTRVPlaceBundle:PlaceType")->find($p_place_type->getId()));
+			
+			$addres = $street.' '.$town;
+			
+			$array = null;
+			if (!$maxRequestReached) { //tant qu'on a pas atteint le nombre limite de requetes google
+			
+				$array = $this->lookupGoogleMap($addres);
+				
+				if ($array['status'] == 'OK') { //si  on trouve les coordonnes
+					if($this->updateLatLng($place, $array)==true)
+						$placeAddedNumber++;
+					else 
+						$placeAleradyExistNumber++;
+					$latLngFoundNumber++;
+
+				} else { // echec requetes google
+					
+					//si on atteint le nombre de requetes max google
+					if ($array['status'] == 'OVER_QUERY_LIMIT') {
+						$maxRequestReached = true;
+						$array = null;
+					}
+					
+					if(!$maxRequestReachedOpenStreet)
+						$array = $this->lookupOpenStreetMap($addres);
+					
+					if ($array!=null) {//si on trouve les coordonnees
+						if($this->updateLatLng($place, $array)==true)
+							$placeAddedNumber++;
+						else
+							$placeAleradyExistNumber++;
+						$latLngFoundNumber++;
+					
+					} else { //si on n'a pas trouvé la lat et la lng on la sauvegarde sans coodonnees 
+						$maxRequestReachedOpenStreet = true;
+						
+						$placeTemp = $this->em->getRepository("CTRVPlaceBundle:Place")
+							->findOneBy(array("title"=>$title,"activity"=>$activity,"street"=>$street,"town"=>$town));
+							
+						if ($placeTemp == null) { //si la place n'est pas déjà présente
+							$this->em->persist($place);
+						} else {
+							$placeAleradyExistNumber++;
+						}
+					}
+				}
+			
+			} else { //on atteint le nombre de requetes max google
+				
+				if(!$maxRequestReachedOpenStreet)
+					$array = $this->lookupOpenStreetMap($addres);
+
+				if($array!=null) {
+					if($this->updateLatLng($place, $array)==true) {
+						$placeAddedNumber++;
+					} else {
+						$placeAleradyExistNumber++;
+					}
+					$latLngFoundNumber++;
+				
+				} else { //si on n'a pas trouvé la lat et la lng on la sauvegarde sans coodonnees 
+					
+					$maxRequestReachedOpenStreet = true;
+					
+					$placeTemp = $this->em->getRepository("CTRVPlaceBundle:Place")
+						->findOneBy(array("title"=>$title,"activity"=>$activity,"street"=>$street,"town"=>$town));
+						
+					if ($placeTemp == null) { //si la place n'est pas déjà présente
+						$this->em->persist($place);
+						$placeAddedNumber++;
+						//$latLngFoundNumber++;
+					} else {
+						$placeAleradyExistNumber++;
+					}
+					
+				}
+			} 
+			
+			//si on a pas atteint les limites on enchaines pas les requetes
+			if (!$maxRequestReached || !$maxRequestReachedOpenStreet)
+				sleep(1);//pour ne pas enchainer les requêtes sur un intervalle trop réduit
+			
+			$this->em->flush();
+		}
+		
+		$this->em->flush();
+		
+		return array('added'=>$placeAddedNumber,'already'=>$placeAleradyExistNumber,'latLngFound'=>$latLngFoundNumber,'all'=>$placesNumber);
+	}
+	
+	/**
+	 * Lance le calcul de latitude longitude de tous les places importées à partir de leur adresse
+	 */
+	public function calculateLatLng ($city) {
+		
+		$traitedPlaceNumber = 0;
+		$totalPlaceNumber = 0;
+		$placeRepo = $this->em->getRepository("CTRVPlaceBundle:Place"); /* @var $placeRepo \Doctrine\ORM\EntityManager */
+		
+		//liste des places dont on ne connait pas la latitude et la longitude
+		$places = $placeRepo->findBy(array("longitude"=>null, "latitude"=>null));
+		$totalPlaceNumber = count($places);
+		$maxRequestReached = false;
+		$maxRequestReachedOpenStreet = false;
+		
+		foreach ($places as $place) {
+
+			$array = null;
+			
+			$addres = $place->getStreet().' '.$place->getTown();
+			$addres = utf8_encode($addres);
+
+			if (!$maxRequestReached) { //tant qu'on a pas atteint le nombre limite de requetes google 
+				
+				$array = $this->lookupGoogleMap($addres);
+				
+				if ($array['status'] == 'OVER_QUERY_LIMIT') { //si on ateint le nombre max de requete => open street
+					
+					$array = null;
+					$maxRequestReached = true;
+					
+					if (!$maxRequestReachedOpenStreet) {
+						$array = $this->lookupOpenStreetMap($addres);
+					}
+					
+					if ($array!=null) {
+						$this->updateLatLng($place, $array);
+						$traitedPlaceNumber++;
+					} else {
+						$maxRequestReachedOpenStreet = true;
+					}
+					
+				} else if ($array['status'] == 'OK') {
+					
+					$this->updateLatLng($place, $array);
+					$traitedPlaceNumber++;
+				
+				} else if ($array['status'] == 'INVALID_REQUEST' || $array['status']='ZERO_RESULTS') {
+					
+					//on passe à la place suivante
+					$maxRequestReached = true;
+					
+				} else {
+					
+					$array = null;
+					if (!$maxRequestReachedOpenStreet) {
+						$array = $this->lookupOpenStreetMap($addres);
+					}
+					
+					if ($array!=null) {
+						$this->updateLatLng($place, $array);
+						$traitedPlaceNumber++;
+					} else {
+						$maxRequestReachedOpenStreet = true;
+					}
+				}
+				
+				$this->trace($array, $addres);
+				
+			} else { //si on atteint le nombre de requetes google max
+				
+				if (!$maxRequestReachedOpenStreet) {
+					$array = $this->lookupOpenStreetMap($addres);
+				}
+				
+				if ($array!=null) {
+					$this->updateLatLng($place, $array);
+					$traitedPlaceNumber++;
+				} else {
+					$maxRequestReachedOpenStreet = true;
+				}
+				
+				$this->trace($array,$addres);
+			} 
+			
+			// si on n'a pas atteint le nombre de requetes max
+			if (!$maxRequestReached || !$maxRequestReachedOpenStreet) {
+				//sleep(1);//pour ne pas enchainer les requêtes sur un intervalle trop réduit
+			} else {
+				break;
+				
+			}
+			$this->em->flush();//pour ne pas perdre les lat lng deja trouve
+		}
+		
+		//$this->em->flush();
+		
+		return array($traitedPlaceNumber,$totalPlaceNumber);
+	}
+	
+	public function trace ($array,$address,$saved=false) {
+		
+		$myFile = "logPlace.txt";
+		$fh = fopen($myFile, 'a');
+		
+		if ($array!=null && $array['status']!='INVALID_REQUEST' && isset($array['latitude']) && isset($array['longitude']) ) {
+// 			var_dump($array);die;
+			fwrite($fh, "SAVED-".$array['status'].'-'.$array['latitude'].'-'.$array['longitude']."-".$address."-".PHP_EOL);
+		} else {
+			fwrite ($fh, "Null-".$array['status']."-".$address.PHP_EOL);
+		}
+	}
+	
+	/**
+	 * Persist une place si une autre place ne se trouve pas déjà aux mêmes coordonnees
+	 * @param unknown_type $place
+	 * @param unknown_type $array
+	 * @return false si la place existe dejà aux coordonnées passées en parametre
+	 */
+	public function updateLatLng ($place, $array) {
+		
+		$result = false;
+		
+		if ($array!=null && $place!=null) {
+		
+				$result = true;
+				$place->setLatitude($array['latitude']);
+				$place->setLongitude($array['longitude']);
+				$this->em->persist($place);
+				$this->em->flush();
+// 				$this->trace($array,true);
+		}
+		
+		return $result;
+	}
+	
+	/**
+	 * 
+	 * @param unknown_type $address
+	 */
+	public function lookupGoogleMap ($address) {
+		
+		$result = null;
+		
+		$address = strtr($address,'@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ','aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+		$address = str_replace (" ", "+", urlencode($address));
+		
+		$details_url = Constants::GOOGLE_MAP_API_URL.$address."&sensor=false";//google map API
+// 		var_dump($details_url);
+		$ch = curl_init();
+		curl_setopt ($ch, CURLOPT_URL, $details_url);
+		curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+		$response = json_decode(curl_exec($ch), true);
+	
+		// If Status Code is ZERO_RESULTS, OVER_QUERY_LIMIT, REQUEST_DENIED or INVALID_REQUEST
+		if ($response['status'] != 'OK') {
+			$result = array (
+					'status' => $response['status'],
+			);
+			
+		} else {
+			 
+			$geometry = $response['results'][0]['geometry'];
+	
+			$longitude = $geometry['location']['lat'];
+			$latitude = $geometry['location']['lng'];
+	
+			$result = array (
+					'status' => $response['status'],
+					'longitude' => $geometry['location']['lng'],
+					'latitude' => $geometry['location']['lat'],
+					'location_type' => $geometry['location_type'],
+			);
+		}
+// 		var_dump($result);die;
+		return $result;
+	}
+	
+	/**
+	 * Retourne la latitude et la longitude à partir de 
+	 * @param unknown_type $address
+	 * @return Ambigous <NULL, multitype:string NULL >
+	 */
+	public function lookupOpenStreetMap ($address) {
+	
+		$result = null;
+// 		$address = htmlentities($address,ENT_NOQUOTES,"UTF-8");
+// 		$address = htmlspecialchars_decode($address);
+		 
+		$address = strtr($address,'@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ','aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+		$address = str_replace (" ", "+", urlencode($address));
+
+		$details_url = Constants::OPEN_STREET_API_URL.$address."&format=json";//open street API
+// 		var_dump(">>>>>".$details_url);
+		
+		$ch = curl_init();
+		curl_setopt ($ch, CURLOPT_URL, $details_url);
+		curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+		$response = json_decode(curl_exec($ch), true);
+
+		if ($response != null) {
+			$result = array (
+					'status' => 'OK',
+					'longitude' => $response[0]['lon'],
+					'latitude' => $response[0]['lat']
+			);
+	
+		} else {
+			$result = null;
+		}
+	
+// 		var_dump($response);die;
+		
+		return $result;
+	}
+	
+	/**
+	 * Remplace les abbreviation du champs adresse du fichier excel par le mot complet
+	 * @param unknown_type $street
+	 */
+	public function traitAddress ($street) {
+		
+		$street = preg_replace("/\bav\b/", "avenue", $street);
+		$street = preg_replace("/\br\b/", "rue", $street);
+		$street = preg_replace("/\brte\b/", "route", $street);
+		$street = preg_replace("/\bpl\b/", "place", $street);
+		$street = preg_replace("/\bchem\b/", "chemin", $street);
+		$street = preg_replace("/\bimp\b/", "impasse", $street);
+		$street = preg_replace("/\bbd\b/", "boulevard", $street);
+		$street = preg_replace("/\bqu\b/", "quai", $street);
+
+		if (preg_match("/Ctre Ccial/", $street)) {
+			$street = preg_replace("/\bCtre\b/", "", $street);
+		}
+		
+		$street = preg_replace("/\bctre\b/", "centre", $street);
+		$street = preg_replace("/\bCcial\b/", "centre commercial", $street);
+		$street = preg_replace("/\bcial\b/", "commercial", $street);
+		$street = preg_replace("/\ball\b/", "allee", $street);
+		
+		return $street;
+	}
+	/**
+	 * retourne la liste des abus sur les commentaires des places
+	 * @return unknown
+	 */
+	public function getPlaceCommentAbuse($currentCity) {
+		$entities = $this->em->getRepository('CTRVCommonBundle:Abuse')
+		->getPlaceCommentAbuse($this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+	
+
+}

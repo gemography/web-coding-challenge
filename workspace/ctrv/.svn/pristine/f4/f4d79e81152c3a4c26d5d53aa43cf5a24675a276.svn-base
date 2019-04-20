@@ -1,0 +1,7 @@
+services:
+    common_service:
+        class: CTRV\CommonBundle\Service\CommonService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+    session_service:
+        class: CTRV\CommonBundle\Service\SessionService
+        arguments: [@session,@doctrine,@translator]

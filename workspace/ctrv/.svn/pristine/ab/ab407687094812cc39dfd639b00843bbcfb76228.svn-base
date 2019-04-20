@@ -1,0 +1,443 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CTRV\CommonBundle\Entity\Event
+ *
+ * @ORM\Table(name="event")
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="CTRV\EventBundle\Entity\EventRepository")
+ */
+class Event
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $latitude
+     *
+     * @ORM\Column(name="latitude", type="string", length=256, nullable=false)
+     */
+    private $latitude;
+
+    /**
+     * @var string $longitude
+     *
+     * @ORM\Column(name="longitude", type="string", length=256, nullable=false)
+     */
+    private $longitude;
+
+    /**
+     * @var integer $duration
+     *
+     * @ORM\Column(name="duration", type="integer", nullable=false)
+     */
+    private $duration;
+
+    /**
+     * @var \DateTime $addedDate
+     *
+     * @ORM\Column(name="added_date", type="datetime", nullable=true)
+     */
+    private $addedDate;
+
+    /**
+     * @var string $description
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string $title
+     *
+     * @ORM\Column(name="title", type="string", length=256, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string $street
+     *
+     * @ORM\Column(name="street", type="string", length=256, nullable=true)
+     */
+    private $street;
+
+    /**
+     * @var integer $mark
+     *
+     * @ORM\Column(name="mark", type="integer", nullable=true)
+     */
+    private $mark;
+
+    /**
+     * @var integer $numberMark
+     *
+     * @ORM\Column(name="number_mark", type="integer", nullable=true)
+     */
+    private $numberMark;
+
+
+   /**
+     * @var integer $cityId
+     * @ORM\ManyToOne(targetEntity="\CTRV\CommonBundle\Entity\City")
+     * @JoinColumn(name="city_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $city;
+    
+    /**
+     * @var integer $eventTypeId
+     * @ORM\ManyToOne(targetEntity="EventType")
+     * @JoinColumn(name="event_type_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $eventType;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="\CTRV\CommonBundle\Entity\User",inversedBy="events")
+     * @JoinColumn(name="userid",referencedColumnName="userid", onDelete="CASCADE")
+     */
+    private $auteur;
+    
+    /**
+     * @var unknown_type
+     * @ORM\OneToMany(targetEntity="EventComment",mappedBy="event")
+     */
+    private $comments;
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param string $latitude
+     * @return Event
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return string 
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param string $longitude
+     * @return Event
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return string 
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * Set duration
+     *
+     * @param integer $duration
+     * @return Event
+     */
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+    
+        return $this;
+    }
+
+    /**
+     * Get duration
+     *
+     * @return integer 
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+
+    /**
+     * Set addedDate
+     *
+     * @param \DateTime $addedDate
+     * @return Event
+     */
+    public function setAddedDate($addedDate)
+    {
+        $this->addedDate = $addedDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get addedDate
+     *
+     * @return \DateTime 
+     */
+    public function getAddedDate()
+    {
+        return $this->addedDate;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Event
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Event
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set street
+     *
+     * @param string $street
+     * @return Event
+     */
+    public function setStreet($street)
+    {
+        $this->street = $street;
+    
+        return $this;
+    }
+
+    /**
+     * Get street
+     *
+     * @return string 
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * Set mark
+     *
+     * @param integer $mark
+     * @return Event
+     */
+    public function setMark($mark)
+    {
+        $this->mark = $mark;
+    
+        return $this;
+    }
+
+    /**
+     * Get mark
+     *
+     * @return integer 
+     */
+    public function getMark()
+    {
+        return $this->mark;
+    }
+
+    /**
+     * Set numberMark
+     *
+     * @param integer $numberMark
+     * @return Event
+     */
+    public function setNumberMark($numberMark)
+    {
+        $this->numberMark = $numberMark;
+    
+        return $this;
+    }
+
+    /**
+     * Get numberMark
+     *
+     * @return integer 
+     */
+    public function getNumberMark()
+    {
+        return $this->numberMark;
+    }
+
+    /**
+     * Set city
+     *
+     * @param CTRV\CommonBundle\Entity\City $city
+     * @return Event
+     */
+    public function setCity(\CTRV\CommonBundle\Entity\City $city = null)
+    {
+        $this->city = $city;
+    
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return CTRV\CommonBundle\Entity\City 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set eventType
+     *
+     * @param CTRV\CommonBundle\Entity\EventType $eventType
+     * @return Event
+     */
+    public function setEventType(EventType $eventType = null)
+    {
+        $this->eventType = $eventType;
+    
+        return $this;
+    }
+
+    /**
+     * Get eventType
+     *
+     * @return CTRV\CommonBundle\Entity\EventType 
+     */
+    public function getEventType()
+    {
+        return $this->eventType;
+    }
+
+    /**
+     * Set auteur
+     *
+     * @param CTRV\CommonBundle\Entity\User $auteur
+     * @return Event
+     */
+    public function setAuteur(\CTRV\CommonBundle\Entity\User $auteur = null)
+    {
+        $this->auteur = $auteur;
+    
+        return $this;
+    }
+
+    /**
+     * Get auteur
+     *
+     * @return CTRV\CommonBundle\Entity\User 
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * Add comments
+     *
+     * @param CTRV\CommonBundle\Entity\EventComment $comments
+     * @return Event
+     */
+    public function addComment(EventComment $comments)
+    {
+        $this->comments[] = $comments;
+    
+        return $this;
+    }
+
+    /**
+     * Remove comments
+     *
+     * @param CTRV\CommonBundle\Entity\EventComment $comments
+     */
+    public function removeComment(EventComment $comments)
+    {
+        $this->comments->removeElement($comments);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+}

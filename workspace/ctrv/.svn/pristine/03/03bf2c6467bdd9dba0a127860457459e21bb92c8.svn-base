@@ -1,0 +1,89 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	{% if events is not empty  %}
+	{% for entity in events %}
+		<h3>{% trans %}event.list.titleUpdatePerEvent{% endtrans %} : {{ entity.title }} " {{ entity.description }} "</h3>
+	{% endfor %}
+		<h2>{% trans %}event.list.LastValues{% endtrans %}</h2><br>
+		<a href="{{ path ("eventUpdated") }}" class="event-to-view btn btn-mini" ">{% trans %}event.list.table.back_action{% endtrans %}</a>
+		    <table class="table table-bordered table-condensed table-hover">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}event.list.table.title{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.description{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.adresse{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.duration{% endtrans %}</th>
+						<th>{% trans %}event.list.table.author{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.addedDate{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			      {% for entity in events %}
+			        <tr>
+			            <td>{{ entity.title }}</td>
+			            <td>{{ entity.description }}</td>
+			            <td>{{ entity.street }}</td>
+			            <td>{{ entity.duration}}</td>
+			            <td>{{ entity.auteur }}</td>
+			            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+			            <td>{{ entity.addedDate|date(format) }}</td>
+			        </tr>
+			         {% endfor %}
+			    </tbody>
+			  </table>  
+		<div class="right"><h4>{% trans %}event.list.titleAllUpdate{% endtrans %} : {{ nb_entities }}</h4></div><br>
+		<div id="events-list">
+		
+			<table class="table table-bordered table-condensed table-hover">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}event.list.table.title{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.description{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.adresse{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.duration{% endtrans %}</th>
+						<th>{% trans %}event.list.table.author{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.addedDate{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.title }}</td>
+			            <td>{{ entity.description }}</td>
+			            <td>{{ entity.street }}</td>
+			            <td>{{ entity.duration}}</td>
+			            <td>{{ entity.auteur }}</td>
+			            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+			            <td>{{ entity.addedDate|date(format) }}</td>
+			            <td>
+					        <a class="event-to-validate btn btn-mini" data-event-id="{{entity.id}}">{% trans %}event.list.table.validate_action{% endtrans %}</a>
+			                
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+				
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'event' } %}
+		
+		{% else %}
+			<div class="center">{% trans %}event.list.table.no_result{% endtrans %}</div>				
+		{% endif %}
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvevent/js/event.js') }}"></script>
+
+{% endblock body %}

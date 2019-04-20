@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title2{% endtrans %}</h3>
+		
+		{% if nb_entities is not null  %}
+
+    
+    
+		  <div class="center">Nombre total d'utilisateurs : {{ nb_entities }}</div>
+            
+    {% else%}
+	<div class="center">{% trans %}utilisateur.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+		
+		
+		</div>
+
+
+
+
+{% endblock body %}

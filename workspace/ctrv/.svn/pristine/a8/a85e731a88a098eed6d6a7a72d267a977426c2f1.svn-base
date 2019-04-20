@@ -1,0 +1,33 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVMailBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}mail.sendMailTemplate.title{% endtrans %}</h3>
+		
+		<form class="form-vertical" action="{{ path('send_mail')}}" method="post" {{ form_enctype(form) }}>
+		    {{ form_widget(form) }}
+		    {{ forms.input('mail.sendMailform.send','mail') }}
+		</form>
+		
+	</div>
+
+</div>
+
+{# <script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/messagePublic.js') }}"></script>#}
+<script>
+	$(function() {
+		 
+	});
+</script>
+
+{% endblock body %}

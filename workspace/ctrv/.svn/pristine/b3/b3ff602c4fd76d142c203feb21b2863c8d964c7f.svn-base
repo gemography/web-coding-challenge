@@ -1,0 +1,14 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("place") }}">{% trans %}place.menu.moderate{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path('placeComment') }}">{% trans %}placeComment.menu.afficher{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("rechercher_place") }}">{% trans %}place.menu.search{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("import_place") }}">{% trans %}place.menu.import{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("loadTypePlaces") }}">{% trans %}place.menu.type{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("placeWithoutLatLong") }}">{% trans %}place.menu.setLatLng{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("placeWithoutDescription") }}">{% trans %}place.menu.setPlaceDescription{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("placeWithSameAddress") }}">{% trans %}place.menu.placeWithSameAddress{% endtrans %}</a></li>
+		<li><a class="btn btn-block" href="{{ path("delete_double") }}">{% trans %}place.menu.show_delete_double{% endtrans %}</a></li>
+	</ul>
+</div>

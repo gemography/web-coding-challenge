@@ -1,0 +1,57 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menuCity.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}city.list.titleAll{% endtrans %}</h3>
+		<div class="right">{% trans %}city.list.number{% endtrans %} : {{ nb_entities }}</div><br>
+		{% if entities is not empty  %}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>{% trans %}city.list.table.name{% endtrans %}</th>
+            <th>{% trans %}city.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{entity.name|capitalize}}</td>
+            <td>
+		        <a class="city-to-delete btn btn-mini" data-city-id="{{entity.id}}">{% trans %}city.list.table.delete_action{% endtrans %}</a>
+		        <a href="{{ path ("edit_city", { 'id': entity.id }) }}" class="city-to-edit btn btn-mini" data-city-id="{{entity.id}}">{% trans %}city.list.table.edit_action{% endtrans %}</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'city' } %}
+
+		{% else%}
+			<div class="center">{% trans %}city.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+	</div>
+
+</div>
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/city.js') }}"></script>
+<script>
+	$(function() {
+
+		var url_delete_city_action = "{{ path('city_delete', { 'id': 'city_id_to_delete' }) }}";
+		$(".city-to-delete").click( function () {
+			url_delete_city_action = url_delete_city_action.replace('city_id_to_delete',$(this).attr('data-city-id'));
+			deleteCity (url_delete_city_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

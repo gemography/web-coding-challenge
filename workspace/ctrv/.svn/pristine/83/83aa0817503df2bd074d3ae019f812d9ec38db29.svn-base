@@ -1,0 +1,9 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("abuse") }}">{% trans %}abus.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("eventCommentAbuse") }}">{% trans %}abus.menu.eventCommentAbus{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("placeCommentAbuse") }}">{% trans %}abus.menu.placeCommentAbus{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("publicMessageAbuse") }}">{% trans %}abus.menu.messageCommentAbus{% endtrans %}</a></li><br>
+	</ul>
+</div>

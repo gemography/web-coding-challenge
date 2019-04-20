@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Package PHPExcel_Shared_ZipArchive Element Index</title>
+<link rel="stylesheet" type="text/css" href="media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Shared_ZipArchive</td>
+  </tr>
+  <tr><td class="header_line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                      		  [ <a href="classtrees_PHPExcel_Shared_ZipArchive.html" class="menu">class tree: PHPExcel_Shared_ZipArchive</a> ]
+		  [ <a href="elementindex_PHPExcel_Shared_ZipArchive.html" class="menu">index: PHPExcel_Shared_ZipArchive</a> ]
+		  	    [ <a href="elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="li_PHPExcel.html">PHPExcel</a><br />
+              <a href="li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="li_JAMA.html">JAMA</a><br />
+              <a href="li_Math_Stats.html">Math_Stats</a><br />
+              <a href="li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="PHPExcel_Shared_ZipArchive/_PHPExcel---Shared---ZipArchive.php.html">		ZipArchive.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<a name="top"></a>
+<h1>Element index for package PHPExcel_Shared_ZipArchive</h1>
+	[ <a href="elementindex_PHPExcel_Shared_ZipArchive.html#a">a</a> ]
+	[ <a href="elementindex_PHPExcel_Shared_ZipArchive.html#c">c</a> ]
+	[ <a href="elementindex_PHPExcel_Shared_ZipArchive.html#o">o</a> ]
+	[ <a href="elementindex_PHPExcel_Shared_ZipArchive.html#p">p</a> ]
+	[ <a href="elementindex_PHPExcel_Shared_ZipArchive.html#z">z</a> ]
+
+  <hr />
+	<a name="a"></a>
+	<div>
+		<h2>a</h2>
+		<dl>
+							<dt><b>addFromString</b></dt>
+				<dd>in file ZipArchive.php, method <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html#methodaddFromString">PHPExcel_Shared_ZipArchive::addFromString()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Add a new file to the zip archive from a string of raw data.</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Shared_ZipArchive.html#top">top</a><br>
+  <hr />
+	<a name="c"></a>
+	<div>
+		<h2>c</h2>
+		<dl>
+							<dt><b>close</b></dt>
+				<dd>in file ZipArchive.php, method <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html#methodclose">PHPExcel_Shared_ZipArchive::close()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Close this zip archive</dd>
+							<dt><b>CREATE</b></dt>
+				<dd>in file ZipArchive.php, class constant <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html#constCREATE">PHPExcel_Shared_ZipArchive::CREATE</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Shared_ZipArchive.html#top">top</a><br>
+  <hr />
+	<a name="o"></a>
+	<div>
+		<h2>o</h2>
+		<dl>
+							<dt><b>open</b></dt>
+				<dd>in file ZipArchive.php, method <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html#methodopen">PHPExcel_Shared_ZipArchive::open()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Open a new zip archive</dd>
+							<dt><b>OVERWRITE</b></dt>
+				<dd>in file ZipArchive.php, class constant <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html#constOVERWRITE">PHPExcel_Shared_ZipArchive::OVERWRITE</a><br>&nbsp;&nbsp;&nbsp;&nbsp;constants</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Shared_ZipArchive.html#top">top</a><br>
+  <hr />
+	<a name="p"></a>
+	<div>
+		<h2>p</h2>
+		<dl>
+							<dt><b>PCLZIP_TEMPORARY_DIR</b></dt>
+				<dd>in file ZipArchive.php, constant <a href="PHPExcel_Shared_ZipArchive/_PHPExcel---Shared---ZipArchive.php.html#definePCLZIP_TEMPORARY_DIR">PCLZIP_TEMPORARY_DIR</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel</dd>
+							<dt><b>PHPExcel_Shared_ZipArchive</b></dt>
+				<dd>in file ZipArchive.php, class <a href="PHPExcel_Shared_ZipArchive/PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Shared_ZipArchive</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Shared_ZipArchive.html#top">top</a><br>
+  <hr />
+	<a name="z"></a>
+	<div>
+		<h2>z</h2>
+		<dl>
+							<dt><b>ZipArchive.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Shared_ZipArchive/_PHPExcel---Shared---ZipArchive.php.html">ZipArchive.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Shared_ZipArchive.html#top">top</a><br>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:15:04 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

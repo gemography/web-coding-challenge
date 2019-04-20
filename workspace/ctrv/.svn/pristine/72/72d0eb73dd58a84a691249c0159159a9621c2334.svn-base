@@ -1,0 +1,7 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("city") }}">{% trans %}city.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("addCity") }}">{% trans %}city.menu.ajouter{% endtrans %}</a></li><br>
+	</ul>
+</div>

@@ -1,0 +1,4 @@
+services:
+    event_service:
+        class: CTRV\EventBundle\Service\EventService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]

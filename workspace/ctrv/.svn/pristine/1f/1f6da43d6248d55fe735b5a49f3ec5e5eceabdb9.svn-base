@@ -1,0 +1,29 @@
+common:
+    chooseCity: Ville
+session:
+    city:
+        not_found: La session a expirée (ville sélecctionnée inconnu)
+utilisateur:
+    menu:
+      afficher: Gestion des Utilisateurs
+      groupe: Gestion des Groupes
+      nombresC: Nombres d'utilisateurs Connectés
+      
+    list:
+        title: Liste des utilisateurs de
+        title1: Liste des Users Connectés par Ville
+        title2: Le nombre total d'utilisateurs
+        table:
+            firstName: Noms
+            lastName: Prénoms
+            addedDate: Date d'enrégistrements
+            action: Actions
+            etat: Désactiver
+            no_result: Aucun utilisateur trouvé
+
+                    
+authentication:
+    form:      
+        login: Login
+        password: Mot de passe 
+        submit: Se connecter          

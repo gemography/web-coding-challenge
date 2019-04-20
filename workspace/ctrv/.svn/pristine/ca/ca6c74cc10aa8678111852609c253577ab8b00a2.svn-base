@@ -1,0 +1,83 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use CTRV\CommonBundle\Entity\Comment;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CTRV\CommonBundle\Entity\EventComment
+ *
+ * @ORM\Table(name="event_comment")
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="CTRV\EventBundle\Entity\EventCommentRepository")
+ */
+class EventComment extends Comment
+{
+    /**
+	 * @var integer $id
+	 *
+	 * @ORM\Column(name="comment_id", type="integer", nullable=false)
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="NONE")
+	 */
+	private $id;
+
+    /**
+     * @var integer $agendaId
+     * @ORM\ManyToOne(targetEntity="Event",inversedBy="comments")
+     * @JoinColumn(name="event_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $event;
+
+
+
+    /**
+     * Set id
+     *
+     * @param integer $id
+     * @return EventComment
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set event
+     *
+     * @param CTRV\CommonBundle\Entity\Event $event
+     * @return EventComment
+     */
+    public function setEvent(Event $event = null)
+    {
+        $this->event = $event;
+    
+        return $this;
+    }
+
+    /**
+     * Get event
+     *
+     * @return CTRV\CommonBundle\Entity\Event 
+     */
+    public function getEvent()
+    {
+        return $this->event;
+    }
+}

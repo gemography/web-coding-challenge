@@ -1,0 +1,23 @@
+services:
+    common_service:
+        class: CTRV\CommonBundle\Service\CommonService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator,@router]
+    session_service:
+        class: CTRV\CommonBundle\Service\SessionService
+        arguments: [@session,@doctrine,@translator,@service_container]
+    password_service:
+        class: CTRV\CommonBundle\Service\MyPasswordEncoder
+    user_service:
+        class: CTRV\CommonBundle\Service\UserService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+    comment_service:
+        class: CTRV\CommonBundle\Service\CommentService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]   
+#    kernel.listener.access_denied.handler:
+#        class: CTRV\CommonBundle\Service\AccessDeniedService
+#        tags:
+#            - { name: kernel.event_listener, event: security.kernel_response, method: handle  }
+#    kernel_listener_service:
+#        class: CTRV\CommonBundle\Listener\CustomExceptionListener
+#        tags:
+#            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

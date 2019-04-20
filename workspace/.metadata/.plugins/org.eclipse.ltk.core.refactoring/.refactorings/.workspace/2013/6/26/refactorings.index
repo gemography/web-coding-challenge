@@ -1,0 +1,7 @@
+1372162696426	Delete 2 resources
+1372247521018	Delete resource 'ctrv/src/CTRV/CommonBundle/Resources/translations/messages.fr.yml'
+1372247563321	Delete resource 'ctrv/src/CTRV/CommonBundle/Resources/translations/messages.fr.yml.svntmp'
+1372323400669	Delete resource 'ctrv/src/CTRV/CommonBundle/Resources/views/Abus/eventCommentAbuse.html.twig'
+1372323689222	Delete resource 'ctrv/src/CTRV/CommonBundle/Resources/views/Abus/publicMessageAbuse.html.twig'
+1372324442798	Delete resource 'ctrv/src/CTRV/CommonBundle/Resources/views/Abus/placeCommentAbuse.html.twig'
+1372336625887	Delete resource 'ctrv/src/CTRV/MailBundle/Entity/MailTypeTypeRepository.php'

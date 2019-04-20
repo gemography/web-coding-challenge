@@ -1,0 +1,60 @@
+agenda:
+    menu:
+      afficher: Afficher la liste des Agendas
+    list:
+        title: Liste des évènements publics futur ajoutés
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucune agenda trouvé
+
+event:
+    menu:
+      afficher: Afficher la liste des événements
+    list:
+        title: Liste des événements publics temps rééls ajoutés
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun événement trouvé
+
+agendaComment:
+    menu:
+      afficher: Commentaires des agendas
+          
+    list:
+        title: Liste des commentaires des évènements publics futur
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé
+
+eventComment:
+    menu:
+      afficher: Commentaires des évènements
+    list:
+        title: Liste des commentaires des évènements publics temps rééls
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé

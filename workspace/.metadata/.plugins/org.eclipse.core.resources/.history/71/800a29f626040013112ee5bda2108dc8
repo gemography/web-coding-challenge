@@ -1,0 +1,82 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.list.titleAll{% endtrans %}</h3>
+		
+		<form id="choose_place_type" action="" method="post">
+			{{ form_widget(form) }}
+		</form>
+		<div id="places-list"> <!-- le tableau sera affiché ici en js -->
+		{% if entities is not empty  %}
+<table class="table table-bordered table-condensed table-hover">
+    <thead>
+        <tr>
+        	<th>{% trans %}place.list.table.title{% endtrans %}</th>
+            <th>{% trans %}place.list.table.description{% endtrans %}</th>
+            <th>{% trans %}place.list.table.adresse{% endtrans %}</th>
+            <th>{% trans %}place.list.table.addedDate{% endtrans %}</th>
+            <th>{% trans %}place.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.title }}</td>
+            <td>{{ entity.description }}</td>
+            <td>{{ entity.street }}</td>
+            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT') %}
+            <td>{{ entity.addedDate|date(format) }}</td>
+            <td>
+		        <a class="place-to-delete btn btn-mini" data-place-id="{{entity.id}}">{% trans %}place.list.table.delete_action{% endtrans %}</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'false', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'place' } %}
+
+{% else%}
+	<div class="center">{% trans %}place.list.table.no_result{% endtrans %}</div>				
+{% endif %}
+		</div>
+		
+	</div>
+
+</div>
+		
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvplace/js/place.js') }}"></script>
+<script>
+$(function() { //à la fin du  chargement du DOM
+
+	var urlAction = "{{ path('loadAllPlacesByTypeOrNot') }}";
+	var page = 1;
+	var placeTypeId = $("#choose_place_type_placeType").val();
+	loadPlacesByType (urlAction,placeTypeId,page,$("#places-list"));
+
+	//si on change de type de place
+	$("#choose_place_type").change(function() {
+		page = 1;
+		placeTypeId = $("#choose_place_type_placeType").val();
+		loadPlacesByType (urlAction,placeTypeId,page,$("#places-list"));
+	});
+
+		var url_delete_place_action = "{{ path('place_delete', { 'id': 'place_id_to_delete' }) }}";
+		$(".place-to-delete").click( function () {
+			url_delete_place_action = url_delete_place_action.replace('place_id_to_delete',$(this).attr('data-place-id'));
+			deletePlace (url_delete_place_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

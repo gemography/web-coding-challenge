@@ -1,0 +1,17 @@
+utilisateur:
+    menu:
+      afficher: Statistique Utilisateurs
+      groupe: Groupes
+      nombresC: Utilisateurs
+    list:
+        title: Liste des utilisateurs de
+        title1: Liste des Users Connectés par Ville
+        title2: Statistique Utilisateurs
+        table:
+            firstName: Noms
+            lastName: Prénoms
+            addedDate: Date d'enrégistrements
+            action: Actions
+            etat: Désactiver
+            no_result: Aucun utilisateur trouvé
+    

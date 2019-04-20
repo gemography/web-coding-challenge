@@ -1,0 +1,286 @@
+<?php
+
+namespace CTRV\PlaceBundle\Controller;
+
+use CTRV\PlaceBundle\Form\PlaceRechercheType;
+use Symfony\Component\HttpFoundation\Response;
+use CTRV\PlaceBundle\Form\ChoosePlaceTypeType;
+use CTRV\CommonBundle\DependencyInjection\Constants;
+use Doctrine\ORM\EntityRepository;
+use CTRV\PlaceBundle\Form\ChoosePlaceTypeForm;
+use CTRV\PlaceBundle\Form\PlaceTypeType;
+use CTRV\PlaceBundle\Form\PlaceTypeModifType;
+use CTRV\PlaceBundle\Form\ImportPlaceType;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\PlaceBundle\Entity\Place;
+use CTRV\PlaceBundle\Entity\PlaceType;
+use CTRV\PlaceBundle\Entity\ImportPlace;
+
+
+/**
+ * Place controller.
+ *
+ * @Route("/place")
+ */
+class PlaceController extends Controller
+{
+	
+	/**
+	 * Formulaire de recherche d'une place
+	 * @Route("/rechercher",name="rechercher_place")
+	 * @Template()
+	 */
+	public function rechercherPlaceAction () {
+		
+		$form = $this->createForm(new PlaceRechercheType());
+		
+		return array('form'=>$form->createView());
+	}
+	/**
+	 * ajouter un  nouveau type de place
+	 * @Route("/ajouter",name="ajouter_place")
+	 * @Template()
+	 */
+	public function ajouterTypeAction () {
+		$em = $this->getDoctrine()->getEntityManager();
+		$form = $this->createForm(new PlaceTypeType(),new PlaceType());
+		// On vérifie qu'elle est de type POST
+		if ($this->getRequest()->getMethod() == 'POST') {
+			// On fait le lien Requête <-> Formulaire
+			$form->bind($this->getRequest());
+			// On vérifie que les valeurs rentrées sont correctes
+			if ($form->isValid()) {
+				// On enregistre notre objet $placeType dans la base de données
+				$placeType = $form->getData();
+				$em->persist($placeType);
+				$em->flush();
+				// on redirige vers l'ajout des types de place
+				return $this->redirect($this->generateUrl("loadTypePlaces"));			}
+		}
+	
+					
+		return array('form'=>$form->createView());
+			
+	}
+	/**
+	 * modifier un type de place
+	 * @Route("/modifier/{id}",name="modifier_place")
+	 * @Template()
+	 */
+	public function modifierTypeAction(PlaceType $placeType) {
+		$form = $this->createForm(new PlaceTypeType, $placeType);
+		$request=$this->getRequest();
+		// On vérifie qu'elle est de type POST
+		if ($this->getRequest()->getMethod() == 'POST') {
+		// On fait le lien Requête <-> Formulaire
+		$form->bind($this->getRequest());
+		// On vérifie que les valeurs rentrées sont correctes
+		if ($form->isValid()) {
+		// On enregistre notre objet $placeType dans la base de données
+		$em = $this->getDoctrine()->getEntityManager();
+		$em->persist($placeType);
+		$em->flush();
+		// on redirige vers les types de place
+		return $this->redirect($this->generateUrl("loadTypePlaces"));
+				}
+			
+		}
+	
+			
+		return array(
+				'placeType'=> $placeType,
+				'form'=>$form->createView());
+			
+	}
+	
+	/**
+	 * Afficher le resultat de la recherche sur les places
+	 * @Route("/rechercherResult",name="rechercher_place_result")
+	 * @Template()
+	 */
+	public function rechercherPlaceResultAction () {
+		
+		$searchText = $this->getRequest()->get("searchText","");
+		
+		$currentCity = $this->get("session_service")->getCity();
+		$city = $this->getDoctrine()->getEntityManager()->getRepository('CTRVCommonBundle:City')->find($currentCity->getId());
+		$places = $this->getDoctrine()->getRepository('CTRVPlaceBundle:Place')->getPlaceByStreet($searchText, $city);
+
+		$page = intval($this->getRequest()->get("page",1));
+		//pagination
+		$nb_entities = count($places);
+		$nb_entities_page = Constants::places_search_number_per_page;
+		$nb_pages = ceil($nb_entities/$nb_entities_page);
+		$offset = ($page-1) * $nb_entities_page;
+		
+		$places = array_slice($places, $offset,$nb_entities_page);
+		
+		return  array (
+				'entities' => $places,
+				'nb_pages' => $nb_pages,
+				'page' => $page,
+				'nb_entities' => $nb_entities
+		);
+	}
+	
+	
+	/**
+	 * Importer un fichier de données de place
+	 * @Route("/import",name="import_place")
+	 * @Template()
+	 */
+	public function importAction () {
+	
+		$form = $this->createForm(new ImportPlaceType(), new ImportPlace());
+	
+		if( $this->get('request')->getMethod() == 'POST' ) {
+				
+			$form->bind($this->get('request'));
+	
+			if ( $form->isValid() ) {
+	
+				$city = $this->get('session')->get("city");
+				
+				$importPlace = $form->getData();
+				$fileName = $city->getName().$importPlace->placeType.'.'.$importPlace->file->guessExtension();
+				$importPlace->file->move($importPlace->getUploadRootDir(), $fileName);
+				$importPlace->file = null;
+				
+				$res = $this->get("place_service")->savePlaceDataFromFile ($importPlace->getUploadRootDir().'/'.$fileName, $city, $importPlace->placeType);
+				$traitedandtotal = $this->get("place_service")->calculateLatLng();
+				
+				$this->get('session')->getFlashBag()->add('success', $this->get('translator')
+						->trans('place.import.success',array("%imported%"=>$res['added'],"%already%"=>$res["already"],"%traited%"=>$res['latLngFound'],"%total%"=>$res['all'])));
+				
+			}
+		}
+		
+		return array('form'=>$form->createView());
+	}
+	
+	
+    /**
+     * Affiche le formulaire de choix de type de place 
+     * @Route("/list", name="place")
+     * @Template()
+     */
+    public function indexAction () {
+    	
+        $form = $this->createForm(new ChoosePlaceTypeType());
+        return array (
+        	'form' => $form->createView(),
+        );
+    }
+    
+    /**
+     * Charge les donnees du type de place spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+     * @Route("/loadPlacesByType", name="loadPlacesByType")
+     * @Template()
+     */
+    public function loadPlacesByTypeAction () {
+    	
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	
+    	$page = $this->getRequest()->get("page",1);
+    	$placeTypeId = $this->getRequest()->get("placeTypeId");
+    	
+    	$entities = $this->get("place_service")->getPlaceAddedByUsers($placeTypeId, $currentCity);
+    	
+    	//pagination
+        $nb_entities = count($entities);
+        $nb_entities_page = Constants::places_number_per_page;
+        $nb_pages = ceil($nb_entities/$nb_entities_page);
+        $offset = ($page-1) * $nb_entities_page;
+        
+        $entities = array_slice($entities, $offset,$nb_entities_page);
+       	
+       	return  array (
+            'entities' => $entities,
+        	'nb_pages' => $nb_pages,
+        	'page' => $page,
+        	'nb_entities' => $nb_entities
+        );
+    }  
+    /**
+    * Charge les type de place de chaque ville spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+    * @Route("/loadTypePlaces", name="loadTypePlaces")
+    * @Template()
+    */
+    public function loadTypePlacesAction () {
+    	 
+    	$em = $this->getDoctrine()->getEntityManager();
+    	 
+    	$currentCity = $this->get('session_service')->getCity();
+    	 
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	 
+    	$page = $this->getRequest()->get("page",1);
+    	 
+    	$entities = $this->get("place_service")->getTypePlaces($currentCity);
+    	 
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::places_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    
+
+    /**
+     * Deletes a Place entity.
+     *
+     * @Route("/{id}/delete", name="place_delete" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function deleteAction($id) {
+    	
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('CTRVPlaceBundle:Place')->find($id);
+
+        $em->remove($entity);
+        $em->flush();
+        
+        return new Response(json_encode(array('result'=>true)));
+    }
+    
+    /**
+     * Deletes a PlaceType entity.
+     *
+     * @Route("/{id}/deletetype", name="placetype_delete" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function deletePlaceTypeAction($id) {
+    	 
+    	$em = $this->getDoctrine()->getManager();
+    	$entity = $em->getRepository('CTRVPlaceBundle:PlaceType')->find($id);
+    
+    	$em->remove($entity);
+    	$em->flush();
+    
+    	return new Response(json_encode(array('result'=>true)));
+    }
+
+}

@@ -1,0 +1,38 @@
+publicMessage:
+    menu:
+      afficher: Gestion des Messages publics
+      
+    
+    list:
+        title: Gestion des Messages publics
+        table:
+            content: Contenu
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun message public trouvé
+        numberPublicMessage: Nombre de message publics à   
+groupe:
+    menu:
+      afficher: Groupes
+      
+    
+    list:
+        title: Liste des groupes de
+        title1: Nombre total de groupes
+        title2 : Nombre total de groupes de la ville courante 
+        table:
+            noms: Noms
+            description: Descriptions
+            addedDate: Date d'ajout
+            membre : Nombre de Membres
+            login : Login Administrateur
+            action: Actions
+            delete_action: Supprimer
+            block_action: Bloquer
+            deblock_action: Débloquer
+            no_result: Aucun groupe trouvé
+                       

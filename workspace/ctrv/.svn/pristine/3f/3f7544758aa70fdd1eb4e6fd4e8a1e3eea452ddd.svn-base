@@ -1,0 +1,775 @@
+<?php
+
+
+namespace CTRV\UserBundle\Entity;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+
+use Doctrine\Common\Collections\ArrayCollection;
+
+use FOS\UserBundle\Entity\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="ctrv_user")
+ */
+class UserCTRV extends BaseUser
+{
+	
+	/**
+	 * @ORM\Id
+	 * @ORM\Column(name="public_key",type="integer")
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 */
+	protected $id;
+	
+	 /**
+     * @var string $userid
+     *
+     * @ORM\Column(name="userid", type="string", length=255, nullable=true)
+     */
+    private $userid;
+    
+    /**
+     * @var string $firstName
+     *
+     * @ORM\Column(name="first_name", type="string", length=256, nullable=true)
+     */
+    private $firstName;
+    
+    /**
+     * @var string $lastName
+     *
+     * @ORM\Column(name="last_name", type="string", length=256, nullable=true)
+     */
+    private $lastName;
+    
+    /**
+     * @var string $latitude
+     *
+     * @ORM\Column(name="latitude", type="string", length=256, nullable=true)
+     */
+    private $latitude;
+    
+    /**
+     * @var string $longitude
+     *
+     * @ORM\Column(name="longitude", type="string", length=256, nullable=true)
+     */
+    private $longitude;
+    
+    /**
+     * @var City
+     * @ORM\ManyToOne(targetEntity="\CTRV\CommonBundle\Entity\City",inversedBy="users")
+     * @JoinColumn(name="city_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $city;
+    
+    /**
+     * @var string $registrationDate
+     * @ORM\Column(name="registration_date", type="string", length=256, nullable=true)
+     */
+    private $registrationDate;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\GroupUser",mappedBy="admin")
+     * @var unknown_type
+     */
+    private $groupsAdmin; // liste des groupes administrés
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\GroupMember",mappedBy="member")
+     * @var unknown_type
+     */
+    private $groupsMember; //liste des groupes ou le user est membre
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\PendingPrivateMessage",mappedBy="sender")
+     * @var unknown_type
+     */
+    private $sentPendingsPrivateMessages;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\PendingPrivateMessage",mappedBy="receiver")
+     * @var unknown_type
+     */
+    private $receivedPendingsPrivateMessages;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\PrivateMessage",mappedBy="sender")
+     * @var unknown_type
+     */
+    private $sentPrivateMessages;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\PrivateMessage",mappedBy="receiver")
+     * @var unknown_type
+     */
+    private $receivedPrivateMessages;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\FlowBundle\Entity\PrivateMessage",mappedBy="sender")
+     * @var unknown_type
+     */
+    private $sentPublicMessages;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\EventBundle\Entity\Agenda",mappedBy="auteur")
+     * @var unknown_type
+     */
+    private $agendas;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\EventBundle\Entity\Event",mappedBy="auteur")
+     * @var unknown_type
+     */
+    private $events;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\PlaceBundle\Entity\Place",mappedBy="auteur")
+     * @var unknown_type
+     */
+    private $places;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\CommonBundle\Entity\Contact",mappedBy="ownerUserid")
+     * @var unknown_type
+     */
+    private $contacts;
+    
+    /**
+     * Liste des users dont on est le contact
+     * @ORM\OneToMany(targetEntity="\CTRV\CommonBundle\Entity\Contact",mappedBy="contactPublicKey")
+     * @var unknown_type
+     */
+    private $owners;
+    
+    
+    /**
+     * @ORM\OneToMany(targetEntity="\CTRV\CommonBundle\Entity\Comment",mappedBy="auteur")
+     * @var unknown_type
+     */
+    private $comments;
+	
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+    	parent::__construct();
+        $this->groupsAdmin = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->groupsMember = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->sentPendingsPrivateMessages = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->receivedPendingsPrivateMessages = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->sentPrivateMessages = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->receivedPrivateMessages = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->sentPublicMessages = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->agendas = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->events = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->places = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->contacts = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->owners = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set userid
+     *
+     * @param string $userid
+     * @return UserCTRV
+     */
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
+    
+        return $this;
+    }
+
+    /**
+     * Get userid
+     *
+     * @return string 
+     */
+    public function getUserid()
+    {
+        return $this->userid;
+    }
+
+    /**
+     * Set firstName
+     *
+     * @param string $firstName
+     * @return UserCTRV
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    
+        return $this;
+    }
+
+    /**
+     * Get firstName
+     *
+     * @return string 
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     * @return UserCTRV
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+    
+        return $this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string 
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param string $latitude
+     * @return UserCTRV
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return string 
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param string $longitude
+     * @return UserCTRV
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return string 
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * Set registrationDate
+     *
+     * @param string $registrationDate
+     * @return UserCTRV
+     */
+    public function setRegistrationDate($registrationDate)
+    {
+        $this->registrationDate = $registrationDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get registrationDate
+     *
+     * @return string 
+     */
+    public function getRegistrationDate()
+    {
+        return $this->registrationDate;
+    }
+
+    /**
+     * Set city
+     *
+     * @param CTRV\CommonBundle\Entity\City $city
+     * @return UserCTRV
+     */
+    public function setCity(\CTRV\CommonBundle\Entity\City $city = null)
+    {
+        $this->city = $city;
+    
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return CTRV\CommonBundle\Entity\City 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Add groupsAdmin
+     *
+     * @param CTRV\FlowBundle\Entity\GroupUser $groupsAdmin
+     * @return UserCTRV
+     */
+    public function addGroupsAdmin(\CTRV\FlowBundle\Entity\GroupUser $groupsAdmin)
+    {
+        $this->groupsAdmin[] = $groupsAdmin;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groupsAdmin
+     *
+     * @param CTRV\FlowBundle\Entity\GroupUser $groupsAdmin
+     */
+    public function removeGroupsAdmin(\CTRV\FlowBundle\Entity\GroupUser $groupsAdmin)
+    {
+        $this->groupsAdmin->removeElement($groupsAdmin);
+    }
+
+    /**
+     * Get groupsAdmin
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupsAdmin()
+    {
+        return $this->groupsAdmin;
+    }
+
+    /**
+     * Add groupsMember
+     *
+     * @param CTRV\FlowBundle\Entity\GroupMember $groupsMember
+     * @return UserCTRV
+     */
+    public function addGroupsMember(\CTRV\FlowBundle\Entity\GroupMember $groupsMember)
+    {
+        $this->groupsMember[] = $groupsMember;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groupsMember
+     *
+     * @param CTRV\FlowBundle\Entity\GroupMember $groupsMember
+     */
+    public function removeGroupsMember(\CTRV\FlowBundle\Entity\GroupMember $groupsMember)
+    {
+        $this->groupsMember->removeElement($groupsMember);
+    }
+
+    /**
+     * Get groupsMember
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupsMember()
+    {
+        return $this->groupsMember;
+    }
+
+    /**
+     * Add sentPendingsPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PendingPrivateMessage $sentPendingsPrivateMessages
+     * @return UserCTRV
+     */
+    public function addSentPendingsPrivateMessage(\CTRV\FlowBundle\Entity\PendingPrivateMessage $sentPendingsPrivateMessages)
+    {
+        $this->sentPendingsPrivateMessages[] = $sentPendingsPrivateMessages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove sentPendingsPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PendingPrivateMessage $sentPendingsPrivateMessages
+     */
+    public function removeSentPendingsPrivateMessage(\CTRV\FlowBundle\Entity\PendingPrivateMessage $sentPendingsPrivateMessages)
+    {
+        $this->sentPendingsPrivateMessages->removeElement($sentPendingsPrivateMessages);
+    }
+
+    /**
+     * Get sentPendingsPrivateMessages
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getSentPendingsPrivateMessages()
+    {
+        return $this->sentPendingsPrivateMessages;
+    }
+
+    /**
+     * Add receivedPendingsPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PendingPrivateMessage $receivedPendingsPrivateMessages
+     * @return UserCTRV
+     */
+    public function addReceivedPendingsPrivateMessage(\CTRV\FlowBundle\Entity\PendingPrivateMessage $receivedPendingsPrivateMessages)
+    {
+        $this->receivedPendingsPrivateMessages[] = $receivedPendingsPrivateMessages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove receivedPendingsPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PendingPrivateMessage $receivedPendingsPrivateMessages
+     */
+    public function removeReceivedPendingsPrivateMessage(\CTRV\FlowBundle\Entity\PendingPrivateMessage $receivedPendingsPrivateMessages)
+    {
+        $this->receivedPendingsPrivateMessages->removeElement($receivedPendingsPrivateMessages);
+    }
+
+    /**
+     * Get receivedPendingsPrivateMessages
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getReceivedPendingsPrivateMessages()
+    {
+        return $this->receivedPendingsPrivateMessages;
+    }
+
+    /**
+     * Add sentPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $sentPrivateMessages
+     * @return UserCTRV
+     */
+    public function addSentPrivateMessage(\CTRV\FlowBundle\Entity\PrivateMessage $sentPrivateMessages)
+    {
+        $this->sentPrivateMessages[] = $sentPrivateMessages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove sentPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $sentPrivateMessages
+     */
+    public function removeSentPrivateMessage(\CTRV\FlowBundle\Entity\PrivateMessage $sentPrivateMessages)
+    {
+        $this->sentPrivateMessages->removeElement($sentPrivateMessages);
+    }
+
+    /**
+     * Get sentPrivateMessages
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getSentPrivateMessages()
+    {
+        return $this->sentPrivateMessages;
+    }
+
+    /**
+     * Add receivedPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $receivedPrivateMessages
+     * @return UserCTRV
+     */
+    public function addReceivedPrivateMessage(\CTRV\FlowBundle\Entity\PrivateMessage $receivedPrivateMessages)
+    {
+        $this->receivedPrivateMessages[] = $receivedPrivateMessages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove receivedPrivateMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $receivedPrivateMessages
+     */
+    public function removeReceivedPrivateMessage(\CTRV\FlowBundle\Entity\PrivateMessage $receivedPrivateMessages)
+    {
+        $this->receivedPrivateMessages->removeElement($receivedPrivateMessages);
+    }
+
+    /**
+     * Get receivedPrivateMessages
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getReceivedPrivateMessages()
+    {
+        return $this->receivedPrivateMessages;
+    }
+
+    /**
+     * Add sentPublicMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $sentPublicMessages
+     * @return UserCTRV
+     */
+    public function addSentPublicMessage(\CTRV\FlowBundle\Entity\PrivateMessage $sentPublicMessages)
+    {
+        $this->sentPublicMessages[] = $sentPublicMessages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove sentPublicMessages
+     *
+     * @param CTRV\FlowBundle\Entity\PrivateMessage $sentPublicMessages
+     */
+    public function removeSentPublicMessage(\CTRV\FlowBundle\Entity\PrivateMessage $sentPublicMessages)
+    {
+        $this->sentPublicMessages->removeElement($sentPublicMessages);
+    }
+
+    /**
+     * Get sentPublicMessages
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getSentPublicMessages()
+    {
+        return $this->sentPublicMessages;
+    }
+
+    /**
+     * Add agendas
+     *
+     * @param CTRV\EventBundle\Entity\Agenda $agendas
+     * @return UserCTRV
+     */
+    public function addAgenda(\CTRV\EventBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas[] = $agendas;
+    
+        return $this;
+    }
+
+    /**
+     * Remove agendas
+     *
+     * @param CTRV\EventBundle\Entity\Agenda $agendas
+     */
+    public function removeAgenda(\CTRV\EventBundle\Entity\Agenda $agendas)
+    {
+        $this->agendas->removeElement($agendas);
+    }
+
+    /**
+     * Get agendas
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getAgendas()
+    {
+        return $this->agendas;
+    }
+
+    /**
+     * Add events
+     *
+     * @param CTRV\EventBundle\Entity\Event $events
+     * @return UserCTRV
+     */
+    public function addEvent(\CTRV\EventBundle\Entity\Event $events)
+    {
+        $this->events[] = $events;
+    
+        return $this;
+    }
+
+    /**
+     * Remove events
+     *
+     * @param CTRV\EventBundle\Entity\Event $events
+     */
+    public function removeEvent(\CTRV\EventBundle\Entity\Event $events)
+    {
+        $this->events->removeElement($events);
+    }
+
+    /**
+     * Get events
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getEvents()
+    {
+        return $this->events;
+    }
+
+    /**
+     * Add places
+     *
+     * @param CTRV\PlaceBundle\Entity\Place $places
+     * @return UserCTRV
+     */
+    public function addPlace(\CTRV\PlaceBundle\Entity\Place $places)
+    {
+        $this->places[] = $places;
+    
+        return $this;
+    }
+
+    /**
+     * Remove places
+     *
+     * @param CTRV\PlaceBundle\Entity\Place $places
+     */
+    public function removePlace(\CTRV\PlaceBundle\Entity\Place $places)
+    {
+        $this->places->removeElement($places);
+    }
+
+    /**
+     * Get places
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getPlaces()
+    {
+        return $this->places;
+    }
+
+    /**
+     * Add contacts
+     *
+     * @param CTRV\CommonBundle\Entity\Contact $contacts
+     * @return UserCTRV
+     */
+    public function addContact(\CTRV\CommonBundle\Entity\Contact $contacts)
+    {
+        $this->contacts[] = $contacts;
+    
+        return $this;
+    }
+
+    /**
+     * Remove contacts
+     *
+     * @param CTRV\CommonBundle\Entity\Contact $contacts
+     */
+    public function removeContact(\CTRV\CommonBundle\Entity\Contact $contacts)
+    {
+        $this->contacts->removeElement($contacts);
+    }
+
+    /**
+     * Get contacts
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getContacts()
+    {
+        return $this->contacts;
+    }
+
+    /**
+     * Add owners
+     *
+     * @param CTRV\CommonBundle\Entity\Contact $owners
+     * @return UserCTRV
+     */
+    public function addOwner(\CTRV\CommonBundle\Entity\Contact $owners)
+    {
+        $this->owners[] = $owners;
+    
+        return $this;
+    }
+
+    /**
+     * Remove owners
+     *
+     * @param CTRV\CommonBundle\Entity\Contact $owners
+     */
+    public function removeOwner(\CTRV\CommonBundle\Entity\Contact $owners)
+    {
+        $this->owners->removeElement($owners);
+    }
+
+    /**
+     * Get owners
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getOwners()
+    {
+        return $this->owners;
+    }
+
+    /**
+     * Add comments
+     *
+     * @param CTRV\CommonBundle\Entity\Comment $comments
+     * @return UserCTRV
+     */
+    public function addComment(\CTRV\CommonBundle\Entity\Comment $comments)
+    {
+        $this->comments[] = $comments;
+    
+        return $this;
+    }
+
+    /**
+     * Remove comments
+     *
+     * @param CTRV\CommonBundle\Entity\Comment $comments
+     */
+    public function removeComment(\CTRV\CommonBundle\Entity\Comment $comments)
+    {
+        $this->comments->removeElement($comments);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+}

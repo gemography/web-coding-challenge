@@ -1,0 +1,51 @@
+<?php
+
+namespace CTRV\CommonBundle\Service;
+
+use CTRV\CommonBundle\Entity\Comment;
+
+use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bundle\TwigBundle\TwigEngine;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+class CommentService {
+	
+	protected $mailer;
+	protected $doctrine;
+	protected $em;
+	protected $service_container;
+	protected $templating;
+	
+	
+	public function __construct(\Swift_Mailer $mailer,RegistryInterface $doctrine, ContainerInterface $service_container, TwigEngine $templating,TranslatorInterface $translator) {
+		
+		$this->mailer = $mailer;
+		$this->doctrine = $doctrine;
+		$this->em = $doctrine->getEntityManager();
+		$this->service_container = $service_container;
+		$this->templating = $templating;
+		$this->translator = $translator;
+	}
+	//Retourne les commentaires des agendas de la ville spécifié
+	public function getAgendaComment ($typeEntity, $currentCity) {
+		$entities = $this->em->getRepository('CTRVCommonBundle:Comment')
+		->getAgendaComment($this->em->getRepository('CTRVCommonBundle:Comment')->findBytypeEntity('AGENDA'),
+		$this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+	//Retourne les commentaires des événements de la ville spécifié
+	public function getEventComment ($typeEvent, $currentCity) {
+		$entities = $this->em->getRepository('CTRVCommonBundle:Comment')
+		->getEventComment($this->em->getRepository('CTRVCommonBundle:Comment')->findBytypeEntity('EVENT'),
+		$this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+	//Retourne les commentaires des places de la ville spécifié
+	public function getPlaceComment ($typeEvent, $currentCity) {
+		$entities = $this->em->getRepository('CTRVCommonBundle:Comment')
+		->getPlaceComment($this->em->getRepository('CTRVCommonBundle:Comment')->findBytypeEntity('PLACE'),
+		$this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+}

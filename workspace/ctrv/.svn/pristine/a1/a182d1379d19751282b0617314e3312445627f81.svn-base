@@ -1,0 +1,23 @@
+<?php
+
+namespace CTRV\FlowBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class GroupUserRepository extends EntityRepository
+{
+    
+	public function getGroup () {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.admin is not null")
+		
+		->orderBy('p.addedDate', 'DESC')
+		
+		
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

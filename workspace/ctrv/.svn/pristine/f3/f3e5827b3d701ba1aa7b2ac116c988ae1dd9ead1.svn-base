@@ -1,0 +1,128 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class EventRepository extends EntityRepository
+{
+/**
+ * retourne la liste des événements en cours de la ville courante
+ */	
+	public function getEvent($city, $first, $last) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.duration > 0")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, true)
+		->setFirstResult($first)
+		->setMaxResults($last)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * retourne le nombre d'événements en cours de la ville courante
+	 */
+	public function getEventNumber($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.duration > 0")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, true)
+		;
+		return count($qb->getQuery()->getResult());
+	}
+	
+	
+	/**
+	 * retourne la liste des événements passés de la ville courante
+	 */
+	public function getEventPassed($city, $first, $last) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.duration <= 0")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, true)
+		->setFirstResult($first)
+		->setMaxResults($last)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * retourne le nombre d'événements passés de la ville courante
+	 */
+	public function getEventPassedNumber($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.duration <= 0")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, true)
+		;
+		return count($qb->getQuery()->getResult());
+	}
+	
+	
+	/**
+	 * retourne la liste des agendas de la ville courante
+	 */	
+	public function getAgenda ($city, $first, $last) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		//->andWhere("p.startDate >= current_date")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, false)
+		->setFirstResult($first)
+		->setMaxResults($last)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * retourne le nombre d'agendas de la ville courante
+	 */
+	public function getAgendaNumber($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		//->andWhere("p.startDate >= current_date")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, false)
+		;
+		return count($qb->getQuery()->getResult());
+	}
+	
+}

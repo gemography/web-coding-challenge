@@ -1,0 +1,1990 @@
+<html>
+<head>
+<title>Docs For Class PHPExcel_Calculation_Engineering</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Calculation</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                          		  [ <a href="../classtrees_PHPExcel_Calculation.html" class="menu">class tree: PHPExcel_Calculation</a> ]
+		  [ <a href="../elementindex_PHPExcel_Calculation.html" class="menu">index: PHPExcel_Calculation</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_PHPExcel.html">PHPExcel</a><br />
+              <a href="../li_JAMA.html">JAMA</a><br />
+              <a href="../li_Math_Stats.html">Math_Stats</a><br />
+              <a href="../li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="../li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="../li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="../li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="../li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="../li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="../li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="../li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="../li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="../li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="../li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="../li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="../li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="../li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="../li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="../li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="../li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="../li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="../li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="../li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="../li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation.php.html">		Calculation.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Database.php.html">		Database.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---DateTime.php.html">		DateTime.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Engineering.php.html">		Engineering.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---ExceptionHandler.php.html">		ExceptionHandler.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Financial.php.html">		Financial.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---FormulaParser.php.html">		FormulaParser.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---FormulaToken.php.html">		FormulaToken.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Function.php.html">		Function.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Functions.php.html">		Functions.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Logical.php.html">		Logical.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---LookupRef.php.html">		LookupRef.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---MathTrig.php.html">		MathTrig.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Token---Stack.php.html">		Stack.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Statistical.php.html">		Statistical.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---TextData.php.html">		TextData.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Database.html">PHPExcel_Calculation_Database</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html">PHPExcel_Calculation_DateTime</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html">PHPExcel_Calculation_Engineering</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Exception.html">PHPExcel_Calculation_Exception</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_ExceptionHandler.html">PHPExcel_Calculation_ExceptionHandler</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Financial.html">PHPExcel_Calculation_Financial</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_FormulaParser.html">PHPExcel_Calculation_FormulaParser</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_FormulaToken.html">PHPExcel_Calculation_FormulaToken</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Function.html">PHPExcel_Calculation_Function</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Functions.html">PHPExcel_Calculation_Functions</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Logical.html">PHPExcel_Calculation_Logical</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_LookupRef.html">PHPExcel_Calculation_LookupRef</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_MathTrig.html">PHPExcel_Calculation_MathTrig</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Statistical.html">PHPExcel_Calculation_Statistical</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_TextData.html">PHPExcel_Calculation_TextData</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Token_Stack.html">PHPExcel_Calculation_Token_Stack</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: PHPExcel_Calculation_Engineering</h1>
+Source Location: /PHPExcel/Calculation/Engineering.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">PHPExcel_Calculation_Engineering</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+      
+  
+
+<h4>Copyright:</h4>
+<ul>
+  <li>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBESSELI">BESSELI</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBESSELJ">BESSELJ</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBESSELK">BESSELK</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBESSELY">BESSELY</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBINTODEC">BINTODEC</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBINTOHEX">BINTOHEX</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodBINTOOCT">BINTOOCT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodCOMPLEX">COMPLEX</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodCONVERTUOM">CONVERTUOM</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodDECTOBIN">DECTOBIN</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodDECTOHEX">DECTOHEX</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodDECTOOCT">DECTOOCT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodDELTA">DELTA</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodERF">ERF</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodERFC">ERFC</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodGESTEP">GESTEP</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodgetConversionGroups">getConversionGroups</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodgetConversionGroupUnitDetails">getConversionGroupUnitDetails</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodgetConversionGroupUnits">getConversionGroupUnits</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodgetConversionMultipliers">getConversionMultipliers</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodHEXTOBIN">HEXTOBIN</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodHEXTODEC">HEXTODEC</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodHEXTOOCT">HEXTOOCT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMABS">IMABS</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMAGINARY">IMAGINARY</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMARGUMENT">IMARGUMENT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMCONJUGATE">IMCONJUGATE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMCOS">IMCOS</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMDIV">IMDIV</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMEXP">IMEXP</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMLN">IMLN</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMLOG2">IMLOG2</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMLOG10">IMLOG10</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMPOWER">IMPOWER</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMPRODUCT">IMPRODUCT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMREAL">IMREAL</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMSIN">IMSIN</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMSQRT">IMSQRT</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMSUB">IMSUB</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodIMSUM">IMSUM</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodOCTTOBIN">OCTTOBIN</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodOCTTODEC">OCTTODEC</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#methodOCTTOHEX">OCTTOHEX</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#method_erfVal">_erfVal</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html#method_parseComplex">_parseComplex</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 50]<br />
+PHPExcel_Calculation_Engineering<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+  <hr />
+	<a name="methodBESSELI"></a>
+	<h3>static method BESSELI <span class="smalllinenumber">[line 793]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float BESSELI(
+float
+$x, integer
+$ord)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BESSELI<br /><br /><p>Returns the modified Bessel function In(x), which is equivalent to the Bessel function evaluated 		for purely imaginary arguments</p><p>Excel Function: 		BESSELI(x,ord)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The value at which to evaluate the function.                                 If x is nonnumeric, BESSELI returns the #VALUE! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$ord</b>&nbsp;&nbsp;</td>
+        <td>The order of the Bessel function.                                 If ord is not an integer, it is truncated.                                 If $ord is nonnumeric, BESSELI returns the #VALUE! error value.                                 If $ord &lt; 0, BESSELI returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBESSELJ"></a>
+	<h3>static method BESSELJ <span class="smalllinenumber">[line 845]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float BESSELJ(
+float
+$x, integer
+$ord)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BESSELJ<br /><br /><p>Returns the Bessel function</p><p>Excel Function: 		BESSELJ(x,ord)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The value at which to evaluate the function.                                 If x is nonnumeric, BESSELJ returns the #VALUE! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$ord</b>&nbsp;&nbsp;</td>
+        <td>The order of the Bessel function. If n is not an integer, it is truncated.                                 If $ord is nonnumeric, BESSELJ returns the #VALUE! error value.                                 If $ord &lt; 0, BESSELJ returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBESSELK"></a>
+	<h3>static method BESSELK <span class="smalllinenumber">[line 934]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float BESSELK(
+float
+$x, integer
+$ord)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BESSELK<br /><br /><p>Returns the modified Bessel function Kn(x), which is equivalent to the Bessel functions evaluated 		for purely imaginary arguments.</p><p>Excel Function: 		BESSELK(x,ord)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The value at which to evaluate the function.                                 If x is nonnumeric, BESSELK returns the #VALUE! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$ord</b>&nbsp;&nbsp;</td>
+        <td>The order of the Bessel function. If n is not an integer, it is truncated.                                 If $ord is nonnumeric, BESSELK returns the #VALUE! error value.                                 If $ord &lt; 0, BESSELK returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBESSELY"></a>
+	<h3>static method BESSELY <span class="smalllinenumber">[line 1014]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float BESSELY(
+float
+$x, integer
+$ord)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BESSELY<br /><br /><p>Returns the Bessel function, which is also called the Weber function or the Neumann function.</p><p>Excel Function: 		BESSELY(x,ord)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The value at which to evaluate the function.                                 If x is nonnumeric, BESSELK returns the #VALUE! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$ord</b>&nbsp;&nbsp;</td>
+        <td>The order of the Bessel function. If n is not an integer, it is truncated.                                 If $ord is nonnumeric, BESSELK returns the #VALUE! error value.                                 If $ord &lt; 0, BESSELK returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBINTODEC"></a>
+	<h3>static method BINTODEC <span class="smalllinenumber">[line 1061]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string BINTODEC(
+string
+$x)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BINTODEC<br /><br /><p>Return a binary value as decimal.</p><p>Excel Function: 		BIN2DEC(x)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The binary number (as a string) that you want to convert. The number                                 cannot contain more than 10 characters (10 bits). The most significant                                 bit of number is the sign bit. The remaining 9 bits are magnitude bits.                                 Negative numbers are represented using two's-complement notation.                                 If number is not a valid binary number, or if number contains more than                                 10 characters (10 bits), BIN2DEC returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBINTOHEX"></a>
+	<h3>static method BINTOHEX <span class="smalllinenumber">[line 1113]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string BINTOHEX(
+string
+$x, [integer
+$places = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BINTOHEX<br /><br /><p>Return a binary value as hex.</p><p>Excel Function: 		BIN2HEX(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The binary number (as a string) that you want to convert. The number                                 cannot contain more than 10 characters (10 bits). The most significant                                 bit of number is the sign bit. The remaining 9 bits are magnitude bits.                                 Negative numbers are represented using two's-complement notation.                                 If number is not a valid binary number, or if number contains more than                                 10 characters (10 bits), BIN2HEX returns the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, BIN2HEX uses the                                 minimum number of characters necessary. Places is useful for padding the                                 return value with leading 0s (zeros).                                 If places is not an integer, it is truncated.                                 If places is nonnumeric, BIN2HEX returns the #VALUE! error value.                                 If places is negative, BIN2HEX returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodBINTOOCT"></a>
+	<h3>static method BINTOOCT <span class="smalllinenumber">[line 1167]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string BINTOOCT(
+string
+$x, [integer
+$places = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		BINTOOCT<br /><br /><p>Return a binary value as octal.</p><p>Excel Function: 		BIN2OCT(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The binary number (as a string) that you want to convert. The number                                 cannot contain more than 10 characters (10 bits). The most significant                                 bit of number is the sign bit. The remaining 9 bits are magnitude bits.                                 Negative numbers are represented using two's-complement notation.                                 If number is not a valid binary number, or if number contains more than                                 10 characters (10 bits), BIN2OCT returns the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, BIN2OCT uses the                                 minimum number of characters necessary. Places is useful for padding the                                 return value with leading 0s (zeros).                                 If places is not an integer, it is truncated.                                 If places is nonnumeric, BIN2OCT returns the #VALUE! error value.                                 If places is negative, BIN2OCT returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodCOMPLEX"></a>
+	<h3>static method COMPLEX <span class="smalllinenumber">[line 1637]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string COMPLEX(
+[float
+$realNumber = 0.0], [float
+$imaginary = 0.0], [string
+$suffix = 'i'])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		COMPLEX<br /><br /><p>Converts real and imaginary coefficients into a complex number of the form x + yi or x + yj.</p><p>Excel Function: 		COMPLEX(realNumber,imaginary[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$realNumber</b>&nbsp;&nbsp;</td>
+        <td>The real coefficient of the complex number.</td>
+      </tr>
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$imaginary</b>&nbsp;&nbsp;</td>
+        <td>The imaginary coefficient of the complex number.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$suffix</b>&nbsp;&nbsp;</td>
+        <td>The suffix for the imaginary component of the complex number.                                         If omitted, the suffix is assumed to be &quot;i&quot;.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodCONVERTUOM"></a>
+	<h3>static method CONVERTUOM <span class="smalllinenumber">[line 2418]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float CONVERTUOM(
+float
+$value, string
+$fromUOM, string
+$toUOM)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		CONVERTUOM<br /><br /><p>Converts a number from one measurement system to another. 	For example, CONVERT can translate a table of distances in miles to a table of distances 	in kilometers.</p><p>Excel Function: 		CONVERT(value,fromUOM,toUOM)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td>The value in fromUOM to convert.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$fromUOM</b>&nbsp;&nbsp;</td>
+        <td>The units for value.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$toUOM</b>&nbsp;&nbsp;</td>
+        <td>The units for the result.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDECTOBIN"></a>
+	<h3>static method DECTOBIN <span class="smalllinenumber">[line 1225]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string DECTOBIN(
+string
+$x, [integer
+$places = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DECTOBIN<br /><br /><p>Return a decimal value as binary.</p><p>Excel Function: 		DEC2BIN(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The decimal integer you want to convert. If number is negative,                                 valid place values are ignored and DEC2BIN returns a 10-character                                 (10-bit) binary number in which the most significant bit is the sign                                 bit. The remaining 9 bits are magnitude bits. Negative numbers are                                 represented using two's-complement notation.                                 If number &lt; -512 or if number &gt; 511, DEC2BIN returns the #NUM! error                                 value.                                 If number is nonnumeric, DEC2BIN returns the #VALUE! error value.                                 If DEC2BIN requires more than places characters, it returns the #NUM!                                 error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, DEC2BIN uses                                 the minimum number of characters necessary. Places is useful for                                 padding the return value with leading 0s (zeros).                                 If places is not an integer, it is truncated.                                 If places is nonnumeric, DEC2BIN returns the #VALUE! error value.                                 If places is zero or negative, DEC2BIN returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDECTOHEX"></a>
+	<h3>static method DECTOHEX <span class="smalllinenumber">[line 1281]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string DECTOHEX(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DECTOHEX<br /><br /><p>Return a decimal value as hex.</p><p>Excel Function: 		DEC2HEX(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The decimal integer you want to convert. If number is negative,                                 places is ignored and DEC2HEX returns a 10-character (40-bit)                                 hexadecimal number in which the most significant bit is the sign                                 bit. The remaining 39 bits are magnitude bits. Negative numbers                                 are represented using two's-complement notation.                                 If number &lt; -549,755,813,888 or if number &gt; 549,755,813,887,                                 DEC2HEX returns the #NUM! error value.                                 If number is nonnumeric, DEC2HEX returns the #VALUE! error value.                                 If DEC2HEX requires more than places characters, it returns the                                 #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, DEC2HEX uses                                 the minimum number of characters necessary. Places is useful for                                 padding the return value with leading 0s (zeros).                                 If places is not an integer, it is truncated.                                 If places is nonnumeric, DEC2HEX returns the #VALUE! error value.                                 If places is zero or negative, DEC2HEX returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDECTOOCT"></a>
+	<h3>static method DECTOOCT <span class="smalllinenumber">[line 1335]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string DECTOOCT(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DECTOOCT<br /><br /><p>Return an decimal value as octal.</p><p>Excel Function: 		DEC2OCT(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The decimal integer you want to convert. If number is negative,                                 places is ignored and DEC2OCT returns a 10-character (30-bit)                                 octal number in which the most significant bit is the sign bit.                                 The remaining 29 bits are magnitude bits. Negative numbers are                                 represented using two's-complement notation.                                 If number &lt; -536,870,912 or if number &gt; 536,870,911, DEC2OCT                                 returns the #NUM! error value.                                 If number is nonnumeric, DEC2OCT returns the #VALUE! error value.                                 If DEC2OCT requires more than places characters, it returns the                                 #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, DEC2OCT uses                                 the minimum number of characters necessary. Places is useful for                                 padding the return value with leading 0s (zeros).                                 If places is not an integer, it is truncated.                                 If places is nonnumeric, DEC2OCT returns the #VALUE! error value.                                 If places is zero or negative, DEC2OCT returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDELTA"></a>
+	<h3>static method DELTA <span class="smalllinenumber">[line 2189]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int DELTA(
+float
+$a, [float
+$b = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DELTA<br /><br /><p>Tests whether two values are equal. Returns 1 if number1 = number2; returns 0 otherwise. 	Use this function to filter a set of values. For example, by summing several DELTA 	functions you calculate the count of equal pairs. This function is also known as the 	Kronecker Delta function.</p><p>Excel Function: 		DELTA(a[,b])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$a</b>&nbsp;&nbsp;</td>
+        <td>The first number.</td>
+      </tr>
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$b</b>&nbsp;&nbsp;</td>
+        <td>The second number. If omitted, b is assumed to be zero.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodERF"></a>
+	<h3>static method ERF <span class="smalllinenumber">[line 2265]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float ERF(
+float
+$lower, [float
+$upper = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		ERF<br /><br /><p>Returns the error function integrated between the lower and upper bound arguments.</p><p>Note: In Excel 2007 or earlier, if you input a negative value for the upper or lower bound arguments, 			the function would return a #NUM! error. However, in Excel 2010, the function algorithm was 			improved, so that it can now calculate the function for both positive and negative ranges. 			PHPExcel follows Excel 2010 behaviour, and accepts nagative arguments.</p><p>Excel Function: 		ERF(lower[,upper])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$lower</b>&nbsp;&nbsp;</td>
+        <td>lower bound for integrating ERF</td>
+      </tr>
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$upper</b>&nbsp;&nbsp;</td>
+        <td>upper bound for integrating ERF.                                 If omitted, ERF integrates between zero and lower_limit</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodERFC"></a>
+	<h3>static method ERFC <span class="smalllinenumber">[line 2329]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float ERFC(
+float
+$x)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		ERFC<br /><br /><p>Returns the complementary ERF function integrated between x and infinity</p><p>Note: In Excel 2007 or earlier, if you input a negative value for the lower bound argument, 		the function would return a #NUM! error. However, in Excel 2010, the function algorithm was 		improved, so that it can now calculate the function for both positive and negative x values. 			PHPExcel follows Excel 2010 behaviour, and accepts nagative arguments.</p><p>Excel Function: 		ERFC(x)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The lower bound for integrating ERFC</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodGESTEP"></a>
+	<h3>static method GESTEP <span class="smalllinenumber">[line 2212]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int GESTEP(
+float
+$number, [float
+$step = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		GESTEP<br /><br /><p>Excel Function: 		GESTEP(number[,step])</p><p>Returns 1 if number &gt;= step; returns 0 (zero) otherwise 	Use this function to filter a set of values. For example, by summing several GESTEP 	functions you calculate the count of values that exceed a threshold.</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$number</b>&nbsp;&nbsp;</td>
+        <td>The value to test against step.</td>
+      </tr>
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$step</b>&nbsp;&nbsp;</td>
+        <td>The threshold value.                                     If you omit a value for step, GESTEP uses zero.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetConversionGroups"></a>
+	<h3>static method getConversionGroups <span class="smalllinenumber">[line 2345]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static array getConversionGroups(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		getConversionGroups 	Returns a list of the different conversion groups for UOM conversions<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetConversionGroupUnitDetails"></a>
+	<h3>static method getConversionGroupUnitDetails <span class="smalllinenumber">[line 2378]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static array getConversionGroupUnitDetails(
+[
+$group = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		getConversionGroupUnitDetails<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$group</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetConversionGroupUnits"></a>
+	<h3>static method getConversionGroupUnits <span class="smalllinenumber">[line 2362]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static array getConversionGroupUnits(
+[string
+$group = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		getConversionGroupUnits 	Returns an array of units of measure, for a specified conversion group, or for all groups<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$group</b>&nbsp;&nbsp;</td>
+        <td>The group whose units of measure you want to retrieve</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetConversionMultipliers"></a>
+	<h3>static method getConversionMultipliers <span class="smalllinenumber">[line 2397]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static array getConversionMultipliers(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		getConversionMultipliers 	Returns an array of the Multiplier prefixes that can be used with Units of Measure in CONVERTUOM()<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>of mixed</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodHEXTOBIN"></a>
+	<h3>static method HEXTOBIN <span class="smalllinenumber">[line 1392]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string HEXTOBIN(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		HEXTOBIN<br /><br /><p>Return a hex value as binary.</p><p>Excel Function: 		HEX2BIN(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>the hexadecimal number you want to convert. Number cannot                                     contain more than 10 characters. The most significant bit of                                     number is the sign bit (40th bit from the right). The remaining                                     9 bits are magnitude bits. Negative numbers are represented                                     using two's-complement notation.                                     If number is negative, HEX2BIN ignores places and returns a                                     10-character binary number.                                     If number is negative, it cannot be less than FFFFFFFE00, and                                     if number is positive, it cannot be greater than 1FF.                                     If number is not a valid hexadecimal number, HEX2BIN returns                                     the #NUM! error value.                                     If HEX2BIN requires more than places characters, it returns                                     the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted,                                     HEX2BIN uses the minimum number of characters necessary. Places                                     is useful for padding the return value with leading 0s (zeros).                                     If places is not an integer, it is truncated.                                     If places is nonnumeric, HEX2BIN returns the #VALUE! error value.                                     If places is negative, HEX2BIN returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodHEXTODEC"></a>
+	<h3>static method HEXTODEC <span class="smalllinenumber">[line 1428]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string HEXTODEC(
+string
+$x)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		HEXTODEC<br /><br /><p>Return a hex value as decimal.</p><p>Excel Function: 		HEX2DEC(x)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The hexadecimal number you want to convert. This number cannot                                 contain more than 10 characters (40 bits). The most significant                                 bit of number is the sign bit. The remaining 39 bits are magnitude                                 bits. Negative numbers are represented using two's-complement                                 notation.                                 If number is not a valid hexadecimal number, HEX2DEC returns the                                 #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodHEXTOOCT"></a>
+	<h3>static method HEXTOOCT <span class="smalllinenumber">[line 1474]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string HEXTOOCT(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		HEXTOOCT<br /><br /><p>Return a hex value as octal.</p><p>Excel Function: 		HEX2OCT(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The hexadecimal number you want to convert. Number cannot                                     contain more than 10 characters. The most significant bit of                                     number is the sign bit. The remaining 39 bits are magnitude                                     bits. Negative numbers are represented using two's-complement                                     notation.                                     If number is negative, HEX2OCT ignores places and returns a                                     10-character octal number.                                     If number is negative, it cannot be less than FFE0000000, and                                     if number is positive, it cannot be greater than 1FFFFFFF.                                     If number is not a valid hexadecimal number, HEX2OCT returns                                     the #NUM! error value.                                     If HEX2OCT requires more than places characters, it returns                                     the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, HEX2OCT                                     uses the minimum number of characters necessary. Places is                                     useful for padding the return value with leading 0s (zeros).                                     If places is not an integer, it is truncated.                                     If places is nonnumeric, HEX2OCT returns the #VALUE! error                                     value.                                     If places is negative, HEX2OCT returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMABS"></a>
+	<h3>static method IMABS <span class="smalllinenumber">[line 1726]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float IMABS(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMABS<br /><br /><p>Returns the absolute value (modulus) of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMABS(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the absolute value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMAGINARY"></a>
+	<h3>static method IMAGINARY <span class="smalllinenumber">[line 1686]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float IMAGINARY(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMAGINARY<br /><br /><p>Returns the imaginary coefficient of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMAGINARY(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the imaginary                                          coefficient.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMARGUMENT"></a>
+	<h3>static method IMARGUMENT <span class="smalllinenumber">[line 1747]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float IMARGUMENT(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMARGUMENT<br /><br /><p>Returns the argument theta of a complex number, i.e. the angle in radians from the real  axis to the representation of the number in polar coordinates.</p><p>Excel Function: 		IMARGUMENT(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the argument theta.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMCONJUGATE"></a>
+	<h3>static method IMCONJUGATE <span class="smalllinenumber">[line 1781]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMCONJUGATE(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMCONJUGATE<br /><br /><p>Returns the complex conjugate of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMCONJUGATE(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the conjugate.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMCOS"></a>
+	<h3>static method IMCOS <span class="smalllinenumber">[line 1809]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string|float IMCOS(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMCOS<br /><br /><p>Returns the cosine of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMCOS(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the cosine.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMDIV"></a>
+	<h3>static method IMDIV <span class="smalllinenumber">[line 2037]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMDIV(
+string
+$complexDividend, string
+$complexDivisor)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMDIV<br /><br /><p>Returns the quotient of two complex numbers in x + yi or x + yj text format.</p><p>Excel Function: 		IMDIV(complexDividend,complexDivisor)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexDividend</b>&nbsp;&nbsp;</td>
+        <td>The complex numerator or dividend.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexDivisor</b>&nbsp;&nbsp;</td>
+        <td>The complex denominator or divisor.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMEXP"></a>
+	<h3>static method IMEXP <span class="smalllinenumber">[line 1969]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMEXP(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMEXP<br /><br /><p>Returns the exponential of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMEXP(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the exponential.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMLN"></a>
+	<h3>static method IMLN <span class="smalllinenumber">[line 1886]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMLN(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMLN<br /><br /><p>Returns the natural logarithm of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMLN(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the natural logarithm.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMLOG2"></a>
+	<h3>static method IMLOG2 <span class="smalllinenumber">[line 1943]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMLOG2(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMLOG2<br /><br /><p>Returns the common logarithm (base 10) of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMLOG2(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the base-2 logarithm.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMLOG10"></a>
+	<h3>static method IMLOG10 <span class="smalllinenumber">[line 1917]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMLOG10(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMLOG10<br /><br /><p>Returns the common logarithm (base 10) of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMLOG10(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the common logarithm.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMPOWER"></a>
+	<h3>static method IMPOWER <span class="smalllinenumber">[line 2002]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMPOWER(
+string
+$complexNumber, float
+$realNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMPOWER<br /><br /><p>Returns a complex number in x + yi or x + yj text format raised to a power.</p><p>Excel Function: 		IMPOWER(complexNumber,realNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number you want to raise to a power.</td>
+      </tr>
+          <tr>
+        <td class="type">float&nbsp;&nbsp;</td>
+        <td><b>$realNumber</b>&nbsp;&nbsp;</td>
+        <td>The power to which you want to raise the complex number.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMPRODUCT"></a>
+	<h3>static method IMPRODUCT <span class="smalllinenumber">[line 2149]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMPRODUCT(
+string
+$complexNumber,...)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMPRODUCT<br /><br /><p>Returns the product of two or more complex numbers in x + yi or x + yj text format.</p><p>Excel Function: 		IMPRODUCT(complexNumber[,complexNumber[,...]])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber,...</b>&nbsp;&nbsp;</td>
+        <td>Series of complex numbers to multiply</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMREAL"></a>
+	<h3>static method IMREAL <span class="smalllinenumber">[line 1707]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float IMREAL(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMREAL<br /><br /><p>Returns the real coefficient of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMREAL(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the real coefficient.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMSIN"></a>
+	<h3>static method IMSIN <span class="smalllinenumber">[line 1833]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string|float IMSIN(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMSIN<br /><br /><p>Returns the sine of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMSIN(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the sine.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMSQRT"></a>
+	<h3>static method IMSQRT <span class="smalllinenumber">[line 1857]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMSQRT(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMSQRT<br /><br /><p>Returns the square root of a complex number in x + yi or x + yj text format.</p><p>Excel Function: 		IMSQRT(complexNumber)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number for which you want the square root.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMSUB"></a>
+	<h3>static method IMSUB <span class="smalllinenumber">[line 2081]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMSUB(
+string
+$complexNumber1, string
+$complexNumber2)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMSUB<br /><br /><p>Returns the difference of two complex numbers in x + yi or x + yj text format.</p><p>Excel Function: 		IMSUB(complexNumber1,complexNumber2)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber1</b>&nbsp;&nbsp;</td>
+        <td>The complex number from which to subtract complexNumber2.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber2</b>&nbsp;&nbsp;</td>
+        <td>The complex number to subtract from complexNumber1.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodIMSUM"></a>
+	<h3>static method IMSUM <span class="smalllinenumber">[line 2113]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string IMSUM(
+string
+$complexNumber,...)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		IMSUM<br /><br /><p>Returns the sum of two or more complex numbers in x + yi or x + yj text format.</p><p>Excel Function: 		IMSUM(complexNumber[,complexNumber[,...]])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber,...</b>&nbsp;&nbsp;</td>
+        <td>Series of complex numbers to add</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodOCTTOBIN"></a>
+	<h3>static method OCTTOBIN <span class="smalllinenumber">[line 1525]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string OCTTOBIN(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		OCTTOBIN<br /><br /><p>Return an octal value as binary.</p><p>Excel Function: 		OCT2BIN(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The octal number you want to convert. Number may not                                     contain more than 10 characters. The most significant                                     bit of number is the sign bit. The remaining 29 bits                                     are magnitude bits. Negative numbers are represented                                     using two's-complement notation.                                     If number is negative, OCT2BIN ignores places and returns                                     a 10-character binary number.                                     If number is negative, it cannot be less than 7777777000,                                     and if number is positive, it cannot be greater than 777.                                     If number is not a valid octal number, OCT2BIN returns                                     the #NUM! error value.                                     If OCT2BIN requires more than places characters, it                                     returns the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted,                                     OCT2BIN uses the minimum number of characters necessary.                                     Places is useful for padding the return value with                                     leading 0s (zeros).                                     If places is not an integer, it is truncated.                                     If places is nonnumeric, OCT2BIN returns the #VALUE!                                     error value.                                     If places is negative, OCT2BIN returns the #NUM! error                                     value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodOCTTODEC"></a>
+	<h3>static method OCTTODEC <span class="smalllinenumber">[line 1561]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string OCTTODEC(
+string
+$x)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		OCTTODEC<br /><br /><p>Return an octal value as decimal.</p><p>Excel Function: 		OCT2DEC(x)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The octal number you want to convert. Number may not contain                                 more than 10 octal characters (30 bits). The most significant                                 bit of number is the sign bit. The remaining 29 bits are                                 magnitude bits. Negative numbers are represented using                                 two's-complement notation.                                 If number is not a valid octal number, OCT2DEC returns the                                 #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodOCTTOHEX"></a>
+	<h3>static method OCTTOHEX <span class="smalllinenumber">[line 1604]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string OCTTOHEX(
+string
+$x, [integer
+$places = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		OCTTOHEX<br /><br /><p>Return an octal value as hex.</p><p>Excel Function: 		OCT2HEX(x[,places])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td>The octal number you want to convert. Number may not contain                                     more than 10 octal characters (30 bits). The most significant                                     bit of number is the sign bit. The remaining 29 bits are                                     magnitude bits. Negative numbers are represented using                                     two's-complement notation.                                     If number is negative, OCT2HEX ignores places and returns a                                     10-character hexadecimal number.                                     If number is not a valid octal number, OCT2HEX returns the                                     #NUM! error value.                                     If OCT2HEX requires more than places characters, it returns                                     the #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$places</b>&nbsp;&nbsp;</td>
+        <td>The number of characters to use. If places is omitted, OCT2HEX                                     uses the minimum number of characters necessary. Places is useful                                     for padding the return value with leading 0s (zeros).                                     If places is not an integer, it is truncated.                                     If places is nonnumeric, OCT2HEX returns the #VALUE! error value.                                     If places is negative, OCT2HEX returns the #NUM! error value.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_erfVal"></a>
+	<h3>static method _erfVal <span class="smalllinenumber">[line 2225]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void _erfVal(
+
+$x)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_parseComplex"></a>
+	<h3>static method _parseComplex <span class="smalllinenumber">[line 696]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static string[] _parseComplex(
+string
+$complexNumber)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		_parseComplex<br /><br /><p>Parses a complex number into its real and imaginary parts, and an I or J suffix</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Indexed on &quot;real&quot;, &quot;imaginary&quot; and &quot;suffix&quot;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$complexNumber</b>&nbsp;&nbsp;</td>
+        <td>The complex number</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:16:09 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?php
+
+namespace CTRV\CommonBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+
+class CommentRepository extends EntityRepository
+{
+    
+	public function getAgendaComment ($typeEntity,$city) {
+		$qb = $this->createQueryBuilder("p")
+		->select('p')
+		->from('CTRV\EventBundle\Entity\Agenda','a')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->orderBy('p.idEntity', 'DESC')
+		->setParameter(1, 'agenda')
+		->setParameter(2, $city)
+		;
+		return $qb->getQuery()->getResult();
+	}
+public function getEventComment ($typeEntity,$city) {
+		$qb = $this->createQueryBuilder("p")
+		->select('p')
+		->from('CTRV\EventBundle\Entity\Event','a')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->orderBy('p.idEntity', 'DESC')
+		->setParameter(1, 'event')
+		->setParameter(2, $city)
+		;
+		return $qb->getQuery()->getResult();
+	}
+public function getPlaceComment ($typeEntity,$city) {
+		$qb = $this->createQueryBuilder("p")
+		->select('p')
+		->from('CTRV\PlaceBundle\Entity\Place','a')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->orderBy('p.idEntity', 'DESC')
+		->setParameter(1, 'place')
+		->setParameter(2, $city)
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

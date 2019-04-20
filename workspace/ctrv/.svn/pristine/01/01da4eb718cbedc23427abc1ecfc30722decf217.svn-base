@@ -1,0 +1,58 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVMailBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}mail.list.title{% endtrans %}</h3>
+		
+		<div><a class="pull-right btn" href="{{ path('add_mail') }}">{% trans %}mail.menu.add{% endtrans %}</a></div><br/><br/>
+		
+		{% if entities is not empty  %}
+		
+			<table class="table table-bordered tablez-condensed">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}mail.list.table.subject{% endtrans %}</th>
+			            <th>{% trans %}mail.list.table.content{% endtrans %}</th>
+			            <th>{% trans %}mail.list.table.type{% endtrans %}</th>
+			            <th>{% trans %}mail.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.subject }}</td>
+			            <td>{{ entity.content[0:100] }} ...</td>
+			            <td>{{ entity.mailType }}</td>
+			            <td>
+					        <a href="{{ path ("edit_mail", { 'id': entity.id }) }}" class="btn btn-mini" data-mail-id="{{entity.id}}">{% trans %}mail.list.table.edit_action{% endtrans %}</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+		
+		{% else%}
+			<div class="center">{% trans %}mail..list.table.no_result{% endtrans %}</div>				
+		{% endif %}	
+
+	</div>
+
+</div>
+
+{# <script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/messagePublic.js') }}"></script>#}
+<script>
+	$(function() { 
+	});
+</script>
+
+{% endblock body %}

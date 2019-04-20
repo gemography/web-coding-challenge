@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.ajouterForm.titleLatLong{% endtrans %}</h3>
+		<br/>
+	
+		<div>
+			<form class="well form-horizontal" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+				{{ forms.input('place.ajouterForm.save','placeWithoutLatLong') }}
+				</form>
+		</div>
+	</div>
+</div>
+{% endblock body %}

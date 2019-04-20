@@ -1,0 +1,5 @@
+common:
+    chooseCity: Ville
+session:
+    city:
+        not_found: La session a expirée (ville sélecctionnée inconnu)

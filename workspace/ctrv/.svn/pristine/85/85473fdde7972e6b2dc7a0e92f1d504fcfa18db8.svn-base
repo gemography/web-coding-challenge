@@ -1,0 +1,28 @@
+<?php
+
+namespace CTRV\CommonBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Doctrine\ORM\EntityRepository;
+
+class UserRechercheType extends AbstractType{
+
+public function buildForm(FormBuilderInterface $builder, array $options){
+
+	$builder->add('motcle','text', array('label' => 'utilisateur.rechercheForm.rechercher','required'=>false))
+	
+	->add('Etat','choice',array('label'=>'Etat','choices'=>array(
+        'Tous'   => 'Tous',
+        'Bloqués' => 'Bloqués',
+        'Désactivés'  => 'Désactivés'
+    )
+            		));
+}
+public function getName(){
+
+	return 'userrecherche';
+}
+
+}

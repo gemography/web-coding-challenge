@@ -1,0 +1,4 @@
+services:
+    place_service:
+        class: CTRV\PlaceBundle\Service\PlaceService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]

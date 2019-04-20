@@ -1,0 +1,79 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+           {% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title{% endtrans %} {{ city|capitalize }}</h3>
+		<div class="right">{% trans %}utilisateur.list.title3{% endtrans %} {{ city|capitalize }} : {{ nb_entities }}</div><br>
+	    <form class="form-vertical">
+				{{ form_widget(form) }}
+		</form>	
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>login</th>
+        	<th>Noms</th>
+            <th>Prenoms</th>
+            <th>Adresse</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td>{{ entity.login }}</td>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+            <td>{{ entity.address }}</td>
+            <td>{{ entity.name }}</td>
+            <td>
+		        {% if entity.isActive == "0" %}
+		        <a class="user-to-active btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.active_action{% endtrans %}</a>
+		        {% else %}
+		        <a class="user-to-desactive btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.desactive_action{% endtrans %}</a>
+		        {% endif %}
+		        {% if entity.isBlocked == "0" %}
+		        <a class="user-to-block btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.block_action{% endtrans %}</a>
+		        {% else %}
+		        <a class="user-to-deblock btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.deblock_action{% endtrans %}</a>
+		        {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'false', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+{% else %}
+	<div class="center">{% trans %}utilisateur.rechercheForm.list.table.no_result{% endtrans %}</div>				
+{% endif %}
+		
+ 
+	<div id="user-list"> </div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+
+<script>
+	$(function() {
+		
+		var url_desactive_user_action = "{{ path('user_desactive', { 'id': 'user_id_to_desactive' }) }}";
+		$(".user-to-desactive").click( function () {
+			url_desactive_user_action = url_desactive_user_action.update('user_id_to_desactive',$(this).attr('data-user-id'));
+			desactiveUser (url_desactive_user_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

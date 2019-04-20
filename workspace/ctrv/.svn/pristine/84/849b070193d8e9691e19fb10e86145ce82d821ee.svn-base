@@ -1,0 +1,12 @@
+{% if app.session.hasFlash('success') %}
+    <div class="alert alert-success">
+    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ app.session.flash('success') }}
+    </div>
+    
+{% elseif (app.session.hasFlash('error')) %}
+    <div class="alert alert-error">
+    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ app.session.flash('error') }}
+    </div>
+{% endif %}

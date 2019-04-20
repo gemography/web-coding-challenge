@@ -1,0 +1,157 @@
+<?php
+
+namespace CTRV\CommonBundle\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\CommonBundle\Entity\Comment;
+use CTRV\EventBundle\Entity\Event;
+use CTRV\EventBundle\Entity\Agenda;
+use CTRV\PlaceBundle\Entity\Place;
+
+
+/**
+ * Comment controller.
+ *
+ * @Route("/comment")
+ */
+class CommentController extends Controller
+{
+	
+	/**
+     * Charge les donnees de tous les users spécifié en AJAX (places ajoutées par des utilisateurs sous forme de tableau paginé)
+     * @Route("/agendaComment", name="agendaComment")
+     * @Template()
+     */
+    public function loadAgendaCommentAction () {
+    	
+    	$em = $this->getDoctrine()->getEntityManager();
+    	
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	
+    	$page = $this->getRequest()->get("page",1);
+    	$typeEntity = $this->getRequest()->get("typeEntity");
+    	
+    	$entities = $this->get("comment_service")->getAgendaComment($typeEntity, $currentCity);
+    	
+    	//pagination
+        $nb_entities = count($entities);
+        $nb_entities_page = Constants::comments_number_per_page;
+        $nb_pages = ceil($nb_entities/$nb_entities_page);
+        $offset = ($page-1) * $nb_entities_page;
+        
+        $entities = array_slice($entities, $offset,$nb_entities_page);
+       	
+       	return  array (
+            'entities' => $entities,
+        	'nb_pages' => $nb_pages,
+        	'page' => $page,
+        	'nb_entities' => $nb_entities
+        );
+    }  
+    
+    /**
+     * Charge les commentaires des evenements
+     * @Route("/eventComment", name="eventComment")
+     * @Template()
+     */
+    public function loadEventCommentAction () {
+    	 
+    	$em = $this->getDoctrine()->getEntityManager();
+    	 
+    	$currentCity = $this->get('session_service')->getCity();
+    	 
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	 
+    	$page = $this->getRequest()->get("page",1);
+    	$typeEntity = $this->getRequest()->get("typeEntity");
+    	 
+    	$entities = $this->get("comment_service")->getEventComment($typeEntity, $currentCity);
+    	 
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::comments_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    /**
+    * Charge les commentaires des places
+    * @Route("/placeComment", name="placeComment")
+    * @Template()
+    */
+    
+    public function loadPlaceCommentAction () {
+    	 
+    	$em = $this->getDoctrine()->getEntityManager();
+    	 
+    	$currentCity = $this->get('session_service')->getCity();
+    	 
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	 
+    	$page = $this->getRequest()->get("page",1);
+    	$typeEntity = $this->getRequest()->get("typeEntity");
+    	 
+    	$entities = $this->get("comment_service")->getPlaceComment($typeEntity, $currentCity);
+    	 
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::comments_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    
+    /**
+     * Deletes a Comment.
+     *
+     * @Route("/{id}/delete", name="comment_delete" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('CTRVCommonBundle:Comment')->find($id);
+
+        $em->remove($entity);
+        $em->flush();
+        
+        return new Response(json_encode(array('result'=>true)));
+    }
+
+}
