@@ -1,0 +1,35 @@
+
+agenda:
+    menu:
+      afficher: Afficher la liste des Agendas
+      import: Importer des données
+      setLatLng: Saisir la latitude et la longitude
+      setPlaceDescription: Saisir description de places
+    
+    list:
+        title: Liste des agenda ajoutées
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucune agenda trouvé
+event:
+    menu:
+      afficher: Afficher la liste des événements
+      import: Importer des données
+      setLatLng: Saisir la latitude et la longitude
+      setPlaceDescription: Saisir description de places
+    
+    list:
+        title: Liste des événements ajoutées
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun événement trouvé

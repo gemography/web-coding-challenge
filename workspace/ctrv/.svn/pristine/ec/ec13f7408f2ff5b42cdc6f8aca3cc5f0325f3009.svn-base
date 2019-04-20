@@ -1,0 +1,10 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("event") }}">{% trans %}event.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("loadTypeEvents") }}">{% trans %}event.menu.type{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("eventComment") }}">{% trans %}eventComment.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("eventCommentAbuse") }}">{% trans %}Abus{% endtrans %}</a></li><br>
+				
+	</ul>
+</div>

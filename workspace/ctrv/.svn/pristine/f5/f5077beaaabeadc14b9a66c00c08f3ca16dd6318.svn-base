@@ -1,0 +1,17 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>Noms</th>
+            <th>Prenoms</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

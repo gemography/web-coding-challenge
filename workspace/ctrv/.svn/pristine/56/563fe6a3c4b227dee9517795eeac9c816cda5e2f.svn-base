@@ -1,0 +1,17 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     projet
+    database_user:     root
+    database_password: ~
+
+    mailer_transport:  smtp
+    auth_mode:  login
+    encryption: ssl
+    mailer_host:       smtp.iota-it.com
+    mailer_user:       cndiaye@iota-it.com
+    mailer_password:   ndiaye&
+
+    locale:            fr
+    secret:            ThisTokenIsNotSoSecretChangeIt

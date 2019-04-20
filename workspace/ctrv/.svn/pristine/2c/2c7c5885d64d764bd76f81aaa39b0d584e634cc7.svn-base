@@ -1,0 +1,93 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.placeWithSameAddress.list.title{% endtrans %}</h3>
+		<br/>
+	
+		{% if entities is not empty  %}
+			<table class="table table-bordered table-condensed table-hover">
+			    <thead>
+			        <tr>
+			        	<th></th>
+			        	<th>{% trans %}place.placeWithSameAddress.list.table.type{% endtrans %}</th>
+			        	<th>{% trans %}place.placeWithSameAddress.list.table.title{% endtrans %}</th>
+			            <th>{% trans %}place.placeWithSameAddress.list.table.adresse{% endtrans %}</th>
+			            <th>{% trans %}place.placeWithSameAddress.list.table.town{% endtrans %}</th>
+			            <th>{% trans %}place.placeWithSameAddress.list.table.latitude{% endtrans %}</th>
+			            <th>{% trans %}place.placeWithSameAddress.list.table.longitude{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    
+			    {%  set oldStreet = "" %}
+			    
+			    {% for entity in entities %}
+			        
+			        {% if oldStreet !=  entity.street %}
+			         	<tr>
+				        	<td colspan="7"></td>
+				        </tr>
+				        <tr>
+				        	<td colspan="7">{{ entity.street }}</td>
+				        </tr>
+ 					{% endif %}
+			        
+			        <tr>
+			        	<td><input type="checkbox" class="property-check" value="{{entity.id}}"/></td>
+						<td>{{ entity.placeType }}</td>
+						<td>{{ entity.title }}</td>
+			            <td>{{ entity.street}}</td>
+			            <td>{{ entity.town |upper}}</td>
+			            <td>{{ entity.latitude}}</td>
+			            <td>{{ entity.longitude}}</td>
+			        </tr>
+			       
+			        
+			    	{%  set oldStreet =  entity.street %}
+			        
+			    {% endfor %}
+			    </tbody>
+			</table>
+			
+			<button id="submit-property">Tout supprimer</button>
+			
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'placeWithSameAddress' } %}
+		
+		{% else%}
+			<div class="center">{% trans %}place.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvplace/js/place.js') }}"></script>
+<script>
+	$(function() {
+
+		$('#submit-property').click (function () {
+			var url_delete_place_action = "{{ path('place_list_delete') }}";
+		  	var selectedIds = [];
+		  	var cpt=0;
+		  	$(".property-check").each(function(){
+			     if ($(this).is(":checked")) {
+			       selectedIds[cpt] = $(this).val();
+			       cpt++;
+			     }
+  			});
+  			//alert(selectedIds);
+	   		deleteListPlace(url_delete_place_action,selectedIds);
+	  	});
+		
+	});
+</script>
+
+{% endblock body %}

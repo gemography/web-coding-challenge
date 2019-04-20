@@ -1,0 +1,76 @@
+<?php
+
+namespace CTRV\FlowBundle\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use CTRV\CommonBundle\DependencyInjection\Constants;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\FlowBundle\Entity\PublicMessage;
+
+/**
+ * PublicMessage controller.
+ *
+ * @Route("/publicMessage")
+ */
+class PublicMessageController extends Controller
+{
+     
+    /**
+     * Charge les donnees des messages spécifié en AJAX (sous forme de tableau paginé)
+     * @Route("/list", name="publicMessage")
+     * @Template()
+     */
+    public function loadPublicMessageAction () {
+    	
+    	$em = $this->getDoctrine()->getEntityManager();
+    	
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	
+    	$page = $this->getRequest()->get("page",1);
+       	$entities = $this->get("publicMessage_service")->getPublicMessage($currentCity);
+    	
+    	//pagination
+        $nb_entities = count($entities);
+        $nb_entities_page = Constants::publicmessage_number_per_page;
+        $nb_pages = ceil($nb_entities/$nb_entities_page);
+        $offset = ($page-1) * $nb_entities_page;
+        
+        $entities = array_slice($entities, $offset,$nb_entities_page);
+       	
+       	return  array (
+            'entities' => $entities,
+        	'nb_pages' => $nb_pages,
+        	'page' => $page,
+        	'nb_entities' => $nb_entities
+        );
+    }  
+
+    /**
+     * Deletes an PublicMessage entity.
+     *
+     * @Route("/{id}/delete", name="publicmessage_delete" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('CTRVFlowBundle:PublicMessage')->find($id);
+
+        $em->remove($entity);
+        $em->flush();
+        
+        return new Response(json_encode(array('result'=>true)));
+    }
+
+
+}

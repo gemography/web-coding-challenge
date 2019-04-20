@@ -1,0 +1,82 @@
+<?php
+
+namespace CTRV\PlaceBundle\Entity;
+
+use CTRV\CommonBundle\Entity\Comment;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CTRV\CommonBundle\Entity\PlaceComment
+ *
+ * @ORM\Table(name="place_comment")
+ * @ORM\Entity
+ */
+class PlaceComment extends Comment
+{
+    /**
+     * @var integer $commentId
+     *
+     * @ORM\Column(name="comment_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $id;
+
+    /**
+     * @var integer $placeId
+     * @ORM\ManyToOne(targetEntity="Place",inversedBy="comments")
+     * @JoinColumn(name="place_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $place;
+
+
+
+    /**
+     * Set id
+     *
+     * @param integer $id
+     * @return PlaceComment
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set place
+     *
+     * @param CTRV\CommonBundle\Entity\Place $place
+     * @return PlaceComment
+     */
+    public function setPlace(\CTRV\CommonBundle\Entity\Place $place = null)
+    {
+        $this->place = $place;
+    
+        return $this;
+    }
+
+    /**
+     * Get place
+     *
+     * @return CTRV\CommonBundle\Entity\Place 
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+}

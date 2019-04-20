@@ -1,0 +1,51 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle:Place:menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		{% trans %}place.rechercheForm.title{% endtrans %}
+		
+		<form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+		</form>
+	
+		
+		<div id="place-list">
+		
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvplace/js/place.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		//appel initial ajax
+		var urlAction = "{{ path('rechercher_place_result') }}";
+		loadSearchedPlaces (urlAction, "", $('#place-list') );
+
+		
+		//lorqu'on appui sur entre
+		$('#placerecherche_motcle').keypress(function(e) {
+	 		if(e.which == 13) {
+			        //appel ajax
+		 		loadSearchedPlaces (urlAction, $('#placerecherche_motcle').val(), $('#place-list') );
+	    	}
+		    return false;
+		});
+
+
+		
+	});
+</script>
+
+
+{% endblock body %}

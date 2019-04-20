@@ -1,0 +1,94 @@
+{% if(nb_pages>1) %}
+	<div class="pagination center">
+    	
+    	{% if (nb_pages < 10 ) %}
+    	
+	    	<ul>
+				{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+				{% for p in range(1, nb_pages) %}
+	    			<li data-page="{{ p }}" {% if p == page %} class="active"{% endif %}>
+	    				{% if href_active=='true' %}
+	    					<a href="{{ path(url_path, {'page': p}) }}">{{ p }}</a>
+	    				{% else %}
+	    					<a>{{ p }}</a>
+	    				{% endif %}
+	    			</li>
+				{% endfor %}
+				<select class="pagination-select" id="choose_page"s>
+		    		{% for p in range(1, nb_pages) %}
+		    			<option value="{{ p }}" path-url="{{ url(url_path, {'page': 'page_to_replace'}) }}">{{ p }}</option>
+		    		{% endfor %}
+	    		</select>
+	    	</ul>
+	    	
+	    {% else %} {# si on a plus de 10 pages on affiche 5 page #}
+	    	<ul>
+    			{% if (page==1) %}
+	    			{% set deb = page %}
+	    			{% set fin = page+6 %}
+				{% endif %}
+				{% if ((page-1)>0) %}
+	    			{% set deb = page-1 %}
+	    			{% set fin = page+5 %}
+	    		{% endif %}
+	    		{% if ((page-2)>0) %}
+	    			{% set deb = page-2 %}
+	    			{% set fin = page+4 %}
+	    		{% endif %}
+	    		{% if ((page-3)>0) %}
+	    			{% set deb = page-3 %}
+	    			{% set fin = page+3 %}
+	    		{% endif %}
+	    		{% if ((page-4)>0) %}
+	    			{% set deb = page-4 %}
+	    			{% set fin = page+2 %}
+	    		{% endif %}
+	    		
+				{% for p in range(deb, fin) %}
+	    			<li data-page="{{ p }}" {% if p == page %} class="active"{% endif %}>
+	    				{% if href_active=='true' %}
+	    					<a href="{{ path(url_path, {'page': p}) }}">{{ p }}</a>
+	    				{% else %}
+	    					<a>{{ p }}</a>
+	    				{% endif %}
+	    			</li>
+				{% endfor %}
+				
+				<select class="pagination-select" id="choose_page">
+		    		{% for p in range(1, nb_pages) %}
+		    			<option value="{{ p }}" path-url="{{ url(url_path, {'page': 'page_to_replace'}) }}">{{ p }}</option>
+		    		{% endfor %}
+    			</select>
+	    	</ul>
+	    {% endif %}
+    	
+	</div>
+{% endif %}
+
+
+<script>
+	$(function() {
+
+		$("#choose_page").val("{{ page }}");
+		
+		var  href_active = "{{ href_active }}";
+
+		$("#choose_page").change( function () {
+			
+			var selectedPage = $(this).val();
+
+			if (href_active == "true") {
+				var path_url = "{{ url(url_path, {'page': 'selectedPage'}) }}";
+				path_url = path_url.replace('selectedPage',selectedPage);
+				$(location).attr('href',path_url);
+
+			} else {
+				//a gérer sur la page appelante
+
+			}
+		});
+				
+		
+		
+	});
+</script>

@@ -1,0 +1,95 @@
+<?php
+
+namespace CTRV\MailBundle\Controller;
+
+use CTRV\MailBundle\Form\SendMailType;
+
+use CTRV\MailBundle\Entity\MailTemplate;
+
+use CTRV\MailBundle\Form\MailTemplateType;
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+class MailController extends Controller
+{
+    /**
+     * @Route("/list_mail",name="list_mail")
+     * @Template()
+     */
+    public function indexAction() {
+    	
+    	$entities = $this->getDoctrine()->getEntityManager()->getRepository("CTRVMailBundle:MailTemplate")->findAll();
+        return array("entities"=>$entities);
+    }
+    
+    /**
+     * @Route("/mailTemplate/send",name="send_mail")
+     * @Template()
+     */
+    public function sendMailAction() {
+    	 
+    	$form = $this->createForm(new SendMailType());
+    	return array('form'=>$form->createView());
+    }
+    
+    
+    /**
+     * Ajouter, sauvegarder un mail template
+     * @Route("/mailTemplate/add",name="add_mail")
+     * @Template()
+     */
+    public function addMailTemplateAction() {
+    	 
+    	$form = $this->createForm(new MailTemplateType());
+    	 
+    	if( $this->get('request')->getMethod() == 'POST' ) {
+    	
+    		$form->bind($this->get('request'));
+    	
+    		if ( $form->isValid() ) {
+    			
+    			$mailTemplate = $form->getData();
+    			$this->getDoctrine()->getEntityManager()->persist($mailTemplate);
+    			$this->getDoctrine()->getEntityManager()->flush();
+    			
+    			return $this->redirect($this->generateUrl("list_mail"));
+    		}
+    	}
+    	return array('form'=>$form->createView());
+    }
+    
+    /**
+     * Editer puis sauvegarder un mail template
+     * @Route("/mailTemplate/edit/{id}",name="edit_mail")
+     * @Template()
+     */
+    public function editMailTemplateAction (MailTemplate $mailTemplate) {
+    
+    	$form = $this->createForm(new MailTemplateType,$mailTemplate);
+    	
+    	if( $this->get('request')->getMethod() == 'POST' ) {
+    		 
+    		$form->bind($this->get('request'));
+    		 
+    		if ( $form->isValid() ) {
+    			
+    			$data = $form->getData();
+    			 
+    			$mailTemplate->setContent($data->getContent());
+    			$mailTemplate->setSubject($data->getSubject());
+    			$mailTemplate->setMailType($data->getMailType());
+    			
+    			$this->getDoctrine()->getEntityManager()->persist($mailTemplate);
+    			$this->getDoctrine()->getEntityManager()->flush();
+    			 
+    			return $this->redirect($this->generateUrl("list_mail"));
+    		}
+    	}
+    	
+    	return array('form'=>$form->createView());
+    }
+    
+    
+}

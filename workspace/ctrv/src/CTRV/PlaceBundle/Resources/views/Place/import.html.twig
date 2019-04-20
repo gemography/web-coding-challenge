@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.import.title{% endtrans %}</h3>
+	
+		<div>
+			<span class="label label-info">{% trans %}place.import.help{% endtrans %}</span>
+		</div>
+	
+		<br/>
+	
+		<div>
+			<form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+				{{ forms.input('place.import.form.submit','place') }}
+			</form>
+		</div>
+		
+		<br/>
+		Il y a {{ notLocalizedPlacesNumber }}/{{ allPlaceNumber }} places non localisées 
+		<a class="btn" href="{{ path("calculate_Lat_Lng") }}">{% trans %}place.import.calculate_coordinate{% endtrans %}</a>
+		
+	</div>
+</div>
+
+{% endblock body %}

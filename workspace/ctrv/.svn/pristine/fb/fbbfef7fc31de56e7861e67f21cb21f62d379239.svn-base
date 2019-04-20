@@ -1,0 +1,6 @@
+mailTemplate:
+    addEdit:
+        form:
+            mail_type_already_exist: Ce type de mail existe déjà
+            
+            

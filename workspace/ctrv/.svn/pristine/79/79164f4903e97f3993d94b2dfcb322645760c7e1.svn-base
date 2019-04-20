@@ -1,0 +1,14 @@
+menu:
+    home: Accueil
+    flow: Flow
+    groupe: Gestion des groupes
+    utilisateur: Gestion des utilisateurs 
+    attraction: Attraction
+    agenda: Agenda
+    place: Place
+    tracker: Tracker
+    myStore: MyStore
+
+        
+    
+    

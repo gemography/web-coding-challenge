@@ -1,0 +1,123 @@
+place:
+    menu:
+      moderate: Modérer les places
+      import: Importer des données
+      setLatLng: Saisir la latitude et la longitude
+      setPlaceDescription: Saisir description de places
+      placeWithSameAddress: Nettoyer les doublons
+      search: Rechercher par rue
+      type: Types de places
+      add: Ajouter
+    import:
+        title: Importation de données de places
+        help: Uploader un fichier xls contenant des données sur un type d'endroit d'une ville donnée.
+        success: Importation des données terminées (%traited%/%total% coordonnées de place trouvées) : %imported% nouvelle(s) place(s) ajoutée(s) - %already% place(s) existe(nt) déjà
+        relaunch_success: Importation des données terminées - %traited%/%total% coordonnées de place trouvées
+        form:
+            city: Ville
+            placetype: Type de place
+            file: Sélectionner fichier xls de données
+            submit: Importer
+    list:
+        title: Liste des places ajoutées
+        titlePlaceWithoutLatLong: Liste des places ajoutées sans Latitude ou longitude
+        titlePlaceWithoutDescription: Liste des places ajoutées sans Description
+        titleTypePlace: Liste des types de Places
+        table:
+            title: Titre
+            type : Type
+            description: Description
+            latitude: Latitude
+            longitude: Longitude
+            adresse: Adresse
+            town: Ville
+            siteUrl: Url du Site
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            update_action: Modifier
+            code: Code
+            label: Libellé
+            language: Langue
+            img_url: Icône
+            no_result: Aucune place trouvée
+    moderate:
+        form:
+            placeType: Type de place
+    ajouterForm: 
+        titleAddTypePlace : Ajouter un type de place
+        titleUpdateTypePlace : Modifier un type de place
+        titleAddPlace : Ajouter une nouvelle Place
+        titleUpdatePlace : Modifier une Place
+        titleLatLong : Saisir Latitude et Longitude
+        titleDescription : Saisir la Description
+        select_file : Selectionner un fichier
+        libelle: Libellé
+        code : Code
+        activity: Activité
+        longitude: Longitude
+        latitude: Latitude
+        isApproxAdress: Adresse Approximative
+        description: Description
+        TitlePlace: Titre
+        siteUrl: Url du Site
+        town: Ville
+        street: Adresse
+        mark: Marque
+        tel: Téléphone
+        numberMark: Numéro de marques
+        date: Date
+        placeType: Type de place
+        auteur: Auteur
+        city: Cité
+        owner: Propriétaire
+        langue: Langue
+        fr : French
+        en : English
+        es : Spanish
+        save : Sauvegarder
+    rechercheForm:
+        title : Liste des places correspondant à votre recherche
+        rechercher: Entrer le nom d'une rue
+        
+        list:
+          number: Il y a %number% places dans cette ville
+          title: Liste des places de la ville
+          table:
+              title: Titre
+#              description: Description
+#              latitude: Latitude
+#              longitude: Longitude
+              address: Adresse
+#              author: Auteur
+#              addedDate: Date d'ajout
+#              action: Actions
+              no_result: Aucune place trouvée
+    placeWithSameAddress:
+        list:
+            title: Liste des places se trouvant à la même addresse
+            table:
+                title: Titre
+                type : Type
+                description: Description
+                adresse: Adresse
+                town: Ville
+                latitude: Latitude
+                longitude: Longitude
+    
+placeComment:
+    menu:
+      afficher: Commentaires des Places
+          
+    list:
+        title: Liste des Commentaires
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            place: Place
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé    

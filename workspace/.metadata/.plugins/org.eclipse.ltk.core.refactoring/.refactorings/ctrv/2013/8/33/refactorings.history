@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ctrv/src/CTRV/CommonBundle/Resources/views/User/loadUserConnected.html.twig&apos; to &apos;loadUserConnectedByCity.html.twig&apos;" description="Rename resource &apos;loadUserConnected.html.twig&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CTRV/CommonBundle/Resources/views/User/loadUserConnected.html.twig" name="loadUserConnectedByCity.html.twig" stamp="1376303211411" updateReferences="true"/>
+</session>

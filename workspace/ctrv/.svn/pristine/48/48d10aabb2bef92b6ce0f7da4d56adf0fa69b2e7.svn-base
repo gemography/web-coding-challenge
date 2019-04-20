@@ -1,0 +1,34 @@
+@CHARSET "ISO-8859-1";
+
+
+h3 {
+	text-align: center;
+}
+
+/* * pour indiquer champs obligatoire */
+.required:AFTER {
+	content: " *";
+	color:red;
+	font-weight: bold;
+  	font-size: 1.4em;
+}
+
+
+/* affichage des sous menu sur hover et non au click */
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;    
+}
+.navbar .dropdown-menu {
+ margin-top: 0px;
+}
+
+.ctrv-loader {
+  	width: 128px;
+  	height: 300px;
+  	margin: 0 auto;
+	background: url('/bundles/ctrvcommon/images/loading.gif') no-repeat center center;;
+}
+
+.center {
+	text-align:center;
+}

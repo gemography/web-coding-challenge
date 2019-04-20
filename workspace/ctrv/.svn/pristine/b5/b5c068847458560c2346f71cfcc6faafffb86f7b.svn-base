@@ -1,0 +1,259 @@
+<?php
+
+namespace CTRV\CommonBundle\Controller;
+
+use CTRV\CommonBundle\Form\RegistrationType;
+
+use Symfony\Component\Security\Core\SecurityContext;
+
+use CTRV\CommonBundle\Form\UserAuthType;
+
+use Symfony\Component\HttpFoundation\Response;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\CommonBundle\Entity\User;
+use JMS\SecurityExtraBundle\Annotation\Secure;
+use CTRV\CommonBundle\Form\UserRechercheType;
+
+/**
+ * User controller.
+ *
+ * @Route("/utilisateur")
+ */
+class UserController extends Controller
+{
+	
+	/**
+     * Charge les données de tous les utilisateurs de la ville courante
+     * @Route("/list", name="utilisateur")
+     * @Template()
+     */
+    public function loadUserAction () {
+    	
+    	$em = $this->getDoctrine()->getEntityManager();
+    	
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	$form = $this->createForm(new UserRechercheType(),array());
+    	$page = $this->getRequest()->get("page",1);
+    	$entities = $this->get("user_service")->getUsers($currentCity);
+    	
+    	//pagination
+        $nb_entities = count($entities);
+        $nb_entities_page = Constants::users_number_per_page;
+        $nb_pages = ceil($nb_entities/$nb_entities_page);
+        $offset = ($page-1) * $nb_entities_page;
+        
+        $entities = array_slice($entities, $offset,$nb_entities_page);
+       	
+       	return  array (
+            'entities' => $entities,
+        	'nb_pages' => $nb_pages,
+        	'page' => $page,
+        	'nb_entities' => $nb_entities,
+       			'city'=>$currentCity,
+       			'users' => $entities,
+       			'form' => $form->createView()
+        );
+    }  
+    
+    /**
+     * Charge les données de l'ensemble  des utilisateurs Connectés 
+     * @Route("/connected", name="userConnected")
+     * @Template()
+     */
+    public function loadUserConnectedAction () {
+    	 
+    	$em = $this->getDoctrine()->getEntityManager();  	 
+    	$entities = $this->get("user_service")->getUsersConnected();
+    	 
+    	return  array (
+    			'entities' => $entities
+    	);
+    }
+    /**
+     * Charge les données de l'ensemble des utilisateurs Connectés de la ville courante 
+     * @Route("/connectedCity", name="userConnectedCity")
+     * @Template()
+     */
+    public function loadUserConnectedCityAction () {
+    
+    	$em = $this->getDoctrine()->getEntityManager();
+        $currentCity = $this->get('session_service')->getCity();
+    
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    
+    	$entities = $this->get("user_service")->getUsersConnectedCity($currentCity);
+    
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::users_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    }
+    /**
+     * Charge les données de l'ensemble des utilisateurs du Systéme
+     * @Route("/all", name="userAll")
+     * @Template()
+     */
+    public function allUserAction () {
+    
+    	$em = $this->getDoctrine()->getEntityManager();
+        $currentCity = $this->get('session_service')->getCity();
+    
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    
+    	$page = $this->getRequest()->get("page",1);
+        //retourne la liste de tous les utilisateurs du systéme
+    	$entities = $this->get("user_service")->getAllUsers();
+    	//retourne la liste de tous les utilisateurs de la ville courante
+    	$entities1 = $this->get("user_service")->getUsers($currentCity);
+    	// retourne  la liste de tous les utilisateurs connectés
+    	$entities2 = $this->get("user_service")->getUsersConnected();
+    	// retourne la liste de tous les utilisateurs connectés de la ville courante
+    	$entities3 = $this->get("user_service")->getUsersConnectedCity($currentCity);
+        
+    	// Calcul du nombre d'utilisateurs récupérés pour chaque fonction
+    	$nb_entities = count($entities);
+    	$nb_entities1 = count($entities1);
+    	$nb_entities2 = count($entities2);
+    	$nb_entities3 = count($entities3);
+    	return  array (
+    			
+    			'nb_entities' => $nb_entities,
+    			'nb_entities1' => $nb_entities1,
+    			'nb_entities2' => $nb_entities2,
+    			'nb_entities3' => $nb_entities3
+    	);
+    }
+    /**
+     * Activer un utilisateur
+     *
+     * @Route("/active/{id}", name="user_active" ) //requirements={"id" = "\d+"}
+     * @Template()
+     */
+    public function activeAction (User $id) {
+    	$em = $this->getDoctrine()->getManager();
+    		$entity = $em->getRepository('CTRVCommonBundle:User')->find($id);
+    		$entity->setIsActive("1");
+    		$em->persist($entity);
+    		$em->flush();
+    	
+    	return $this->redirect($this->generateUrl("utilisateur"));
+    }
+    
+    /**
+     * Desactiver un utilisateur
+     *
+     * @Route("/desactive/{id}", name="user_desactive" ) //requirements={"id" = "\d+"}
+     * @Template()
+     */
+     public function desactiveAction (User $id) {
+		$em = $this->getDoctrine()->getManager();
+    	$entity = $em->getRepository('CTRVCommonBundle:User')->find($id);
+    	$entity->setIsActive("0");
+    	$em->persist($entity);
+    	$em->flush();
+	
+    	return $this->redirect($this->generateUrl("utilisateur"));
+    }
+    /**
+     * Bloquer un utilisateur
+     *
+     * @Route("/block/{id}", name="user_block" ) //requirements={"id" = "\d+"}
+     * @Template()
+     */
+    public function blockAction (User $id) {
+    	$em = $this->getDoctrine()->getManager();
+    	$entity = $em->getRepository('CTRVCommonBundle:User')->find($id);
+    	$entity->setisBlocked("1");
+    	$em->persist($entity);
+    	$em->flush();
+    	 
+    	return $this->redirect($this->generateUrl("utilisateur"));
+    }
+    /**
+     * Debloquer un utilisateur
+     *
+     * @Route("/deblock/{id}", name="user_deblock" ) //requirements={"id" = "\d+"}
+     * @Template()
+     */
+    public function deblockAction (User $id) {
+    	$em = $this->getDoctrine()->getManager();
+    	$entity = $em->getRepository('CTRVCommonBundle:User')->find($id);
+    	$entity->setisBlocked("0");
+    	$em->persist($entity);
+    	$em->flush();
+    
+    	return $this->redirect($this->generateUrl("utilisateur"));
+    }
+    
+    /**
+     * Rechercher un utilisateur à partir de mot clé
+     * @Route("/rechercher",name="rechercher_user")
+     * @Template()
+     */
+    public function rechercherUserAction () {
+    
+    	$form = $this->createForm(new UserRechercheType(),array());
+    
+    	return array('form'=>$form->createView());
+    }
+    
+    /**
+     * Resultat de la recherche d'utilisateur
+     * @Route("/rechercherResult",name="rechercher_user_result")
+     * @Template()
+     */
+    public function rechercherUserResultAction () {
+    
+    	$searchText = $this->getRequest()->get("searchText","");
+    	$currentCity = $this->get("session_service")->getCity();
+    	$city = $this->getDoctrine()->getEntityManager()->getRepository('CTRVCommonBundle:City')->find($currentCity->getId());
+    	//requête sql
+    	$users = $this->getDoctrine()->getRepository('CTRVCommonBundle:User')->getUserByName($searchText, $city);
+    	$page = intval($this->getRequest()->get("page",1));
+    	//pagination
+    	$nb_entities = count($users);
+    	$nb_entities_page = Constants::users_search_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    	
+    	$users = array_slice($users, $offset,$nb_entities_page);
+    
+    	return  array (
+				'entities' => $users,
+				'nb_pages' => $nb_pages,
+				'page' => $page,
+				'nb_entities' => $nb_entities
+    			);
+    }
+    
+
+}

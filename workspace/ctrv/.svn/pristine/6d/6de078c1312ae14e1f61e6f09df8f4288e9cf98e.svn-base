@@ -1,0 +1,15 @@
+<?php 
+
+namespace CTRV\CommonBundle\DependencyInjection;
+
+Class Constants {
+	
+	const places_number_per_page = 2;
+	
+	const DATE_FORMAT = "d/m/Y H:i:s";
+	const WEB_SERVICE_PATH = "http://webservice.com/v1/";
+	
+	const IMPORT_FILE_PATH = "uploads/places";
+	
+	
+}

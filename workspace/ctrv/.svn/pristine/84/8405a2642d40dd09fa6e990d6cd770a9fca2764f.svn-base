@@ -1,0 +1,45 @@
+{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>Noms</th>
+            <th>Prenoms</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'false', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+{% else %}
+	<div class="center">{% trans %}utilisateur.rechercheForm.list.table.no_result{% endtrans %}</div>				
+{% endif %}
+
+
+<script>
+	$(function() {
+
+		var urlAction = "{{ path('rechercher_user_result') }}";
+		//si on change de page
+		$(".pagination li a").click (function () {
+			var serachVal = $('#userrecherche_motcle').val();
+			var container_id = 'user-list';
+			var page = $(this).parent().attr("data-page");
+			loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(),page, 'user-list' );
+		});
+
+		//si on change de page via la select box
+		$("#choose_page").change( function () {
+			var serachVal = $('#userrecherche_motcle').val();
+			var container_id = 'user-list';
+			var page = $(this).parent().attr("data-page");
+			loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(),page, 'user-list' );
+		});
+	});
+</script>

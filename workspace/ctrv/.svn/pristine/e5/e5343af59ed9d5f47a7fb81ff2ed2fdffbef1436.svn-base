@@ -1,0 +1,46 @@
+<?php
+
+namespace CTRV\CommonBundle\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use CTRV\CommonBundle\Entity\Comment;
+use CTRV\EventBundle\Entity\Event;
+use CTRV\EventBundle\Entity\Agenda;
+use CTRV\PlaceBundle\Entity\Place;
+
+
+/**
+ * Comment controller.
+ *
+ * @Route("/comment")
+ */
+class CommentController extends Controller
+{
+    
+    /**
+     * Deletes a Comment.
+     *
+     * @Route("/{id}/delete", name="comment_delete" ) //requirements={"id" = "\d+"}
+     * @Method("POST")
+     * @Template()
+     */
+    public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('CTRVCommonBundle:Comment')->find($id);
+
+        $em->remove($entity);
+        $em->flush();
+        
+        return new Response(json_encode(array('result'=>true)));
+    }
+
+}

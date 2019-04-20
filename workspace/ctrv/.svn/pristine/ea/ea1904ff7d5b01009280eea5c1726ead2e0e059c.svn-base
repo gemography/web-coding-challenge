@@ -1,0 +1,119 @@
+<?php
+
+namespace CTRV\CommonBundle\Entity;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+
+class CommentRepository extends EntityRepository
+{
+	
+	/**
+	 * retourne la liste de commnetaires d'agendas de la ville courante
+	 */
+	public function getAgendaComment ($city) {
+		
+		$qb = $this->createQueryBuilder("p")
+		->select('p as comment')
+		->from('CTRV\EventBundle\Entity\Event','a')
+		->addSelect('a.title')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->andWhere('a.isPrivate=?3')
+		->andWhere('a.isRealtime=?4')
+		->orderBy('p.date', 'DESC')
+		->setParameter(1, Constants::TYPE_ENTIY_AGENDA)
+		->setParameter(2, $city)
+		->setParameter(3,false)
+		->setParameter(4,false)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * retourne la liste de commnetaires d'événements de la ville courante
+	 */
+   public function getEventComment ($city) {
+   	
+		$qb = $this->createQueryBuilder("p")
+		->select('p as comment')
+		->from('CTRV\EventBundle\Entity\Event','a')
+		->addSelect('a.title')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->andWhere('a.isPrivate=?3')
+		->andWhere('a.isRealtime=?4')
+		->orderBy('p.date', 'DESC')
+		->setParameter(1, Constants::TYPE_ENTIY_EVENT)
+		->setParameter(2, $city)
+		->setParameter(3,false)
+		->setParameter(4,true)
+        ;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * retourne la liste de commnetaires de places de la ville courante
+	 */   
+   public function getPlaceComment ($city) {
+   	
+		$qb = $this->createQueryBuilder("p")
+		->select('p as comment')
+		->from('CTRV\PlaceBundle\Entity\Place','a')
+		->addSelect('a.title')
+		->where("p.idEntity=a.id")
+		->andwhere("p.typeEntity=?1")
+		->andWhere("a.city=?2")
+		->orderBy('p.date', 'DESC')
+		->setParameter(1, Constants::TYPE_ENTIY_PLACE)
+		->setParameter(2, $city)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * Retourne la liste de tous les commentaires signalés des évenements de la ville courante
+	 */
+	public function getEventCommentAbuse($city){
+		$qb= $this->createQueryBuilder("c")
+		->select('c.id,a.entityId')
+		->from('CTRV\CommonBundle\Entity\Abuse','a')
+		->from('CTRV\EventBundle\Entity\Event','e')
+		->addSelect('c.content,a.entityType, e.title')
+		->where("a.entityId=c.id")
+		->andWhere("c.idEntity=e.id")
+		->andWhere("a.entityType=?1")
+		->andWhere("e.city=?2")
+		->orderBy('c.date','DESC')
+		->setParameter(1,Constants::EVENT_COMMENT_ABUSE)
+		->setParameter(2,$city)
+		->groupBy('a.entityId');
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * Retourne la liste de tous les abus sur les commentaires des places
+	 */
+	public function getPlaceCommentAbuse($city){
+		$qb= $this->createQueryBuilder("c")
+		->select('c.id')
+		->from('CTRV\CommonBundle\Entity\Abuse','a')
+		->from('CTRV\PlaceBundle\Entity\Place','p')
+		->addSelect('c.content,a.entityType, p.title')
+		->where("a.entityId=c.id")
+		->andWhere("c.idEntity=p.id")
+		->andWhere("a.entityType=?1")
+		->andWhere("p.city=?2")
+		->orderBy('c.date','DESC')
+		->setParameter(1,Constants::PLACE_COMMENT_ABUSE)
+		->setParameter(2,$city)
+		->groupBy('a.entityId');
+		return $qb->getQuery()->getResult();
+	}
+	
+}

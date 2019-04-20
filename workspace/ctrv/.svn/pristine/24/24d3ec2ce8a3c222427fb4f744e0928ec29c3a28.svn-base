@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+
+{% block body %}
+
+
+Welcome to cityrovers {{ app.security.getToken().getUser()}} 
+
+{% endblock body%}

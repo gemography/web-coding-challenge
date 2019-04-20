@@ -1,0 +1,60 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVFlowBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}publicMessage.list.title{% endtrans %}</h3>
+		{% if entities is not empty  %}
+			<table class="table table-bordered">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}publicMessage.list.table.content{% endtrans %}</th>
+			            <th>{% trans %}publicMessage.list.table.addedDate{% endtrans %}</th>
+			            <th>{% trans %}publicMessage.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.content }}</td>
+			            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT') %}
+			            <td>{{ entity.Date|date(format) }}</td>
+			            <td>
+					        <a class="publicMessage-to-delete btn" data-publicMessage-id="{{entity.id}}">Supprimer</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'publicMessage' } %}
+		
+		{% else%}
+			<div class="center">{% trans %}publicMessage.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/publicMessage.js') }}"></script>
+
+
+<script>
+	$(function() {
+
+		var url_delete_publicMessage_action = "{{ path('publicmessage_delete', { 'id': 'publicMessage_id_to_delete' }) }}";
+		$(".publicMessage-to-delete").click( function () {
+			url_delete_publicMessage_action = url_delete_publicMessage_action.replace('publicMessage_id_to_delete',$(this).attr('data-publicMessage-id'));
+			deletePublicMessage (url_delete_publicMessage_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

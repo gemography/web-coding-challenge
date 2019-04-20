@@ -1,0 +1,86 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		
+		<META NAME="description" CONTENT="admin city rovers">
+		<META NAME="keywords" CONTENT="city rovers cityrovers
+		">
+		<META NAME="subject" CONTENT="">
+		<LINK REL="Generateur-meta" href="http://www.cityrovers.com/" />
+		<META NAME="author" CONTENT="Faye Amady Diouf, Ousmane seck">
+		<META NAME="copyright" CONTENT="2012">
+		<META NAME="revisit-after" CONTENT="1">
+		<META NAME="identifier-url" CONTENT="cityrovers.com">
+		<META NAME="reply-to" CONTENT="">
+		<META NAME="date-creation-ddmmyyyy" CONTENT="01/01/2013">
+		<META NAME="Robots" CONTENT="all">
+		<META NAME="Rating" CONTENT="general">
+		<META NAME="organization" CONTENT="">
+		<META http-equiv="Content-Language" CONTENT="Fr">
+		<META NAME="expires" CONTENT="never">
+		<META NAME="Distribution" CONTENT="Global">
+		<META NAME="Audience" CONTENT="general">	
+		
+		{% include "::include.html.twig" %}
+		
+	
+		<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" />
+		<title>{% block title %}admin.cityrovers.com{% endblock title %}</title>
+		{% block stylesheets %}	{% endblock stylesheets %}
+		
+				
+	</head>
+
+	<body>
+<!-- **************************************MENU******************************************** -->
+		{% include "::menu.html.twig" %}
+{# ************************************************************************************* #}
+		
+<!-- **************************************BODY******************************************** -->
+	
+		<div id="general-container" class="container">
+			<div class="row">
+				
+				<div  class="span120">
+					{% block flash_container%}
+						{% include "::flash_message.html.twig" %}
+					{% endblock flash_container %}
+					
+					
+					{% block body %}
+					{% endblock body%}
+				</div>
+				
+			</div>
+		</div>
+	
+<!-- **************************************FIN BODY ******************************************** -->
+
+	{% set city = app.session.get('city') %}
+	<span id="city_session" data-city-id="{%  if( city is not null) %}{{ city.id }}{% endif %}"></span>
+	
+	<script>
+		$(function() {
+	
+			//on met la valeur en session dans le select du choix de la ville
+			$("#choose_city_type_choose_city").val($("#city_session").attr("data-city-id"));
+	
+			//si on change de ville
+			$("#choose_city_type_choose_city").change(function() {
+				$("#general-container").html('<div class="ctrv-loader"></div>');
+				setTimeout(function() {
+					//on met en session la nouvelle ville
+					$("#choose_city_form").submit();
+				}, 1);//en ms
+				
+			});
+		});
+	</script>
+
+	</body>
+</html>

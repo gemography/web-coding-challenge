@@ -1,0 +1,11 @@
+#services:
+#    user_service:
+#        class: CTRV\UserBundle\Service\UserService
+#        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+
+#services:
+#    user_registration.registration.form.type:
+#        class: CTRV\UserBundle\Form\Type\RegistrationFormType
+#        arguments: [%fos_user.model.user.class%]
+#        tags:
+#            - { name: form.type, alias: user_registration }

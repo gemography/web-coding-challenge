@@ -1,0 +1,117 @@
+<?php
+
+namespace CTRV\PlaceBundle\Service;
+
+use CTRV\PlaceBundle\Entity\Place;
+
+use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bundle\TwigBundle\TwigEngine;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+class PlaceService {
+	
+	protected $mailer;
+	protected $doctrine;
+	protected $em;
+	protected $service_container;
+	protected $templating;
+	
+	
+	public function __construct(\Swift_Mailer $mailer,RegistryInterface $doctrine, ContainerInterface $service_container, TwigEngine $templating,TranslatorInterface $translator) {
+		
+		$this->mailer = $mailer;
+		$this->doctrine = $doctrine;
+		$this->em = $doctrine->getEntityManager();
+		$this->service_container = $service_container;
+		$this->templating = $templating;
+		$this->translator = $translator;
+	}
+	
+	public function getPlaceAddedByUsers ($placeTypeId, $currentCity) {
+		$entities = $this->em->getRepository('CTRVPlaceBundle:Place')
+		->getPlaceAddedByUsers($this->em->getRepository('CTRVPlaceBundle:PlaceType')->find($placeTypeId),
+		$this->em->getRepository('CTRVCommonBundle:City')->find($currentCity->getId()));
+		return $entities;
+	}
+	
+	public function savePlaceDataFromFile ($p_file, $p_city, $p_place_type) {
+		
+		//$object = new \PHPExcel_Reader_Excel2007();$object->
+		$objet = \PHPExcel_IOFactory::createReaderForFile($p_file);
+		$excel = $objet->load($p_file);
+		/* @var $excel \PHPExcel */
+		$sheet = $excel->getActiveSheet();
+		
+		foreach ($sheet->getRowIterator(2) as $row) { //on commence à lire à partir de la ligne 2
+
+			$cellIterator = $row->getCellIterator();
+			// This loops all cells, even if it is not set By default, only cells that are set will be iterated.
+			$cellIterator->setIterateOnlyExistingCells(false);
+				
+			//parcours des colonnes
+			foreach ($cellIterator as $cell) { /* @var $cell \PHPExcel_Cell */
+				
+				$column = $cell->getColumn();
+				if ($column == "A") {
+					$title = $cell->getValue();
+				} else if ($column == "B") {
+					$activity = $cell->getValue();
+				} else if ($column == "C") {
+					$street = $this->traitAddress($cell->getValue());
+				} else if ($column == "E") {
+					$town = $cell->getValue();
+				} else if ($column == "K") {
+					$siteUrl = $cell->getValue();
+				}
+			}
+			
+			$place = $this->em->getRepository("CTRVPlaceBundle:Place")->findBy(array("city"=>$p_city,"placeType"=>$p_place_type,"title"=>$title,"activity"=>$activity,"street"=>$street));
+			
+			if ($place == null) {
+				
+				$place = new Place();
+				$place->setActivity($activity);
+				$place->setTitle($title);
+				$place->setStreet($street);
+				$place->setSiteUrl($siteUrl);
+				$place->setCity($this->em->getRepository("CTRVCommonBundle:City")->find($p_city->getId()));
+				$place->setPlaceType($this->em->getRepository("CTRVPlaceBundle:PlaceType")->find($p_place_type->getId()));
+				$this->em->persist($place);
+			}
+			
+			
+		}
+		
+		$this->em->flush();
+	}
+	
+	/**
+	 * Remplace les abbreviation du champs adresse du fichier excel par le mot complet
+	 * @param unknown_type $street
+	 */
+	public function traitAddress ($street) {
+		
+		$street = preg_replace("/\bav\b/", "avenue", $street);
+		$street = preg_replace("/\br\b/", "rue", $street);
+		$street = preg_replace("/\brte\b/", "route", $street);
+		$street = preg_replace("/\bpl\b/", "place", $street);
+		$street = preg_replace("/\bchem\b/", "chemin", $street);
+		$street = preg_replace("/\bimp\b/", "impasse", $street);
+		$street = preg_replace("/\bbd\b/", "boulevard", $street);
+		$street = preg_replace("/\bqu\b/", "quai", $street);
+
+		if (preg_match("/Ctre Ccial/", $street)) {
+			$street = preg_replace("/\bCtre\b/", "", $street);
+		}
+		
+		$street = preg_replace("/\bctre\b/", "centre", $street);
+		$street = preg_replace("/\bCcial\b/", "centre commercial", $street);
+		$street = preg_replace("/\bcial\b/", "commercial", $street);
+		$street = preg_replace("/\ball\b/", "allee", $street);
+		
+		return $street;
+	}
+	
+
+}

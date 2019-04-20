@@ -1,0 +1,1191 @@
+<html>
+<head>
+<title>Docs For Class PHPExcel_Worksheet_AutoFilter_Column_Rule</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Worksheet</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                              		  [ <a href="../classtrees_PHPExcel_Worksheet.html" class="menu">class tree: PHPExcel_Worksheet</a> ]
+		  [ <a href="../elementindex_PHPExcel_Worksheet.html" class="menu">index: PHPExcel_Worksheet</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_PHPExcel.html">PHPExcel</a><br />
+              <a href="../li_JAMA.html">JAMA</a><br />
+              <a href="../li_Math_Stats.html">Math_Stats</a><br />
+              <a href="../li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="../li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="../li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="../li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="../li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="../li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="../li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="../li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="../li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="../li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="../li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="../li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="../li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="../li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="../li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="../li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="../li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="../li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="../li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="../li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="../li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter.php.html">		AutoFilter.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---BaseDrawing.php.html">		BaseDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---CellIterator.php.html">		CellIterator.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter---Column.php.html">		Column.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---ColumnDimension.php.html">		ColumnDimension.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---HeaderFooter.php.html">		HeaderFooter.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---HeaderFooterDrawing.php.html">		HeaderFooterDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---MemoryDrawing.php.html">		MemoryDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---PageMargins.php.html">		PageMargins.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---PageSetup.php.html">		PageSetup.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---Protection.php.html">		Protection.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---Row.php.html">		Row.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---RowDimension.php.html">		RowDimension.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---RowIterator.php.html">		RowIterator.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter---Column---Rule.php.html">		Rule.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---SheetView.php.html">		SheetView.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet.php.html">		Worksheet.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html">PHPExcel_Worksheet_BaseDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html">PHPExcel_Worksheet_CellIterator</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html">PHPExcel_Worksheet_ColumnDimension</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html">PHPExcel_Worksheet_HeaderFooter</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html">PHPExcel_Worksheet_HeaderFooterDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_MemoryDrawing.html">PHPExcel_Worksheet_MemoryDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_PageMargins.html">PHPExcel_Worksheet_PageMargins</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html">PHPExcel_Worksheet_PageSetup</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html">PHPExcel_Worksheet_Protection</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_Row.html">PHPExcel_Worksheet_Row</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html">PHPExcel_Worksheet_RowDimension</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html">PHPExcel_Worksheet_RowIterator</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_SheetView.html">PHPExcel_Worksheet_SheetView</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: PHPExcel_Worksheet_AutoFilter_Column_Rule</h1>
+Source Location: /PHPExcel/Worksheet/AutoFilter/Column/Rule.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">PHPExcel_Worksheet_AutoFilter_Column_Rule</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+      
+  
+
+<h4>Copyright:</h4>
+<ul>
+  <li>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
+</ul>
+        
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_EQUAL">AUTOFILTER_COLUMN_RULE_EQUAL</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_GREATERTHAN">AUTOFILTER_COLUMN_RULE_GREATERTHAN</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_GREATERTHANOREQUAL">AUTOFILTER_COLUMN_RULE_GREATERTHANOREQUAL</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_LESSTHAN">AUTOFILTER_COLUMN_RULE_LESSTHAN</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_LESSTHANOREQUAL">AUTOFILTER_COLUMN_RULE_LESSTHANOREQUAL</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_NOTEQUAL">AUTOFILTER_COLUMN_RULE_NOTEQUAL</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_TOPTEN_BOTTOM">AUTOFILTER_COLUMN_RULE_TOPTEN_BOTTOM</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_TOPTEN_BY_VALUE">AUTOFILTER_COLUMN_RULE_TOPTEN_BY_VALUE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_TOPTEN_PERCENT">AUTOFILTER_COLUMN_RULE_TOPTEN_PERCENT</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_COLUMN_RULE_TOPTEN_TOP">AUTOFILTER_COLUMN_RULE_TOPTEN_TOP</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_CUSTOMFILTER">AUTOFILTER_RULETYPE_CUSTOMFILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP">AUTOFILTER_RULETYPE_DATEGROUP</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_DAY">AUTOFILTER_RULETYPE_DATEGROUP_DAY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_HOUR">AUTOFILTER_RULETYPE_DATEGROUP_HOUR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_MINUTE">AUTOFILTER_RULETYPE_DATEGROUP_MINUTE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_MONTH">AUTOFILTER_RULETYPE_DATEGROUP_MONTH</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_SECOND">AUTOFILTER_RULETYPE_DATEGROUP_SECOND</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DATEGROUP_YEAR">AUTOFILTER_RULETYPE_DATEGROUP_YEAR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMICFILTER">AUTOFILTER_RULETYPE_DYNAMICFILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_ABOVEAVERAGE">AUTOFILTER_RULETYPE_DYNAMIC_ABOVEAVERAGE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_APRIL">AUTOFILTER_RULETYPE_DYNAMIC_APRIL</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_AUGUST">AUTOFILTER_RULETYPE_DYNAMIC_AUGUST</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_BELOWAVERAGE">AUTOFILTER_RULETYPE_DYNAMIC_BELOWAVERAGE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_DECEMBER">AUTOFILTER_RULETYPE_DYNAMIC_DECEMBER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_FEBRUARY">AUTOFILTER_RULETYPE_DYNAMIC_FEBRUARY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_JANUARY">AUTOFILTER_RULETYPE_DYNAMIC_JANUARY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_JULY">AUTOFILTER_RULETYPE_DYNAMIC_JULY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_JUNE">AUTOFILTER_RULETYPE_DYNAMIC_JUNE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_LASTMONTH">AUTOFILTER_RULETYPE_DYNAMIC_LASTMONTH</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_LASTQUARTER">AUTOFILTER_RULETYPE_DYNAMIC_LASTQUARTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_LASTWEEK">AUTOFILTER_RULETYPE_DYNAMIC_LASTWEEK</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_LASTYEAR">AUTOFILTER_RULETYPE_DYNAMIC_LASTYEAR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MARCH">AUTOFILTER_RULETYPE_DYNAMIC_MARCH</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MAY">AUTOFILTER_RULETYPE_DYNAMIC_MAY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_1">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_1</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_2">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_2</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_3">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_3</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_4">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_4</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_5">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_5</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_6">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_6</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_7">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_7</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_8">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_8</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_9">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_9</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_10">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_10</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_11">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_11</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_12">AUTOFILTER_RULETYPE_DYNAMIC_MONTH_12</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_NEXTMONTH">AUTOFILTER_RULETYPE_DYNAMIC_NEXTMONTH</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_NEXTQUARTER">AUTOFILTER_RULETYPE_DYNAMIC_NEXTQUARTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_NEXTWEEK">AUTOFILTER_RULETYPE_DYNAMIC_NEXTWEEK</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_NEXTYEAR">AUTOFILTER_RULETYPE_DYNAMIC_NEXTYEAR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_NOVEMBER">AUTOFILTER_RULETYPE_DYNAMIC_NOVEMBER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_OCTOBER">AUTOFILTER_RULETYPE_DYNAMIC_OCTOBER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_1">AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_1</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_2">AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_2</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_3">AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_3</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_4">AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_4</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_SEPTEMBER">AUTOFILTER_RULETYPE_DYNAMIC_SEPTEMBER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_THISMONTH">AUTOFILTER_RULETYPE_DYNAMIC_THISMONTH</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_THISQUARTER">AUTOFILTER_RULETYPE_DYNAMIC_THISQUARTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_THISWEEK">AUTOFILTER_RULETYPE_DYNAMIC_THISWEEK</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_THISYEAR">AUTOFILTER_RULETYPE_DYNAMIC_THISYEAR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_TODAY">AUTOFILTER_RULETYPE_DYNAMIC_TODAY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_TOMORROW">AUTOFILTER_RULETYPE_DYNAMIC_TOMORROW</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_YEARTODATE">AUTOFILTER_RULETYPE_DYNAMIC_YEARTODATE</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_DYNAMIC_YESTERDAY">AUTOFILTER_RULETYPE_DYNAMIC_YESTERDAY</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_FILTER">AUTOFILTER_RULETYPE_FILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#constAUTOFILTER_RULETYPE_TOPTENFILTER">AUTOFILTER_RULETYPE_TOPTENFILTER</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#method__construct">__construct</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodgetGrouping">getGrouping</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodgetOperator">getOperator</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodgetParent">getParent</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodgetRuleType">getRuleType</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodgetValue">getValue</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetGrouping">setGrouping</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetOperator">setOperator</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetParent">setParent</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetRule">setRule</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetRuleType">setRuleType</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#methodsetValue">setValue</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html#method__clone">__clone</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 36]<br />
+PHPExcel_Worksheet_AutoFilter_Column_Rule<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 273]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>PHPExcel_Worksheet_AutoFilter_Column_Rule __construct(
+[<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a>
+$pParent = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create a new PHPExcel_Worksheet_AutoFilter_Column_Rule<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a>&nbsp;&nbsp;</td>
+        <td><b>$pParent</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetGrouping"></a>
+	<h3>method getGrouping <span class="smalllinenumber">[line 377]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getGrouping(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Rule Grouping<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOperator"></a>
+	<h3>method getOperator <span class="smalllinenumber">[line 349]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getOperator(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Rule Operator<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetParent"></a>
+	<h3>method getParent <span class="smalllinenumber">[line 427]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> getParent(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get this Rule's AutoFilter Column Parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetRuleType"></a>
+	<h3>method getRuleType <span class="smalllinenumber">[line 283]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getRuleType(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Rule Type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetValue"></a>
+	<h3>method getValue <span class="smalllinenumber">[line 309]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getValue(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Rule Value<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetGrouping"></a>
+	<h3>method setGrouping <span class="smalllinenumber">[line 388]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> setGrouping(
+[string
+$pGrouping = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Rule Grouping<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pGrouping</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetOperator"></a>
+	<h3>method setOperator <span class="smalllinenumber">[line 360]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> setOperator(
+[string
+$pOperator = self::AUTOFILTER_COLUMN_RULE_EQUAL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Rule Operator<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pOperator</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetParent"></a>
+	<h3>method setParent <span class="smalllinenumber">[line 437]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> setParent(
+[<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a>
+$pParent = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set this Rule's AutoFilter Column Parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a>&nbsp;&nbsp;</td>
+        <td><b>$pParent</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetRule"></a>
+	<h3>method setRule <span class="smalllinenumber">[line 410]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> setRule(
+[string
+$pOperator = self::AUTOFILTER_COLUMN_RULE_EQUAL], [string|string[]
+$pValue = ''], [string
+$pGrouping = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Rule<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pOperator</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string|string[]&nbsp;&nbsp;</td>
+        <td><b>$pValue</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pGrouping</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetRuleType"></a>
+	<h3>method setRuleType <span class="smalllinenumber">[line 294]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setRuleType(
+[string
+$pRuleType = self::AUTOFILTER_RULETYPE_FILTER])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Rule Type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pRuleType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetValue"></a>
+	<h3>method setValue <span class="smalllinenumber">[line 320]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> setValue(
+[string|string[]
+$pValue = ''])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Rule Value<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string|string[]&nbsp;&nbsp;</td>
+        <td><b>$pValue</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__clone"></a>
+	<h3>method __clone <span class="smalllinenumber">[line 446]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __clone(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Implement PHP __clone to create a deep clone, not just a shallow copy.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constAUTOFILTER_COLUMN_RULE_EQUAL"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_EQUAL = <span class="value">&nbsp;'equal'</span></h4>
+	<p>[line 165]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_GREATERTHAN"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_GREATERTHAN = <span class="value">&nbsp;'greaterThan'</span></h4>
+	<p>[line 167]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_GREATERTHANOREQUAL"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_GREATERTHANOREQUAL = <span class="value">&nbsp;'greaterThanOrEqual'</span></h4>
+	<p>[line 168]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_LESSTHAN"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_LESSTHAN = <span class="value">&nbsp;'lessThan'</span></h4>
+	<p>[line 169]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_LESSTHANOREQUAL"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_LESSTHANOREQUAL = <span class="value">&nbsp;'lessThanOrEqual'</span></h4>
+	<p>[line 170]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_NOTEQUAL"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_NOTEQUAL = <span class="value">&nbsp;'notEqual'</span></h4>
+	<p>[line 166]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_TOPTEN_BOTTOM"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_TOPTEN_BOTTOM = <span class="value">&nbsp;'bottom'</span></h4>
+	<p>[line 190]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_TOPTEN_BY_VALUE"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_TOPTEN_BY_VALUE = <span class="value">&nbsp;'byValue'</span></h4>
+	<p>[line 181]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_TOPTEN_PERCENT"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_TOPTEN_PERCENT = <span class="value">&nbsp;'byPercent'</span></h4>
+	<p>[line 182]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_RULE_TOPTEN_TOP"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_RULE_TOPTEN_TOP = <span class="value">&nbsp;'top'</span></h4>
+	<p>[line 189]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_CUSTOMFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_CUSTOMFILTER = <span class="value">&nbsp;'customFilter'</span></h4>
+	<p>[line 40]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP = <span class="value">&nbsp;'dateGroupItem'</span></h4>
+	<p>[line 39]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_DAY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_DAY = <span class="value">&nbsp;'day'</span></h4>
+	<p>[line 58]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_HOUR"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_HOUR = <span class="value">&nbsp;'hour'</span></h4>
+	<p>[line 59]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_MINUTE"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_MINUTE = <span class="value">&nbsp;'minute'</span></h4>
+	<p>[line 60]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_MONTH"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_MONTH = <span class="value">&nbsp;'month'</span></h4>
+	<p>[line 57]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_SECOND"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_SECOND = <span class="value">&nbsp;'second'</span></h4>
+	<p>[line 61]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DATEGROUP_YEAR"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DATEGROUP_YEAR = <span class="value">&nbsp;'year'</span></h4>
+	<p>[line 56]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMICFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMICFILTER = <span class="value">&nbsp;'dynamicFilter'</span></h4>
+	<p>[line 41]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_ABOVEAVERAGE"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_ABOVEAVERAGE = <span class="value">&nbsp;'aboveAverage'</span></h4>
+	<p>[line 116]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_APRIL"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_APRIL = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_4</span></h4>
+	<p>[line 95]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_AUGUST"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_AUGUST = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_8</span></h4>
+	<p>[line 103]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_BELOWAVERAGE"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_BELOWAVERAGE = <span class="value">&nbsp;'belowAverage'</span></h4>
+	<p>[line 117]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_DECEMBER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_DECEMBER = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_12</span></h4>
+	<p>[line 111]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_FEBRUARY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_FEBRUARY = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_2</span></h4>
+	<p>[line 91]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_JANUARY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_JANUARY = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_1</span></h4>
+	<p>[line 89]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_JULY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_JULY = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_7</span></h4>
+	<p>[line 101]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_JUNE"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_JUNE = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_6</span></h4>
+	<p>[line 99]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_LASTMONTH"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_LASTMONTH = <span class="value">&nbsp;'lastMonth'</span></h4>
+	<p>[line 82]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_LASTQUARTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_LASTQUARTER = <span class="value">&nbsp;'lastQuarter'</span></h4>
+	<p>[line 81]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_LASTWEEK"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_LASTWEEK = <span class="value">&nbsp;'lastWeek'</span></h4>
+	<p>[line 83]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_LASTYEAR"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_LASTYEAR = <span class="value">&nbsp;'lastYear'</span></h4>
+	<p>[line 80]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MARCH"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MARCH = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_3</span></h4>
+	<p>[line 93]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MAY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MAY = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_5</span></h4>
+	<p>[line 97]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_1"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_1 = <span class="value">&nbsp;'M1'</span></h4>
+	<p>[line 88]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_2"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_2 = <span class="value">&nbsp;'M2'</span></h4>
+	<p>[line 90]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_3"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_3 = <span class="value">&nbsp;'M3'</span></h4>
+	<p>[line 92]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_4"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_4 = <span class="value">&nbsp;'M4'</span></h4>
+	<p>[line 94]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_5"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_5 = <span class="value">&nbsp;'M5'</span></h4>
+	<p>[line 96]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_6"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_6 = <span class="value">&nbsp;'M6'</span></h4>
+	<p>[line 98]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_7"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_7 = <span class="value">&nbsp;'M7'</span></h4>
+	<p>[line 100]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_8"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_8 = <span class="value">&nbsp;'M8'</span></h4>
+	<p>[line 102]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_9"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_9 = <span class="value">&nbsp;'M9'</span></h4>
+	<p>[line 104]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_10"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_10 = <span class="value">&nbsp;'M10'</span></h4>
+	<p>[line 106]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_11"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_11 = <span class="value">&nbsp;'M11'</span></h4>
+	<p>[line 108]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_MONTH_12"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_MONTH_12 = <span class="value">&nbsp;'M12'</span></h4>
+	<p>[line 110]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_NEXTMONTH"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_NEXTMONTH = <span class="value">&nbsp;'nextMonth'</span></h4>
+	<p>[line 86]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_NEXTQUARTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_NEXTQUARTER = <span class="value">&nbsp;'nextQuarter'</span></h4>
+	<p>[line 85]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_NEXTWEEK"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_NEXTWEEK = <span class="value">&nbsp;'nextWeek'</span></h4>
+	<p>[line 87]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_NEXTYEAR"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_NEXTYEAR = <span class="value">&nbsp;'nextYear'</span></h4>
+	<p>[line 84]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_NOVEMBER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_NOVEMBER = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_11</span></h4>
+	<p>[line 109]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_OCTOBER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_OCTOBER = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_10</span></h4>
+	<p>[line 107]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_1"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_1 = <span class="value">&nbsp;'Q1'</span></h4>
+	<p>[line 112]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_2"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_2 = <span class="value">&nbsp;'Q2'</span></h4>
+	<p>[line 113]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_3"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_3 = <span class="value">&nbsp;'Q3'</span></h4>
+	<p>[line 114]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_QUARTER_4"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_QUARTER_4 = <span class="value">&nbsp;'Q4'</span></h4>
+	<p>[line 115]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_SEPTEMBER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_SEPTEMBER = <span class="value">&nbsp;self::AUTOFILTER_RULETYPE_DYNAMIC_MONTH_9</span></h4>
+	<p>[line 105]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_THISMONTH"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_THISMONTH = <span class="value">&nbsp;'thisMonth'</span></h4>
+	<p>[line 78]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_THISQUARTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_THISQUARTER = <span class="value">&nbsp;'thisQuarter'</span></h4>
+	<p>[line 77]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_THISWEEK"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_THISWEEK = <span class="value">&nbsp;'thisWeek'</span></h4>
+	<p>[line 79]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_THISYEAR"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_THISYEAR = <span class="value">&nbsp;'thisYear'</span></h4>
+	<p>[line 76]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_TODAY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_TODAY = <span class="value">&nbsp;'today'</span></h4>
+	<p>[line 73]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_TOMORROW"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_TOMORROW = <span class="value">&nbsp;'tomorrow'</span></h4>
+	<p>[line 74]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_YEARTODATE"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_YEARTODATE = <span class="value">&nbsp;'yearToDate'</span></h4>
+	<p>[line 75]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_DYNAMIC_YESTERDAY"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_DYNAMIC_YESTERDAY = <span class="value">&nbsp;'yesterday'</span></h4>
+	<p>[line 72]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_FILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_FILTER = <span class="value">&nbsp;'filter'</span></h4>
+	<p>[line 38]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_RULETYPE_TOPTENFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_RULETYPE_TOPTENFILTER = <span class="value">&nbsp;'top10Filter'</span></h4>
+	<p>[line 42]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:17:36 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9
+-- http://www.phpmyadmin.net
+--
+-- Serveur: localhost
+-- Généré le : Jeu 30 Mai 2013 à 21:03
+-- Version du serveur: 5.5.8
+-- Version de PHP: 5.3.5
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+
+INSERT INTO `city` (`id`, `name`, `latitude`, `longitude`, `latitude_inf`, `latitude_sup`, `longitude_inf`, `longitude_sup`) VALUES
+(1, 'toulouse', '45', '2', NULL, NULL, NULL, NULL),
+(4, 'grenoble', '', '', NULL, NULL, NULL, NULL);
+
+--
+-- Contenu de la table `cityrovers_user`
+--
+
+INSERT INTO `cityrovers_user` (`public_key`, `city_id`, `userid`, `login`, `password`, `first_name`, `last_name`, `email`, `registration_date`, `latitude`, `longitude`, `is_active`, `is_blocked`, `address`, `numero_rue`, `salt`, `language`, `role_id`) VALUES
+(0, 1, 'mur', 'mur', 'mur', 'mur', 'mur', 'mur', '0000-00-00 00:00:00', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL)
+;
+
+
+INSERT INTO `event_type` (`id`, `label`, `code`, `language`, `img_url`) VALUES
+(1, 'soiree', 'soiree', 'FRENCH', '');
+
+
+INSERT INTO `message_type` (`id`, `label`) VALUES
+(1, 'CONTACT_DEMAND'),
+(2, 'REQUEST_GROUP_FROM_USER'),
+(3, 'REQUEST_GROUP_FROM_ADMIN'),
+(4, 'GROUP'),
+(5, 'SINGLE'),
+(6, 'REQUEST_BECOME_PARTICIPANT'),
+(7, 'PUBLIC_MESSAGE_ANSWER'),
+(8, 'EVENT_UPDATED');
+
+
+INSERT INTO `place_type` (`id`, `label`, `code`, `language`, `img_url`) VALUES
+(1, 'restaurant', 'restaurant', 'FRENCH', ''),
+(2, 'boutique', 'boutique', 'FRENCH', ''),
+(3, 'Mosquée', 'MOSQUE', 'FRENCH', '');
+
+
+INSERT INTO `role` (`id`, `name`) VALUES
+(1, 'ROLE_USER'),
+(2, 'ROLE_ADMIN');
+
+
+SET FOREIGN_KEY_CHECKS=1;

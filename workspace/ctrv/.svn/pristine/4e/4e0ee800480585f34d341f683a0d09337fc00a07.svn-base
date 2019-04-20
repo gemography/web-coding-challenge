@@ -1,0 +1,71 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVFlowBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}groupe.list.title{% endtrans %} {{ city|capitalize }}</h3>
+		<div class="right">{% trans %}groupe.list.title1{% endtrans %}  : {{ nb_entities }}</div><br>
+		<div class="right">{% trans %}groupe.list.title2{% endtrans %} : {{ nb_entities1 }}</div><br>
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}groupe.list.table.noms{% endtrans %}</th>
+        	<th>{% trans %}groupe.list.table.description{% endtrans %}</th>
+        	<th>{% trans %}groupe.list.table.membre{% endtrans %}</th>
+            
+            <th>{% trans %}groupe.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities1 %}
+        <tr>
+			<td>{{ entity.name }}</td>
+			<td>{{ entity.description }}</td>
+			<td> {{ group_member[entity.id]}}</td>
+            
+            <td>
+		        <a class="groupe-to-delete btn" data-groupe-id="{{entity.id}}">Supprimer</a>
+		        {% if entity.isBlocked == "0" %}
+		        <a class="groupe-to-block btn" data-groupe-id="{{entity.id}}">Bloguer</a>
+		        {% else %}
+		        <a class="groupe-to-deblock btn" data-groupe-id="{{entity.id}}">Débloguer</a>
+		        {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'groupe' } %}
+		
+		{% else%}
+			<div class="center">{% trans %}groupe.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/groupUser.js') }}"></script>
+
+
+<script>
+	$(function() {
+
+		
+		var url_delete_groupe_action = "{{ path('groupe_delete', { 'id': 'groupe_id_to_delete' }) }}";
+		$(".groupe-to-delete").click( function () {
+			url_delete_groupe_action = url_delete_groupe_action.replace('groupe_id_to_delete',$(this).attr('data-groupe-id'));
+			deleteGroupe (url_delete_groupe_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

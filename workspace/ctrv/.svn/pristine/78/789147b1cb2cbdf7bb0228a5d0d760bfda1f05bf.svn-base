@@ -1,0 +1,43 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menuAbus.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}abus.list.titleAll{% endtrans %}</h3>
+		<div class="right"><h4>{% trans %}abus.list.number{% endtrans %} : {{ nb_entities }}</h4></div><br>
+		{% if entities is not empty  %}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>{% trans %}abus.list.table.type{% endtrans %}</th>
+            <th>{% trans %}abus.list.table.content{% endtrans %}</th>
+            <th>{% trans %}abus.list.table.idEvent{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{entity.entityType}}</td>
+            <td>{{entity.content}}</td>
+            <td>{{entity.id}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'abuse' } %}
+
+		{% else%}
+			<div class="center">{% trans %}abus.list.table.no_result{% endtrans %}</div>				
+		{% endif %}		
+	</div>
+
+</div>
+{% endblock body %}

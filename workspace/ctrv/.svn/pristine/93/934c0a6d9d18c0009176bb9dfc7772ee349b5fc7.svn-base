@@ -1,0 +1,1209 @@
+<html>
+<head>
+<title>Docs For Class PHPExcel_Calculation_DateTime</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Calculation</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                          		  [ <a href="../classtrees_PHPExcel_Calculation.html" class="menu">class tree: PHPExcel_Calculation</a> ]
+		  [ <a href="../elementindex_PHPExcel_Calculation.html" class="menu">index: PHPExcel_Calculation</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_PHPExcel.html">PHPExcel</a><br />
+              <a href="../li_JAMA.html">JAMA</a><br />
+              <a href="../li_Math_Stats.html">Math_Stats</a><br />
+              <a href="../li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="../li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="../li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="../li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="../li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="../li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="../li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="../li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="../li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="../li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="../li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="../li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="../li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="../li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="../li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="../li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="../li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="../li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="../li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="../li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="../li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation.php.html">		Calculation.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Database.php.html">		Database.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---DateTime.php.html">		DateTime.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Engineering.php.html">		Engineering.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---ExceptionHandler.php.html">		ExceptionHandler.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Financial.php.html">		Financial.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---FormulaParser.php.html">		FormulaParser.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---FormulaToken.php.html">		FormulaToken.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Function.php.html">		Function.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Functions.php.html">		Functions.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Logical.php.html">		Logical.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---LookupRef.php.html">		LookupRef.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---MathTrig.php.html">		MathTrig.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Token---Stack.php.html">		Stack.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---Statistical.php.html">		Statistical.php
+		</a><br>
+			<a href="../PHPExcel_Calculation/_PHPExcel---Calculation---TextData.php.html">		TextData.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Database.html">PHPExcel_Calculation_Database</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html">PHPExcel_Calculation_DateTime</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Engineering.html">PHPExcel_Calculation_Engineering</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Exception.html">PHPExcel_Calculation_Exception</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_ExceptionHandler.html">PHPExcel_Calculation_ExceptionHandler</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Financial.html">PHPExcel_Calculation_Financial</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_FormulaParser.html">PHPExcel_Calculation_FormulaParser</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_FormulaToken.html">PHPExcel_Calculation_FormulaToken</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Function.html">PHPExcel_Calculation_Function</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Functions.html">PHPExcel_Calculation_Functions</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Logical.html">PHPExcel_Calculation_Logical</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_LookupRef.html">PHPExcel_Calculation_LookupRef</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_MathTrig.html">PHPExcel_Calculation_MathTrig</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Statistical.html">PHPExcel_Calculation_Statistical</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_TextData.html">PHPExcel_Calculation_TextData</a><br />
+	    		<a href="../PHPExcel_Calculation/PHPExcel_Calculation_Token_Stack.html">PHPExcel_Calculation_Token_Stack</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: PHPExcel_Calculation_DateTime</h1>
+Source Location: /PHPExcel/Calculation/DateTime.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">PHPExcel_Calculation_DateTime</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+      
+  
+
+<h4>Copyright:</h4>
+<ul>
+  <li>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDATE">DATE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDATEDIF">DATEDIF</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDATENOW">DATENOW</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDATETIMENOW">DATETIMENOW</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDATEVALUE">DATEVALUE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDAYOFMONTH">DAYOFMONTH</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDAYOFWEEK">DAYOFWEEK</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodDAYS360">DAYS360</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodEDATE">EDATE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodEOMONTH">EOMONTH</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodHOUROFDAY">HOUROFDAY</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodMINUTEOFHOUR">MINUTEOFHOUR</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodMONTHOFYEAR">MONTHOFYEAR</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodNETWORKDAYS">NETWORKDAYS</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodSECONDOFMINUTE">SECONDOFMINUTE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodTIME">TIME</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodTIMEVALUE">TIMEVALUE</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodWEEKOFYEAR">WEEKOFYEAR</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodWORKDAY">WORKDAY</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodYEAR">YEAR</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#methodYEARFRAC">YEARFRAC</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#method_getDateValue">_getDateValue</a></li>
+    <li><a href="../PHPExcel_Calculation/PHPExcel_Calculation_DateTime.html#method_isLeapYear">_isLeapYear</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 46]<br />
+PHPExcel_Calculation_DateTime<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+  <hr />
+	<a name="methodDATE"></a>
+	<h3>static method DATE <span class="smalllinenumber">[line 276]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed DATE(
+[integer
+$year = 0], [integer
+$month = 1], [integer
+$day = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DATE<br /><br /><p>The DATE function returns a value that represents a particular date.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the date  format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		DATE(year,month,day)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>The value of the year argument can include one to four digits.                                 Excel interprets the year argument according to the configured                                 date system: 1900 or 1904.                                 If year is between 0 (zero) and 1899 (inclusive), Excel adds that                                 value to 1900 to calculate the year. For example, DATE(108,1,2)                                 returns January 2, 2008 (1900+108).                                 If year is between 1900 and 9999 (inclusive), Excel uses that                                 value as the year. For example, DATE(2008,1,2) returns January 2,                                 2008.                                 If year is less than 0 or is 10000 or greater, Excel returns the                                 #NUM! error value.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$month</b>&nbsp;&nbsp;</td>
+        <td>A positive or negative integer representing the month of the year                                 from 1 to 12 (January to December).                                 If month is greater than 12, month adds that number of months to                                 the first month in the year specified. For example, DATE(2008,14,2)                                 returns the serial number representing February 2, 2009.                                 If month is less than 1, month subtracts the magnitude of that                                 number of months, plus 1, from the first month in the year                                 specified. For example, DATE(2008,-3,2) returns the serial number                                 representing September 2, 2007.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$day</b>&nbsp;&nbsp;</td>
+        <td>A positive or negative integer representing the day of the month                                 from 1 to 31.                                 If day is greater than the number of days in the month specified,                                 day adds that number of days to the first day in the month. For                                 example, DATE(2008,1,35) returns the serial number representing                                 February 4, 2008.                                 If day is less than 1, day subtracts the magnitude that number of                                 days, plus one, from the first day of the month specified. For                                 example, DATE(2008,1,-15) returns the serial number representing                                 December 16, 2007.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDATEDIF"></a>
+	<h3>static method DATEDIF <span class="smalllinenumber">[line 594]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static integer DATEDIF(
+[mixed
+$startDate = 0], [mixed
+$endDate = 0], [string
+$unit = 'D'])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DATEDIF<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Interval between the dates</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$startDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value, PHP date/time stamp, PHP DateTime object                                     or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$endDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value, PHP date/time stamp, PHP DateTime object                                     or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$unit</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDATENOW"></a>
+	<h3>static method DATENOW <span class="smalllinenumber">[line 208]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed DATENOW(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DATENOW<br /><br /><p>Returns the current date.  The NOW function is useful when you need to display the current date and time on a worksheet or  calculate a value based on the current date and time, and have that value updated each time you  open the worksheet.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the date  and time format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		TODAY()</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDATETIMENOW"></a>
+	<h3>static method DATETIMENOW <span class="smalllinenumber">[line 168]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed DATETIMENOW(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DATETIMENOW<br /><br /><p>Returns the current date and time.  The NOW function is useful when you need to display the current date and time on a worksheet or  calculate a value based on the current date and time, and have that value updated each time you  open the worksheet.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the date  and time format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		NOW()</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDATEVALUE"></a>
+	<h3>static method DATEVALUE <span class="smalllinenumber">[line 457]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed DATEVALUE(
+[string
+$dateValue = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DATEVALUE<br /><br /><p>Returns a value that represents a particular date.  Use DATEVALUE to convert a date represented by a text string to an Excel or PHP date/time stamp  value.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the date  format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		DATEVALUE(dateValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Text that represents a date in a Microsoft Excel date format.                                     For example, &quot;1/30/2008&quot; or &quot;30-Jan-2008&quot; are text strings within                                     quotation marks that represent dates. Using the default date                                     system in Excel for Windows, date_text must represent a date from                                     January 1, 1900, to December 31, 9999. Using the default date                                     system in Excel for the Macintosh, date_text must represent a date                                     from January 1, 1904, to December 31, 9999. DATEVALUE returns the                                     #VALUE! error value if date_text is out of this range.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDAYOFMONTH"></a>
+	<h3>static method DAYOFMONTH <span class="smalllinenumber">[line 1043]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int DAYOFMONTH(
+[mixed
+$dateValue = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DAYOFMONTH<br /><br /><p>Returns the day of the month, for a specified date. The day is given as an integer  ranging from 1 to 31.</p><p>Excel Function: 		DAY(dateValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Day of the month</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDAYOFWEEK"></a>
+	<h3>static method DAYOFWEEK <span class="smalllinenumber">[line 1078]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int DAYOFWEEK(
+[mixed
+$dateValue = 1], [int
+$style = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DAYOFWEEK<br /><br /><p>Returns the day of the week for a specified date. The day is given as an integer  ranging from 0 to 7 (dependent on the requested style).</p><p>Excel Function: 		WEEKDAY(dateValue[,style])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Day of the week value</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$style</b>&nbsp;&nbsp;</td>
+        <td>A number that determines the type of return value <ol><li>or omitted    Numbers 1 (Sunday) through 7 (Saturday).</li><li>Numbers 1 (Monday) through 7 (Sunday).</li><li>Numbers 0 (Monday) through 6 (Sunday).</li></ol></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodDAYS360"></a>
+	<h3>static method DAYS360 <span class="smalllinenumber">[line 712]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static integer DAYS360(
+[mixed
+$startDate = 0], [mixed
+$endDate = 0], [boolean
+$method = false])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		DAYS360<br /><br /><p>Returns the number of days between two dates based on a 360-day year (twelve 30-day months),  which is used in some accounting calculations. Use this function to help compute payments if  your accounting system is based on twelve 30-day months.</p><p>Excel Function: 		DAYS360(startDate,endDate[,method])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Number of days between start date and end date</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$startDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                         PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$endDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                         PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$method</b>&nbsp;&nbsp;</td>
+        <td>US or European Method                                         FALSE or omitted: U.S. (NASD) method. If the starting date is                                         the last day of a month, it becomes equal to the 30th of the                                         same month. If the ending date is the last day of a month and                                         the starting date is earlier than the 30th of a month, the                                         ending date becomes equal to the 1st of the next month;                                         otherwise the ending date becomes equal to the 30th of the                                         same month.                                         TRUE: European method. Starting dates and ending dates that                                         occur on the 31st of a month become equal to the 30th of the                                         same month.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodEDATE"></a>
+	<h3>static method EDATE <span class="smalllinenumber">[line 1372]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed EDATE(
+[mixed
+$dateValue = 1], [int
+$adjustmentMonths = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		EDATE<br /><br /><p>Returns the serial number that represents the date that is the indicated number of months  before or after a specified date (the start_date).  Use EDATE to calculate maturity dates or due dates that fall on the same day of the month  as the date of issue.</p><p>Excel Function: 		EDATE(dateValue,adjustmentMonths)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                         PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$adjustmentMonths</b>&nbsp;&nbsp;</td>
+        <td>The number of months before or after start_date.                                         A positive value for months yields a future date;                                         a negative value yields a past date.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodEOMONTH"></a>
+	<h3>static method EOMONTH <span class="smalllinenumber">[line 1417]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed EOMONTH(
+[mixed
+$dateValue = 1], [int
+$adjustmentMonths = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		EOMONTH<br /><br /><p>Returns the date value for the last day of the month that is the indicated number of months  before or after start_date.  Use EOMONTH to calculate maturity dates or due dates that fall on the last day of the month.</p><p>Excel Function: 		EOMONTH(dateValue,adjustmentMonths)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                         PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$adjustmentMonths</b>&nbsp;&nbsp;</td>
+        <td>The number of months before or after start_date.                                         A positive value for months yields a future date;                                         a negative value yields a past date.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodHOUROFDAY"></a>
+	<h3>static method HOUROFDAY <span class="smalllinenumber">[line 1246]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int HOUROFDAY(
+[mixed
+$timeValue = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		HOUROFDAY<br /><br /><p>Returns the hour of a time value.  The hour is given as an integer, ranging from 0 (12:00 A.M.) to 23 (11:00 P.M.).</p><p>Excel Function: 		HOUR(timeValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Hour</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$timeValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard time string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodMINUTEOFHOUR"></a>
+	<h3>static method MINUTEOFHOUR <span class="smalllinenumber">[line 1286]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int MINUTEOFHOUR(
+[mixed
+$timeValue = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		MINUTEOFHOUR<br /><br /><p>Returns the minutes of a time value.  The minute is given as an integer, ranging from 0 to 59.</p><p>Excel Function: 		MINUTE(timeValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Minute</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$timeValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard time string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodMONTHOFYEAR"></a>
+	<h3>static method MONTHOFYEAR <span class="smalllinenumber">[line 1188]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int MONTHOFYEAR(
+[mixed
+$dateValue = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		MONTHOFYEAR<br /><br /><p>Returns the month of a date represented by a serial number.  The month is given as an integer, ranging from 1 (January) to 12 (December).</p><p>Excel Function: 		MONTH(dateValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Month of the year</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodNETWORKDAYS"></a>
+	<h3>static method NETWORKDAYS <span class="smalllinenumber">[line 858]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static integer NETWORKDAYS(
+mixed
+$startDate, mixed
+$endDate, mixed
+$holidays,...)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		NETWORKDAYS<br /><br /><p>Returns the number of whole working days between start_date and end_date. Working days  exclude weekends and any dates identified in holidays.  Use NETWORKDAYS to calculate employee benefits that accrue based on the number of days  worked during a specific term.</p><p>Excel Function: 		NETWORKDAYS(startDate,endDate[,holidays[,holiday[,...]]])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Interval between the dates</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$startDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                             PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$endDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                             PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$holidays,...</b>&nbsp;&nbsp;</td>
+        <td>Optional series of Excel date serial value (float), PHP date                                             timestamp (integer), PHP DateTime object, or a standard date                                             strings that will be excluded from the working calendar, such                                             as state and federal holidays and floating holidays.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodSECONDOFMINUTE"></a>
+	<h3>static method SECONDOFMINUTE <span class="smalllinenumber">[line 1326]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int SECONDOFMINUTE(
+[mixed
+$timeValue = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SECONDOFMINUTE<br /><br /><p>Returns the seconds of a time value.  The second is given as an integer in the range 0 (zero) to 59.</p><p>Excel Function: 		SECOND(timeValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Second</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$timeValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard time string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodTIME"></a>
+	<h3>static method TIME <span class="smalllinenumber">[line 362]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed TIME(
+[integer
+$hour = 0], [integer
+$minute = 0], [integer
+$second = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		TIME<br /><br /><p>The TIME function returns a value that represents a particular time.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the time  format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		TIME(hour,minute,second)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$hour</b>&nbsp;&nbsp;</td>
+        <td>A number from 0 (zero) to 32767 representing the hour.                                     Any value greater than 23 will be divided by 24 and the remainder                                     will be treated as the hour value. For example, TIME(27,0,0) =                                     TIME(3,0,0) = .125 or 3:00 AM.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$minute</b>&nbsp;&nbsp;</td>
+        <td>A number from 0 to 32767 representing the minute.                                     Any value greater than 59 will be converted to hours and minutes.                                     For example, TIME(0,750,0) = TIME(12,30,0) = .520833 or 12:30 PM.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$second</b>&nbsp;&nbsp;</td>
+        <td>A number from 0 to 32767 representing the second.                                     Any value greater than 59 will be converted to hours, minutes,                                     and seconds. For example, TIME(0,0,2000) = TIME(0,33,22) = .023148                                     or 12:33:20 AM</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodTIMEVALUE"></a>
+	<h3>static method TIMEVALUE <span class="smalllinenumber">[line 559]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed TIMEVALUE(
+string
+$timeValue)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		TIMEVALUE<br /><br /><p>Returns a value that represents a particular time.  Use TIMEVALUE to convert a time represented by a text string to an Excel or PHP date/time stamp  value.</p><p>NOTE: When used in a Cell Formula, MS Excel changes the cell format so that it matches the time  format of your regional settings. PHPExcel does not change cell formatting in this way.</p><p>Excel Function: 		TIMEVALUE(timeValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$timeValue</b>&nbsp;&nbsp;</td>
+        <td>A text string that represents a time in any one of the Microsoft                                     Excel time formats; for example, &quot;6:45 PM&quot; and &quot;18:45&quot; text strings                                     within quotation marks that represent time.                                     Date information in time_text is ignored.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodWEEKOFYEAR"></a>
+	<h3>static method WEEKOFYEAR <span class="smalllinenumber">[line 1144]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int WEEKOFYEAR(
+[mixed
+$dateValue = 1], [boolean
+$method = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		WEEKOFYEAR<br /><br /><p>Returns the week of the year for a specified date.  The WEEKNUM function considers the week containing January 1 to be the first week of the year.  However, there is a European standard that defines the first week as the one with the majority  of days (four or more) falling in the new year. This means that for years in which there are  three days or less in the first week of January, the WEEKNUM function returns week numbers  that are incorrect according to the European standard.</p><p>Excel Function: 		WEEKNUM(dateValue[,style])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Week Number</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$method</b>&nbsp;&nbsp;</td>
+        <td>Week begins on Sunday or Monday <ol><li>or omitted    Week begins on Sunday.</li><li>Week begins on Monday.</li></ol></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodWORKDAY"></a>
+	<h3>static method WORKDAY <span class="smalllinenumber">[line 940]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed WORKDAY(
+mixed
+$startDate, integer
+$endDays, mixed
+$holidays,...)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		WORKDAY<br /><br /><p>Returns the date that is the indicated number of working days before or after a date (the  starting date). Working days exclude weekends and any dates identified as holidays.  Use WORKDAY to exclude weekends or holidays when you calculate invoice due dates, expected  delivery times, or the number of days of work performed.</p><p>Excel Function: 		WORKDAY(startDate,endDays[,holidays[,holiday[,...]]])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, PHP date/time serial value or PHP date/time object,                         depending on the value of the ReturnDateType flag</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$startDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                         PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$endDays</b>&nbsp;&nbsp;</td>
+        <td>The number of nonweekend and nonholiday days before or after                                         startDate. A positive value for days yields a future date; a                                         negative value yields a past date.</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$holidays,...</b>&nbsp;&nbsp;</td>
+        <td>Optional series of Excel date serial value (float), PHP date                                         timestamp (integer), PHP DateTime object, or a standard date                                         strings that will be excluded from the working calendar, such                                         as state and federal holidays and floating holidays.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodYEAR"></a>
+	<h3>static method YEAR <span class="smalllinenumber">[line 1217]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static int YEAR(
+[mixed
+$dateValue = 1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		YEAR<br /><br /><p>Returns the year corresponding to a date.  The year is returned as an integer in the range 1900-9999.</p><p>Excel Function: 		YEAR(dateValue)</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Year</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodYEARFRAC"></a>
+	<h3>static method YEARFRAC <span class="smalllinenumber">[line 763]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static float YEARFRAC(
+[mixed
+$startDate = 0], [mixed
+$endDate = 0], [integer
+$method = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		YEARFRAC<br /><br /><p>Calculates the fraction of the year represented by the number of whole days between two dates  (the start_date and the end_date).  Use the YEARFRAC worksheet function to identify the proportion of a whole year's benefits or  obligations to assign to a specific term.</p><p>Excel Function: 		YEARFRAC(startDate,endDate[,method])</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>fraction of the year</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$startDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$endDate</b>&nbsp;&nbsp;</td>
+        <td>Excel date serial value (float), PHP date timestamp (integer),                                     PHP DateTime object, or a standard date string</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$method</b>&nbsp;&nbsp;</td>
+        <td>Method used for the calculation <ol><li>or omitted    US (NASD) 30/360</li><li>Actual/actual</li><li>Actual/360</li><li>Actual/365</li><li>European 30/360</li></ol></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_getDateValue"></a>
+	<h3>static method _getDateValue <span class="smalllinenumber">[line 89]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static mixed _getDateValue(
+string
+$dateValue)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		_getDateValue<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Excel date/time serial value, or string if error</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dateValue</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_isLeapYear"></a>
+	<h3>static method _isLeapYear <span class="smalllinenumber">[line 54]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static boolean _isLeapYear(
+integer
+$year)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Identify if a year is a leap year or not<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>TRUE if the year is a leap year, otherwise FALSE</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>The year to test</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:15:42 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

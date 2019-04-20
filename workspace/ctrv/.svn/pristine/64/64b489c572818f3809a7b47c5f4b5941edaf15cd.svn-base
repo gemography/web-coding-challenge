@@ -1,0 +1,42 @@
+<?php
+
+namespace CTRV\FlowBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class GroupUserRepository extends EntityRepository
+{
+//retourne la liste de tous les groupes    
+	public function getGroup () {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.admin is not null")
+		->orderBy('p.addedDate', 'DESC')
+		;
+		return $qb->getQuery()->getResult();
+	}
+//retourne la liste des groupes de la ville courante	
+	public function getGroupByCity ($city) {
+		$qb = $this->createQueryBuilder("p")
+		->select('p')
+		->from('CTRV\CommonBundle\Entity\User','a')
+		->where("p.id=a.id")
+		->andWhere("p.admin is not null")
+		->andWhere("a.city=?1")
+		->orderBy('p.addedDate', 'DESC')
+		;
+		return $qb->getQuery()->getResult();
+	}
+//retourne la liste des membres du groupe spécifié	
+	public function getGroupMember () {
+		$qb = $this->createQueryBuilder("p")
+		->select('p')
+		->from('CTRV\FlowBundle\Entity\GroupMember','a')
+		->where("p.id=a.groupUser")
+		->orderBy('p.addedDate', 'DESC')
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

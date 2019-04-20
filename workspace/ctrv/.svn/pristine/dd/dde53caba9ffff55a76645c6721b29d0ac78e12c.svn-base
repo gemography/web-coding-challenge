@@ -1,0 +1,7 @@
+
+<div class="span30">
+	<ul class=" unstyled btn-group">
+		<li><a class="btn btn-block" href="{{ path("agenda") }}">{% trans %}agenda.menu.afficher{% endtrans %}</a></li><br>
+		<li><a class="btn btn-block" href="{{ path("agendaComment") }}">{% trans %}agendaComment.menu.afficher{% endtrans %}</a></li><br>
+	</ul>
+</div>

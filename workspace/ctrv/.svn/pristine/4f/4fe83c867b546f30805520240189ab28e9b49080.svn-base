@@ -1,0 +1,22 @@
+<?php
+
+namespace CTRV\PlaceBundle\Entity;
+use Doctrine\ORM\EntityRepository;
+
+
+
+class PlaceTypeRepository extends EntityRepository
+{
+	
+/**
+ * retourne tous les types de places 
+ */
+    public function getTypePlaces(){
+	    $qb= $this->createQueryBuilder("p")
+	    ->orderBy('p.code','ASC')
+	    ;
+	return $qb->getQuery()->getResult();
+    
+    } 
+
+}

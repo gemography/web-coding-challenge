@@ -1,0 +1,40 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class EventRepository extends EntityRepository
+{
+//retourne la liste des événements de la ville courante	
+	public function getEvent ($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, true)
+		;
+		return $qb->getQuery()->getResult();
+	}
+	//retourne la liste des agendas de la ville courante	
+	public function getAgenda ($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.city=?1")
+		->andWhere("p.isPrivate=?2")
+		->andWhere("p.isRealtime=?3")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $city)
+		->setParameter(2, false)
+		->setParameter(3, false)
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

@@ -1,0 +1,55 @@
+<?php
+
+namespace CTRV\CommonBundle\Controller;
+
+use Doctrine\ORM\EntityRepository;
+
+use Symfony\Component\HttpFoundation\Response;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use JMS\SecurityExtraBundle\Annotation\Secure;
+
+/**
+ * Abuse controller.
+ *
+ * @Route("/abuse")
+ */
+class AbusController extends Controller
+{
+    
+    /**
+     * @Route("/list",name="abuse")
+     * @Template()
+     * Retourne la liste de tous les Abus 
+     */
+    public function allAbuseAction(){
+    	
+    	$em = $this->getDoctrine()->getEntityManager();
+    	$currentCity = $this->get('session_service')->getCity();
+    	
+    	if ($currentCity == null) {
+    		$this->get('session')->getFlashBag()->add('error', $this->get('translator')->trans('session.city.not_found'));
+    		$this->redirect($this->generateUrl("home"));
+    	}
+    	//Récupération de la lsite des abus
+    	$entities = $this->get("abuse_service")->getAllAbuse($currentCity);
+    	$page = intval ($this->getRequest()->get("page",1));
+    	//pagination
+    	$nb_entities = count($entities);
+    	$nb_entities_page = Constants::abuse_number_per_page;
+    	$nb_pages = ceil($nb_entities/$nb_entities_page);
+    	$offset = ($page-1) * $nb_entities_page;
+    	 
+    	$entities = array_slice($entities, $offset,$nb_entities_page);
+    	
+    	return  array (
+    			'entities' => $entities,
+    			'nb_pages' => $nb_pages,
+    			'page' => $page,
+    			'nb_entities' => $nb_entities
+    	);
+    } 
+}

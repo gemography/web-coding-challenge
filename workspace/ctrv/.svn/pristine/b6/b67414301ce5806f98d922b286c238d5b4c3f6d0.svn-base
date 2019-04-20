@@ -1,0 +1,941 @@
+<html>
+<head>
+<title>Docs For Class PHPExcel_Worksheet_AutoFilter_Column</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Worksheet</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                              		  [ <a href="../classtrees_PHPExcel_Worksheet.html" class="menu">class tree: PHPExcel_Worksheet</a> ]
+		  [ <a href="../elementindex_PHPExcel_Worksheet.html" class="menu">index: PHPExcel_Worksheet</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_PHPExcel.html">PHPExcel</a><br />
+              <a href="../li_JAMA.html">JAMA</a><br />
+              <a href="../li_Math_Stats.html">Math_Stats</a><br />
+              <a href="../li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="../li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="../li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="../li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="../li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="../li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="../li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="../li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="../li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="../li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="../li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="../li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="../li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="../li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="../li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="../li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="../li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="../li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="../li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="../li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="../li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter.php.html">		AutoFilter.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---BaseDrawing.php.html">		BaseDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---CellIterator.php.html">		CellIterator.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter---Column.php.html">		Column.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---ColumnDimension.php.html">		ColumnDimension.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---HeaderFooter.php.html">		HeaderFooter.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---HeaderFooterDrawing.php.html">		HeaderFooterDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---MemoryDrawing.php.html">		MemoryDrawing.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---PageMargins.php.html">		PageMargins.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---PageSetup.php.html">		PageSetup.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---Protection.php.html">		Protection.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---Row.php.html">		Row.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---RowDimension.php.html">		RowDimension.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---RowIterator.php.html">		RowIterator.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---AutoFilter---Column---Rule.php.html">		Rule.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet---SheetView.php.html">		SheetView.php
+		</a><br>
+			<a href="../PHPExcel_Worksheet/_PHPExcel---Worksheet.php.html">		Worksheet.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_BaseDrawing.html">PHPExcel_Worksheet_BaseDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_CellIterator.html">PHPExcel_Worksheet_CellIterator</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_ColumnDimension.html">PHPExcel_Worksheet_ColumnDimension</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooter.html">PHPExcel_Worksheet_HeaderFooter</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_HeaderFooterDrawing.html">PHPExcel_Worksheet_HeaderFooterDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_MemoryDrawing.html">PHPExcel_Worksheet_MemoryDrawing</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_PageMargins.html">PHPExcel_Worksheet_PageMargins</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_PageSetup.html">PHPExcel_Worksheet_PageSetup</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_Protection.html">PHPExcel_Worksheet_Protection</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_Row.html">PHPExcel_Worksheet_Row</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_RowDimension.html">PHPExcel_Worksheet_RowDimension</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_RowIterator.html">PHPExcel_Worksheet_RowIterator</a><br />
+	    		<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_SheetView.html">PHPExcel_Worksheet_SheetView</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: PHPExcel_Worksheet_AutoFilter_Column</h1>
+Source Location: /PHPExcel/Worksheet/AutoFilter/Column.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">PHPExcel_Worksheet_AutoFilter_Column</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+        </ul>
+
+
+
+
+      
+  
+
+<h4>Copyright:</h4>
+<ul>
+  <li>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</li>
+</ul>
+        
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_consts">Constants</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_COLUMN_JOIN_AND">AUTOFILTER_COLUMN_JOIN_AND</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_COLUMN_JOIN_OR">AUTOFILTER_COLUMN_JOIN_OR</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_FILTERTYPE_CUSTOMFILTER">AUTOFILTER_FILTERTYPE_CUSTOMFILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_FILTERTYPE_DYNAMICFILTER">AUTOFILTER_FILTERTYPE_DYNAMICFILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_FILTERTYPE_FILTER">AUTOFILTER_FILTERTYPE_FILTER</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#constAUTOFILTER_FILTERTYPE_TOPTENFILTER">AUTOFILTER_FILTERTYPE_TOPTENFILTER</a></li>
+  </ul>
+</td>
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodaddRule">addRule</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#method__construct">__construct</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodclearRules">clearRules</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodcreateRule">createRule</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methoddeleteRule">deleteRule</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetAttribute">getAttribute</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetAttributes">getAttributes</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetColumnIndex">getColumnIndex</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetFilterType">getFilterType</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetJoin">getJoin</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetParent">getParent</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetRule">getRule</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodgetRules">getRules</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetAttribute">setAttribute</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetAttributes">setAttributes</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetColumnIndex">setColumnIndex</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetFilterType">setFilterType</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetJoin">setJoin</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#methodsetParent">setParent</a></li>
+    <li><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html#method__clone">__clone</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 36]<br />
+PHPExcel_Worksheet_AutoFilter_Column<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>Copyright (c) 2006 - 2012 PHPExcel (http://www.codeplex.com/PHPExcel)</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="methodaddRule"></a>
+	<h3>method addRule <span class="smalllinenumber">[line 316]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a>|<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> addRule(
+<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a>
+$pRule, [boolean
+$returnRule = TRUE])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Add a new AutoFilter Column Rule to the ruleset<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a>&nbsp;&nbsp;</td>
+        <td><b>$pRule</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$returnRule</b>&nbsp;&nbsp;</td>
+        <td>Flag indicating whether the rule object or the column object should be returned</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 118]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>PHPExcel_Worksheet_AutoFilter_Column __construct(
+
+$pColumn, [<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a>
+$pParent = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create a new PHPExcel_Worksheet_AutoFilter_Column<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$pColumn</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type"><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a>&nbsp;&nbsp;</td>
+        <td><b>$pParent</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclearRules"></a>
+	<h3>method clearRules <span class="smalllinenumber">[line 347]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> clearRules(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Delete all AutoFilter Column Rules<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcreateRule"></a>
+	<h3>method createRule <span class="smalllinenumber">[line 303]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> createRule(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Create a new AutoFilter Column Rule in the ruleset<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddeleteRule"></a>
+	<h3>method deleteRule <span class="smalllinenumber">[line 330]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> deleteRule(
+integer
+$pIndex)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Delete a specified AutoFilter Column Rule 	If the number of rules is reduced to 1, then we reset And/Or logic to Or<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$pIndex</b>&nbsp;&nbsp;</td>
+        <td>Rule index in the ruleset array</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAttribute"></a>
+	<h3>method getAttribute <span class="smalllinenumber">[line 269]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getAttribute(
+string
+$pName)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get specific AutoFilter Column Attribute<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pName</b>&nbsp;&nbsp;</td>
+        <td>Attribute Name</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetAttributes"></a>
+	<h3>method getAttributes <span class="smalllinenumber">[line 259]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getAttributes(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Column Attributes<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetColumnIndex"></a>
+	<h3>method getColumnIndex <span class="smalllinenumber">[line 129]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getColumnIndex(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Column Index<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetFilterType"></a>
+	<h3>method getFilterType <span class="smalllinenumber">[line 178]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getFilterType(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetJoin"></a>
+	<h3>method getJoin <span class="smalllinenumber">[line 204]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getJoin(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get AutoFilter Multiple Rules And/Or Join<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetParent"></a>
+	<h3>method getParent <span class="smalllinenumber">[line 157]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a> getParent(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get this Column's AutoFilter Parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetRule"></a>
+	<h3>method getRule <span class="smalllinenumber">[line 291]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column_Rule.html">PHPExcel_Worksheet_AutoFilter_Column_Rule</a> getRule(
+integer
+$pIndex)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a specified AutoFilter Column Rule<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$pIndex</b>&nbsp;&nbsp;</td>
+        <td>Rule index in the ruleset array</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetRules"></a>
+	<h3>method getRules <span class="smalllinenumber">[line 281]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getRules(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get all AutoFilter Column Rules<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>of PHPExcel_Worksheet_AutoFilter_Column_Rule</td>
+  </tr>
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>PHPExcel_Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetAttribute"></a>
+	<h3>method setAttribute <span class="smalllinenumber">[line 248]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setAttribute(
+string
+$pName, string
+$pValue)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set An AutoFilter Attribute<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pName</b>&nbsp;&nbsp;</td>
+        <td>Attribute Name</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pValue</b>&nbsp;&nbsp;</td>
+        <td>Attribute Value</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetAttributes"></a>
+	<h3>method setAttributes <span class="smalllinenumber">[line 234]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setAttributes(
+[string[]
+$pAttributes = array()])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Attributes<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string[]&nbsp;&nbsp;</td>
+        <td><b>$pAttributes</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetColumnIndex"></a>
+	<h3>method setColumnIndex <span class="smalllinenumber">[line 140]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setColumnIndex(
+string
+$pColumn)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Column Index<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pColumn</b>&nbsp;&nbsp;</td>
+        <td>Column (e.g. A)</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetFilterType"></a>
+	<h3>method setFilterType <span class="smalllinenumber">[line 189]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setFilterType(
+[string
+$pFilterType = self::AUTOFILTER_FILTERTYPE_FILTER])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pFilterType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetJoin"></a>
+	<h3>method setJoin <span class="smalllinenumber">[line 215]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setJoin(
+[string
+$pJoin = self::AUTOFILTER_COLUMN_JOIN_OR])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set AutoFilter Multiple Rules And/Or<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$pJoin</b>&nbsp;&nbsp;</td>
+        <td>And/Or</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetParent"></a>
+	<h3>method setParent <span class="smalllinenumber">[line 167]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter_Column.html">PHPExcel_Worksheet_AutoFilter_Column</a> setParent(
+[<a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a>
+$pParent = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Set this Column's AutoFilter Parent<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../PHPExcel_Worksheet/PHPExcel_Worksheet_AutoFilter.html">PHPExcel_Worksheet_AutoFilter</a>&nbsp;&nbsp;</td>
+        <td><b>$pParent</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__clone"></a>
+	<h3>method __clone <span class="smalllinenumber">[line 357]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __clone(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Implement PHP __clone to create a deep clone, not just a shallow copy.<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+<hr />
+<a name="class_consts"></a>
+<h3>Class Constants</h3>
+<div class="tags">
+	<a name="constAUTOFILTER_COLUMN_JOIN_AND"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_JOIN_AND = <span class="value">&nbsp;'and'</span></h4>
+	<p>[line 59]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_COLUMN_JOIN_OR"></a>
+	<p></p>
+	<h4>AUTOFILTER_COLUMN_JOIN_OR = <span class="value">&nbsp;'or'</span></h4>
+	<p>[line 60]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_FILTERTYPE_CUSTOMFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_FILTERTYPE_CUSTOMFILTER = <span class="value">&nbsp;'customFilters'</span></h4>
+	<p>[line 39]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_FILTERTYPE_DYNAMICFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_FILTERTYPE_DYNAMICFILTER = <span class="value">&nbsp;'dynamicFilter'</span></h4>
+	<p>[line 42]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_FILTERTYPE_FILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_FILTERTYPE_FILTER = <span class="value">&nbsp;'filters'</span></h4>
+	<p>[line 38]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="constAUTOFILTER_FILTERTYPE_TOPTENFILTER"></a>
+	<p></p>
+	<h4>AUTOFILTER_FILTERTYPE_TOPTENFILTER = <span class="value">&nbsp;'top10'</span></h4>
+	<p>[line 45]</p>
+  
+  <br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:15:31 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

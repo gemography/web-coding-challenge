@@ -1,0 +1,41 @@
+{# app/config/Ressources/views/field.html.twig #}
+{% extends 'form_div_layout.html.twig' %}
+
+{% block field_row %}
+{% spaceless %}
+    <div  class="control-group{% if errors|length > 0 %} error{% endif %}">
+       {{ form_label(form, label|default(null), { 'label_attr': { 'class': 'control-label' }}) }}
+       <div class="controls"> 
+         {{ form_widget(form) }}
+         {{ form_errors(form) }}
+       </div>
+    </div>
+{% endspaceless %}
+{% endblock field_row %}
+
+{% block field_errors %}
+    {% if errors|length > 0 %}
+       <span class="help-inline">
+           {% for error in errors %}
+               {{ error.messageTemplate|trans(error.messageParameters, 'validators')~'. ' }}
+           {% endfor %}
+       </span>
+    {% endif %}
+{% endblock field_errors %}
+
+{% block form_errors %}
+    {% if errors|length > 0 %}
+       <ul>
+           {% for error in errors %}
+               <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators')~'. ' }}</li>
+           {% endfor %}
+       </ul>
+    {% endif %}
+{% endblock form_errors %}
+
+{# {% block field_label %}#}
+{#     {{ parent() }}#}
+{#     {% if required %}#}
+{#        <span class="pow">*</span>#}
+{#     {% endif %}#}
+{# {% endblock %}#}

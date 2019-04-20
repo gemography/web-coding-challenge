@@ -1,0 +1,67 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}event.list.titleTypeEvent{% endtrans %}</h3>
+		<div align="right"><a class="btn btn-mini" href="ajouter">{% trans %}event.menu.add{% endtrans %}</a></div><br>
+		
+		
+		<div id="events-list">
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}event.list.table.code{% endtrans %}</th>
+            <th>{% trans %}event.list.table.label{% endtrans %}</th>
+            <th>{% trans %}event.list.table.language{% endtrans %}</th>
+            <th>{% trans %}event.list.table.img_url{% endtrans %}</th>
+            <th>{% trans %}event.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.code }}</td>
+            <td>{{ entity.label }}</td>
+            <td>{{ entity.language }}</td>
+            <td></td>
+            <td>
+		        <a class="eventType-to-delete btn btn-mini" data-eventType-id="{{entity.id}}">{% trans %}event.list.table.delete_action{% endtrans %}</a>
+		        <a href="{{ path ("modifier_evenement", { 'id': entity.id }) }}" class="eventType-to-update btn btn-mini" data-eventtype-id="{{entity.id}}">{% trans %}event.list.table.update_action{% endtrans %}</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'loadTypeEvents' } %}
+
+{% else%}
+	<div class="center">{% trans %}event.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvevent/js/event.js') }}"></script>
+<script>
+	$(function() {
+
+		var url_delete_eventType_action = "{{ path('eventType_delete', { 'id': 'eventType_id_to_delete' }) }}";
+		$(".eventType-to-delete").click( function () {
+			url_delete_eventType_action = url_delete_eventType_action.replace('eventType_id_to_delete',$(this).attr('data-eventType-id'));
+			deleteEventType (url_delete_eventType_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

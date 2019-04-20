@@ -1,0 +1,14 @@
+
+<form id="choose_city_form" action="{{ path('set_city_session') }}" class="chooseCity form-horizontal" method="post" {{ form_enctype(form) }}>
+	<div class="row">
+		<div class="span30 offset30">
+		{{ form_label(form.choose_city) }}
+	    </div>
+	    <div class="span30">
+		{{ form_widget(form.choose_city) }}
+	    </div>
+		<div class="span27">
+		{{ form_errors(form.choose_city) }}
+	    </div>
+    </div>
+</form>

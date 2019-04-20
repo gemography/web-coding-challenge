@@ -1,0 +1,29 @@
+publicMessage:
+    menu:
+      afficher: Gestion des Messages
+      
+    
+    list:
+        title: Gestion des Messages
+        table:
+            content: Contenu
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun message public trouvé
+groupe:
+    menu:
+      afficher: Groupes
+      
+    
+    list:
+        title: liste des groupe de 
+        table:
+            noms: Noms Groupes
+            description: Descriptions
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun groupe trouvé
+                       

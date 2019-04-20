@@ -1,0 +1,6 @@
+{% macro input(value,url_name) %}
+	<div class="form-actions">
+    	<a class="btn" href="{{ path(url_name) }}" /><i class="icon-arrow-left"></i>&nbsp{% trans %}general.form.cancel{% endtrans %}</a>
+    	<input class="btn" type="submit" value="{{ value|trans|e }}" />
+    </div>
+{% endmacro %}

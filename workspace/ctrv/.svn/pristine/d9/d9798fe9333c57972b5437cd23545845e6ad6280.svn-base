@@ -1,0 +1,64 @@
+{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}utilisateur.rechercheForm.list.table.login {% endtrans %}</th>
+        	<th>{% trans %}utilisateur.rechercheForm.list.table.Noms {% endtrans %}</th>
+            <th>{% trans %}utilisateur.rechercheForm.list.table.Prenoms {% endtrans %}</th>
+            <th>{% trans %}utilisateur.rechercheForm.list.table.address {% endtrans %}</th>
+            <th>{% trans %}utilisateur.rechercheForm.list.table.name {% endtrans %}</th>
+            <th>{% trans %}utilisateur.rechercheForm.list.table.action {% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.login }}</td>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+            <td>{{ entity.address }}</td>
+            <td>{{ entity.name }}</td>
+            <td>
+		        {% if entity.isActive == "0" %}
+		        <a href="{{ path ("user_active", { 'id': entity.id }) }}" class="user-to-active btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.active_action{% endtrans %}</a>
+		        {% else %}
+		        <a href="{{ path ("user_desactive", { 'id': entity.id }) }}" class="user-to-desactive btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.desactive_action{% endtrans %}</a>
+		        {% endif %}
+		        {% if entity.isBlocked == "0" %}
+		        <a href="{{ path ("user_block", { 'id': entity.id }) }}" class="user-to-block btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.block_action{% endtrans %}</a>
+		        {% else %}
+		        <a href="{{ path ("user_deblock", { 'id': entity.id }) }}" class="user-to-deblock btn btn-mini" data-user-id="{{entity.id}}">{% trans %}utilisateur.list.table.deblock_action{% endtrans %}</a>
+		        {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'false', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+{% else %}
+	<div class="center">{% trans %}utilisateur.rechercheForm.list.table.no_result{% endtrans %}</div>				
+{% endif %}
+
+
+<script>
+	$(function() {
+
+		var urlAction = "{{ path('rechercher_user_result') }}";
+		//si on change de page
+		$(".pagination li a").click (function () {
+			var serachVal = $('#userrecherche_motcle').val();
+			var container_id = 'user-list';
+			var page = $(this).parent().attr("data-page");
+			loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(),page, 'user-list' );
+		});
+
+		//si on change de page via la select box
+		$("#choose_page").change( function () {
+			var serachVal = $('#userrecherche_motcle').val();
+			var container_id = 'user-list';
+			var page = $(this).parent().attr("data-page");
+			loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(),page, 'user-list' );
+		});
+	});
+</script>

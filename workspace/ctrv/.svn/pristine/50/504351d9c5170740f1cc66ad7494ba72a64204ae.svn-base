@@ -1,0 +1,87 @@
+agenda:
+    menu:
+      currentAgenda: Liste des Agendas en cours
+      passedAgenda : Liste des agendas passés
+    list:
+        title: Liste des évènements publics futur ajoutés
+        titleAllAgendaAt : Nombre total d'agendas à
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucune agenda trouvé
+
+event:
+    menu:
+      currentEvent: Liste des événements en cours
+      passedEvent : Liste des événements passés
+      add : Ajouter
+      type : Types d'évenements
+    list:
+        titlePublicEvent: Liste des événements publics temps rééls ajoutés
+        titlePublicEventPassed: Liste des événements publics passés
+        titleTypeEvent: Liste des types d'évenements
+        titleAllEventAt : Nombre total d'événements à
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            update_action: Modifier
+            code: Code
+            label: Libellé
+            language: Langue
+            img_url: Icône
+            no_result: Aucun événement trouvé
+    ajouterForm: 
+        titleAddEventType : Ajouter un type d'évenement
+        titleUpdateEventType: Modifier un type d'évenement
+        select_file : Selectionner un fichier
+        libelle: Libellé
+        code : Code
+        langue: Langue
+        fr : French
+        en : English
+        es : Spanish
+        save : Sauvegarder
+    rechercheForm:
+        title : Liste des évenements correspondant à votre recherche
+        rechercher: Entrer le nom d'un évenement        
+
+agendaComment:
+    menu:
+      afficher: Commentaires des agendas
+          
+    list:
+        title: Liste des commentaires des évènements publics futur
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé
+
+eventComment:
+    menu:
+      afficher: Commentaires des évènements
+    list:
+        title: Liste des commentaires des évènements publics temps rééls
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé

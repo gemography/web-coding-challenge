@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="43" version="2.0">
+<workbenchAdvisor/>
+<window height="728" maximized="true" width="1030" x="-6" y="0">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.ui.navigator.ProjectExplorer"/>
+<orientation position="512" view="org.eclipse.team.sync.views.SynchronizeView"/>
+<orientation position="512" view="org.eclipse.jdt.ui.PackageExplorer"/>
+</fastViewData>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.team.ui.actionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="84" y="22"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.dubture.twig.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.dadacoalition.yedit.editor.YEdit" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.php.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1365599516519" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.php.editor" name="AbusController.php" partName="AbusController.php" path="C:/cityrovers/workspace/ctrv/src/CTRV/CommonBundle/Controller/AbusController.php" title="AbusController.php" tooltip="ctrv/src/CTRV/CommonBundle/Controller/AbusController.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/CommonBundle/Controller/AbusController.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.dubture.twig.editor" name="allAbuse.html.twig" partName="allAbuse.html.twig" path="C:/cityrovers/workspace/ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig" title="allAbuse.html.twig" tooltip="ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="272"/>
+</editor>
+<editor id="org.eclipse.php.editor" name="CityService.php" partName="CityService.php" path="C:/cityrovers/workspace/ctrv/src/CTRV/CommonBundle/Service/CityService.php" title="CityService.php" tooltip="ctrv/src/CTRV/CommonBundle/Service/CityService.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/CommonBundle/Service/CityService.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2"/>
+</editor>
+<editor id="org.eclipse.php.editor" name="EventController.php" partName="EventController.php" path="C:/cityrovers/workspace/ctrv/src/CTRV/EventBundle/Controller/EventController.php" title="EventController.php" tooltip="ctrv/src/CTRV/EventBundle/Controller/EventController.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/EventBundle/Controller/EventController.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5858" selectionTopPixel="1890"/>
+</editor>
+<editor id="com.dubture.twig.editor" name="rechercherPlaceResult.html.twig" partName="rechercherPlaceResult.html.twig" path="C:/cityrovers/workspace/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig" title="rechercherPlaceResult.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2320" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.php.editor" name="PlaceRepository.php" partName="PlaceRepository.php" path="C:/cityrovers/workspace/ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php" title="PlaceRepository.php" tooltip="ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6100" selectionTopPixel="0"/>
+</editor>
+<editor id="com.dubture.twig.editor" name="index.html.twig" partName="index.html.twig" path="C:/cityrovers/workspace/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig" title="index.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="315"/>
+</editor>
+<editor id="com.dubture.twig.editor" name="loadPlacesByType.html.twig" partName="loadPlacesByType.html.twig" path="C:/cityrovers/workspace/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig" title="loadPlacesByType.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="478"/>
+</editor>
+<editor activePart="true" focus="true" id="com.dubture.twig.editor" name="loadAllPlacesByTypeOrNot.html.twig" partName="loadAllPlacesByTypeOrNot.html.twig" path="C:/cityrovers/workspace/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig" title="loadAllPlacesByTypeOrNot.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="765"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.PHPDebugOutput" partName="Debug Output"/>
+<view id="org.eclipse.debug.ui.PHPBrowserOutput" partName="Browser Output"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints"/>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" currentWorkingSetName="Aggregate for window 1365599516519" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1365599516519">
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.dltk.debug.ui.ScriptDisplayView" partName="Interactive Console"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.dubture.twig.editor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<fastViews>
+<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.21172962"/>
+</fastViews>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@8543aa" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.tigris.subversion.subclipse.ui.repository.RepositoriesView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@e9a114" ratio="0.20738007" ratioLeft="281" ratioRight="1074" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="bottom" ratio="0.7566225" ratioLeft="457" ratioRight="147" relationship="4" relative="org.eclipse.ui.internal.ViewStack@e9a114">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.85044867" ratioLeft="853" ratioRight="150" relationship="2" relative="org.eclipse.ui.internal.ViewStack@e9a114">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="115" ratioRight="345" relationship="4" relative="org.eclipse.ui.internal.ViewStack@e9a114"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@131a9e7" ratio="0.74959874" ratioLeft="467" ratioRight="156" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.team.internal.ui.synchronize.TeamSynchronizingPerspective" id="org.eclipse.team.ui.TeamSynchronizingPerspective" label="Team Synchronizing"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.team.ui.actionSet"/>
+<show_view_action id="org.eclipse.team.sync.views.SynchronizeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.project"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.tigris.subversion.subclipse.ui.svnPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.sync.views.SynchronizeView" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<page content="org.tigris.subversion.subclipse.ui.repository.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7492292" ratioLeft="729" ratioRight="244" relationship="2" relative="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.32901296" ratioLeft="330" ratioRight="673" relationship="2" relative="top"/>
+<info folder="true" part="top2" ratio="0.7990115" ratioLeft="485" ratioRight="122" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.tigris.subversion.subclipse.ui.history.HistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.dltk.debug.ui.ScriptDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.php.debug.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.php.ui.text.php.actionSet.presentation"/>
+<alwaysOnActionSet id="org.eclipse.php.ui.PHPActionSet"/>
+<alwaysOnActionSet id="org.eclipse.php.ui.A_OpenActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.dltk.debug.ui.ScriptDisplayView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.php.perspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.debug.ui.PHPDebugOutput"/>
+<view id="org.eclipse.debug.ui.PHPBrowserOutput"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<view id="org.eclipse.dltk.debug.ui.ScriptDisplayView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.dltk.ui.ScriptExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74974567" ratioLeft="737" ratioRight="246" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.debug.ui.PHPDebugOutput" label="Debug Output"/>
+<page content="org.eclipse.debug.ui.PHPBrowserOutput" label="Browser Output"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44835165" ratioLeft="204" ratioRight="251" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74974567" ratioLeft="737" ratioRight="246" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.49949136" ratioLeft="491" ratioRight="492" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<page content="org.eclipse.dltk.debug.ui.ScriptDisplayView" label="Interactive Console"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.PHPStackView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.browsing.JavaBrowsingPerspectiveFactory" id="org.eclipse.jdt.ui.JavaBrowsingPerspective" label="Java Browsing"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.ProjectsView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackagesView"/>
+<show_view_action id="org.eclipse.jdt.ui.TypesView"/>
+<show_view_action id="org.eclipse.jdt.ui.MembersView"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@df9bdb">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.ProjectsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74974567" ratioLeft="737" ratioRight="246" relationship="2" relative="org.eclipse.ui.internal.ViewStack@df9bdb">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.24876441" ratioLeft="151" ratioRight="456" relationship="4" relative="org.eclipse.ui.internal.ViewStack@df9bdb">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24923703" ratioLeft="245" ratioRight="738" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.75" ratioLeft="342" ratioRight="114" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@716b37" ratio="0.24923703" ratioLeft="245" ratioRight="738" relationship="2" relative="org.eclipse.ui.internal.ViewStack@df9bdb">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@35e921" ratio="0.3292683" ratioLeft="243" ratioRight="495" relationship="2" relative="org.eclipse.ui.internal.ViewStack@716b37">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.TypesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@15ca8ed" ratio="0.4989899" ratioLeft="247" ratioRight="248" relationship="2" relative="org.eclipse.ui.internal.ViewStack@35e921">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.MembersView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Controller/UserController.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Entity/ConnectedUsersRepository.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.dadacoalition.yedit.editor.YEdit" path="/ctrv/src/CTRV/CommonBundle/Resources/translations/messages.fr.yml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/loadUserConnectedByCity.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/loadUser.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/statsUser.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/rechercherUserResult.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadTypePlaces.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/PlaceBundle/Controller/PlaceController.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Controller/AbusController.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Service/CityService.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Service/CommentService.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Entity/AbuseRepository.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/CommonBundle/Entity/Comment.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/EventBundle/Controller/EventController.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/rechercherUserResult.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" path="/ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig"/>
+</editors>
+<item historyLabel="messages.fr.yml" index="2">
+<position info="not_deleted" x="1574" y="0"/>
+</item>
+<item historyLabel="statsUser.html.twig" index="5">
+<position info="not_deleted" x="784" y="0"/>
+</item>
+<item historyLabel="loadUser.html.twig" index="4">
+<position info="not_deleted" x="214" y="78"/>
+</item>
+<item historyLabel="rechercherUserResult.html.twig" index="6">
+<position info="not_deleted" x="2059" y="59"/>
+</item>
+<item historyLabel="loadUserConnectedByCity.html.twig" index="3">
+<position info="not_deleted" x="1615" y="0"/>
+</item>
+<item historyLabel="messages.fr.yml" index="2">
+<position info="not_deleted" x="1574" y="0"/>
+</item>
+<item historyLabel="ConnectedUsersRepository.php" index="1">
+<position info="not_deleted" x="873" y="40"/>
+</item>
+<item historyLabel="UserController.php" index="0">
+<position info="not_deleted" x="3475" y="0"/>
+</item>
+<item historyLabel="loadTypePlaces.html.twig" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="loadPlacesByType.html.twig" index="8">
+<position info="not_deleted" x="972" y="0"/>
+</item>
+<item historyLabel="rechercherPlaceResult.html.twig" index="9">
+<position info="not_deleted" x="846" y="0"/>
+</item>
+<item historyLabel="PlaceController.php" index="10">
+<position info="not_deleted" x="1086" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position/>
+</item>
+<item historyLabel="allAbuse.html.twig" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position/>
+</item>
+<item historyLabel="allAbuse.html.twig" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position info="not_deleted" x="2499" y="0"/>
+</item>
+<item historyLabel="allAbuse.html.twig" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position info="not_deleted" x="2493" y="0"/>
+</item>
+<item historyLabel="allAbuse.html.twig" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position/>
+</item>
+<item historyLabel="CityService.php" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CommentService.php" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position/>
+</item>
+<item historyLabel="CommentService.php" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position info="not_deleted" x="2493" y="0"/>
+</item>
+<item historyLabel="AbuseRepository.php" index="15">
+<position info="not_deleted" x="981" y="0"/>
+</item>
+<item historyLabel="CommentService.php" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbuseRepository.php" index="15">
+<position/>
+</item>
+<item historyLabel="Comment.php" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbuseRepository.php" index="15">
+<position info="not_deleted" x="1572" y="0"/>
+</item>
+<item historyLabel="AbuseRepository.php" index="15">
+<position/>
+</item>
+<item historyLabel="CommentService.php" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position info="not_deleted" x="2493" y="0"/>
+</item>
+<item historyLabel="AbusController.php" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EventController.php" index="17">
+<position info="not_deleted" x="5858" y="0"/>
+</item>
+<item historyLabel="rechercherUserResult.html.twig" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="rechercherPlaceResult.html.twig" index="9">
+<position/>
+</item>
+<item historyLabel="rechercherUserResult.html.twig" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="rechercherPlaceResult.html.twig" index="9">
+<position info="not_deleted" x="2320" y="0"/>
+</item>
+<item historyLabel="PlaceRepository.php" index="19">
+<position info="not_deleted" x="6264" y="0"/>
+</item>
+<item historyLabel="rechercherPlaceResult.html.twig" index="9">
+<position info="not_deleted" x="2320" y="0"/>
+</item>
+<item historyLabel="index.html.twig" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="rechercherPlaceResult.html.twig" index="9">
+<position info="not_deleted" x="2320" y="0"/>
+</item>
+<item historyLabel="index.html.twig" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="loadPlacesByType.html.twig" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PlaceRepository.php" index="19">
+<position info="not_deleted" x="6100" y="0"/>
+</item>
+<item active="true" historyLabel="loadAllPlacesByTypeOrNot.html.twig" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="loadAllPlacesByTypeOrNot.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig">
+<persistable path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadAllPlacesByTypeOrNot.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="loadPlacesByType.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig">
+<persistable path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/loadPlacesByType.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="index.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig">
+<persistable path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/index.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="PlaceRepository.php" tooltip="ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php">
+<persistable path="/ctrv/src/CTRV/PlaceBundle/Entity/PlaceRepository.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="rechercherPlaceResult.html.twig" tooltip="ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig">
+<persistable path="/ctrv/src/CTRV/PlaceBundle/Resources/views/Place/rechercherPlaceResult.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="rechercherUserResult.html.twig" tooltip="ctrv/src/CTRV/CommonBundle/Resources/views/User/rechercherUserResult.html.twig">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Resources/views/User/rechercherUserResult.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="EventController.php" tooltip="ctrv/src/CTRV/EventBundle/Controller/EventController.php">
+<persistable path="/ctrv/src/CTRV/EventBundle/Controller/EventController.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="Comment.php" tooltip="ctrv/src/CTRV/CommonBundle/Entity/Comment.php">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Entity/Comment.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="AbuseRepository.php" tooltip="ctrv/src/CTRV/CommonBundle/Entity/AbuseRepository.php">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Entity/AbuseRepository.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="CommentService.php" tooltip="ctrv/src/CTRV/CommonBundle/Service/CommentService.php">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Service/CommentService.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="CityService.php" tooltip="ctrv/src/CTRV/CommonBundle/Service/CityService.php">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Service/CityService.php"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.dubture.twig.editor" name="allAbuse.html.twig" tooltip="ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Resources/views/Abus/allAbuse.html.twig"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.php.editor" name="AbusController.php" tooltip="ctrv/src/CTRV/CommonBundle/Controller/AbusController.php">
+<persistable path="/ctrv/src/CTRV/CommonBundle/Controller/AbusController.php"/>
+</file>
+</mruList>
+</workbench>

@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menuCity.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}city.ajouterForm.titleEditCity{% endtrans %}</h3>
+		<br/>
+	
+		<div>
+			<form class="well" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+				{{ forms.input('place.ajouterForm.save','city') }}
+				</form>
+		</div>
+	</div>
+</div>
+{% endblock body %}

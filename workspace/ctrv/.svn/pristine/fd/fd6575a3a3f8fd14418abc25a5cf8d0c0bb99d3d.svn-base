@@ -1,0 +1,28 @@
+publicMessage:
+    menu:
+      afficher: Afficher les messages Publics
+      
+    
+    list:
+        title: Liste des messages publics ajoutés
+        table:
+            content: Contenu
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun message public trouvé
+groupe:
+    menu:
+      afficher: Afficher la liste des groupes
+      
+    
+    list:
+        title: Liste des groupes ajoutés
+        table:
+            noms: Noms Groupes
+            description: Descriptions
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun groupe trouvé            

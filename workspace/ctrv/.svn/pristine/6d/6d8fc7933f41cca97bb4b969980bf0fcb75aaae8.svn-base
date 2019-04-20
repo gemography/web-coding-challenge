@@ -1,0 +1,16 @@
+{% if(nb_pages>1) %}
+	<div class="pagination center">
+    	<ul>
+    		{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+    		{% for p in range(1, nb_pages) %}
+    			<li data-page="{{ p }}" {% if p == page %} class="active"{% endif %}>
+    				{% if href_active=='true' %}
+    				<a href="{{ path(url_path, {'page': p}) }}">{{ p }}</a>
+    				{% else %}
+    				<a>{{ p }}</a>
+    				{% endif %}
+    			</li>
+    		{% endfor %}
+    	</ul>
+	</div>
+{% endif %}

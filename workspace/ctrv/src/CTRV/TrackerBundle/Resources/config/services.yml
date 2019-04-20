@@ -1,0 +1,4 @@
+services:
+    tracker_service:
+        class: CTRV\TrackerBundle\Service\TrackerService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]

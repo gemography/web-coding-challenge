@@ -1,0 +1,21 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+#
+#services:
+#    acme_hello.twig.extension.debug:
+#        class:        Twig_Extension_Debug
+#        tags:
+#             - { name: 'twig.extension' }
+        

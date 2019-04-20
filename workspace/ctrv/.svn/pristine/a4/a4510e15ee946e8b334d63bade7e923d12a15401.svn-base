@@ -1,0 +1,23 @@
+<?php
+
+namespace CTRV\FlowBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class PublicMessageRepository extends EntityRepository
+{
+//retourne la liste des messages publics de la ville courante    
+	public function getPublicMessage ($city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.sender is not null")
+		->andWhere("p.city=?1")
+		->orderBy('p.date', 'DESC')
+		->setParameter(1, $city)
+		
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

@@ -1,0 +1,8 @@
+services:
+    publicMessage_service:
+        class: CTRV\FlowBundle\Service\PublicMessageService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+    groupe_service:
+        class: CTRV\FlowBundle\Service\GroupeService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]    
+              

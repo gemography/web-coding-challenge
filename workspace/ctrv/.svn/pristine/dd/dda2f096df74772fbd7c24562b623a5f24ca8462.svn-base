@@ -1,0 +1,629 @@
+<?php
+
+namespace CTRV\EventBundle\Entity;
+
+use Doctrine\ORM\Mapping\JoinColumn;
+
+use Doctrine\ORM\Mapping\JoinTable;
+
+use Doctrine\ORM\Mapping\ManyToMany;
+
+use Doctrine\ORM\Mapping\ManyToOne;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CTRV\CommonBundle\Entity\Agenda
+ *
+ * @ORM\Table(name="agenda")
+ * @ORM\Entity
+ * @ORM\Entity(repositoryClass="CTRV\EventBundle\Entity\AgendaRepository")
+ */
+class Agenda
+{
+    /**
+     * @var integer $id
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var integer $eventTypeId
+     * @ORM\ManyToOne(targetEntity="EventType")
+     * @JoinColumn(name="event_type_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $eventType;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="\CTRV\CommonBundle\Entity\User",inversedBy="agendas")
+     * @JoinColumn(name="userid",referencedColumnName="userid", onDelete="CASCADE")
+     */
+    private $auteur;
+
+    /**
+     * @var integer $cityId
+     * @ORM\ManyToOne(targetEntity="\CTRV\CommonBundle\Entity\City")
+     * @JoinColumn(name="city_id",referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $city;
+
+    /**
+     * @var string $title
+     *
+     * @ORM\Column(name="title", type="string", length=1024, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string $description
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string $startDate
+     *
+     * @ORM\Column(name="start_date", type="date", nullable=false)
+     */
+    private $startDate;
+
+    /**
+     * @var string $endDate
+     *
+     * @ORM\Column(name="end_date", type="date", nullable=false)
+     */
+    private $endDate;
+
+    /**
+     * @var string $startTime
+     *
+     * @ORM\Column(name="start_time", type="string", length=256, nullable=false)
+     */
+    private $startTime;
+
+    /**
+     * @var string $endTime
+     *
+     * @ORM\Column(name="end_time", type="string", length=256, nullable=false)
+     */
+    private $endTime;
+
+    /**
+     * @var string $latitude
+     *
+     * @ORM\Column(name="latitude", type="string", length=256, nullable=true)
+     */
+    private $latitude;
+
+    /**
+     * @var string $longitude
+     *
+     * @ORM\Column(name="longitude", type="string", length=256, nullable=true)
+     */
+    private $longitude;
+
+    /**
+     * @var string $street
+     *
+     * @ORM\Column(name="street", type="string", length=256, nullable=true)
+     */
+    private $street;
+
+    /**
+     * @var integer $mark
+     *
+     * @ORM\Column(name="mark", type="float", nullable=true)
+     */
+    private $mark;
+
+    /**
+     * @var integer $numberMark
+     *
+     * @ORM\Column(name="number_mark", type="integer", nullable=true)
+     */
+    private $numberMark;
+
+    /**
+     * @var \DateTime $addedDate
+     * @ORM\Column(name="added_date", type="datetime", nullable=true)
+     */
+    private $addedDate;
+    
+    ///**
+    //* 
+     //* @var unknown_type
+     //* @ORM\OneToMany(targetEntity="AgendaComment",mappedBy="agenda")
+     //*/
+   // private $comments;
+    
+    /**
+     * @var integer $isPrivate
+     *
+     * @ORM\Column(name="is_private", type="boolean", nullable=false)
+     */
+    private $isPrivate=0;
+    
+    /**
+     * @var string $visibility
+     *
+     * @ORM\Column(name="visibility", type="string", length=255, nullable=false)
+     */
+    private $visibility;
+    
+    /**
+     * @var string $accessRight
+     *
+     * @ORM\Column(name="access_right", type="string", length=255, nullable=false)
+     */
+    private $accessRight;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Agenda
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Agenda
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     * @return Agenda
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime 
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param \DateTime $endDate
+     * @return Agenda
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return \DateTime 
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * Set startTime
+     *
+     * @param string $startTime
+     * @return Agenda
+     */
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    
+        return $this;
+    }
+
+    /**
+     * Get startTime
+     *
+     * @return string 
+     */
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
+
+    /**
+     * Set endTime
+     *
+     * @param string $endTime
+     * @return Agenda
+     */
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+    
+        return $this;
+    }
+
+    /**
+     * Get endTime
+     *
+     * @return string 
+     */
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param string $latitude
+     * @return Agenda
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return string 
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param string $longitude
+     * @return Agenda
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+    
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return string 
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * Set street
+     *
+     * @param string $street
+     * @return Agenda
+     */
+    public function setStreet($street)
+    {
+        $this->street = $street;
+    
+        return $this;
+    }
+
+    /**
+     * Get street
+     *
+     * @return string 
+     */
+    public function getStreet()
+    {
+        return $this->street;
+    }
+
+    /**
+     * Set mark
+     *
+     * @param float $mark
+     * @return Agenda
+     */
+    public function setMark($mark)
+    {
+        $this->mark = $mark;
+    
+        return $this;
+    }
+
+    /**
+     * Get mark
+     *
+     * @return float 
+     */
+    public function getMark()
+    {
+        return $this->mark;
+    }
+
+    /**
+     * Set numberMark
+     *
+     * @param integer $numberMark
+     * @return Agenda
+     */
+    public function setNumberMark($numberMark)
+    {
+        $this->numberMark = $numberMark;
+    
+        return $this;
+    }
+
+    /**
+     * Get numberMark
+     *
+     * @return integer 
+     */
+    public function getNumberMark()
+    {
+        return $this->numberMark;
+    }
+
+    /**
+     * Set addedDate
+     *
+     * @param \DateTime $addedDate
+     * @return Agenda
+     */
+    public function setAddedDate($addedDate)
+    {
+        $this->addedDate = $addedDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get addedDate
+     *
+     * @return \DateTime 
+     */
+    public function getAddedDate()
+    {
+        return $this->addedDate;
+    }
+
+    /**
+     * Set isPrivate
+     *
+     * @param boolean $isPrivate
+     * @return Agenda
+     */
+    public function setIsPrivate($isPrivate)
+    {
+        $this->isPrivate = $isPrivate;
+    
+        return $this;
+    }
+
+    /**
+     * Get isPrivate
+     *
+     * @return boolean 
+     */
+    public function getIsPrivate()
+    {
+        return $this->isPrivate;
+    }
+
+    /**
+     * Set visibility
+     *
+     * @param string $visibility
+     * @return Agenda
+     */
+    public function setVisibility($visibility)
+    {
+        $this->visibility = $visibility;
+    
+        return $this;
+    }
+
+    /**
+     * Get visibility
+     *
+     * @return string 
+     */
+    public function getVisibility()
+    {
+        return $this->visibility;
+    }
+
+    /**
+     * Set accessRight
+     *
+     * @param string $accessRight
+     * @return Agenda
+     */
+    public function setAccessRight($accessRight)
+    {
+        $this->accessRight = $accessRight;
+    
+        return $this;
+    }
+
+    /**
+     * Get accessRight
+     *
+     * @return string 
+     */
+    public function getAccessRight()
+    {
+        return $this->accessRight;
+    }
+
+    /**
+     * Set eventType
+     *
+     * @param CTRV\EventBundle\Entity\EventType $eventType
+     * @return Agenda
+     */
+    public function setEventType(\CTRV\EventBundle\Entity\EventType $eventType = null)
+    {
+        $this->eventType = $eventType;
+    
+        return $this;
+    }
+
+    /**
+     * Get eventType
+     *
+     * @return CTRV\EventBundle\Entity\EventType 
+     */
+    public function getEventType()
+    {
+        return $this->eventType;
+    }
+
+    /**
+     * Set auteur
+     *
+     * @param CTRV\CommonBundle\Entity\User $auteur
+     * @return Agenda
+     */
+    public function setAuteur(\CTRV\CommonBundle\Entity\User $auteur = null)
+    {
+        $this->auteur = $auteur;
+    
+        return $this;
+    }
+
+    /**
+     * Get auteur
+     *
+     * @return CTRV\CommonBundle\Entity\User 
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * Set city
+     *
+     * @param CTRV\CommonBundle\Entity\City $city
+     * @return Agenda
+     */
+    public function setCity(\CTRV\CommonBundle\Entity\City $city = null)
+    {
+        $this->city = $city;
+    
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return CTRV\CommonBundle\Entity\City 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    ///**
+     //* Add comments
+    // *
+     //* @param CTRV\CommonBundle\Entity\AgendaComment $comments
+    // * @return Agenda
+    // */
+   // public function addComment(AgendaComment $comments)
+   // {
+       // $this->comments[] = $comments;
+    
+    
+       // return $this;
+   // }
+
+   // /**
+   //  * Remove comments
+   //  *
+   //  * @param CTRV\CommonBundle\Entity\AgendaComment $comments
+   //  */
+   // public function removeComment(AgendaComment $comments)
+   // {
+  //      $this->comments->removeElement($comments);
+  //  }
+
+   // /**
+   //  * Get comments
+   //  *
+   //  * @return Doctrine\Common\Collections\Collection 
+   //  */
+   // public function getComments()
+   // {
+   //     return $this->comments;
+   // }
+}

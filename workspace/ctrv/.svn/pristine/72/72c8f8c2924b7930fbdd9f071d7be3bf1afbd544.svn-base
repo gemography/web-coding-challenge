@@ -1,0 +1,39 @@
+<?php
+
+namespace CTRV\PlaceBundle\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+class PlaceRepository extends EntityRepository
+{
+    
+	public function getPlaceAddedByUsers ($placeType,$city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.auteur is not null")
+		->andWhere("p.placeType=?1")
+		->andWhere("p.city=?2")
+		->orderBy('p.addedDate', 'DESC')
+		->setParameter(1, $placeType)
+		->setParameter(2, $city)
+		
+		;
+		return $qb->getQuery()->getResult();
+	}
+	
+	/**
+	 * Retourne la liste des places de la rue spécifiée
+	 * @param unknown_type $searchText
+	 */
+	public function getPlaceByStreet ($searchText, $city) {
+		$qb = $this->createQueryBuilder("p")
+		->where("p.street like ?1")
+		->andWhere("p.city=?2")
+		->setParameter(1, "%".$searchText."%")
+		->setParameter(2, $city)
+		;
+		return $qb->getQuery()->getResult();
+	}
+}

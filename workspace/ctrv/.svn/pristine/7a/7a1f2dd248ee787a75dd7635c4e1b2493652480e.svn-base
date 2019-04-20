@@ -1,0 +1,57 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+           {% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title{% endtrans %} {{ city|capitalize }}</h3>
+		<div class="right">{% trans %}utilisateur.list.title3{% endtrans %} {{ city|capitalize }} : {{ nb_entities }}</div><br>
+	    <form action="" method="post" class="form-horizontal" {{ form_enctype(form) }}>
+                    {{ form_widget(form) }}
+                     </form>	
+ 
+	<div id="user-list"> </div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+<script>
+	$(function() { //à la fin du  chargement du DOM
+
+		//appel initial ajax
+		var urlAction = "{{ path('rechercher_user_result') }}";
+		loadSearchedUsers (urlAction, "", $('#user-list') );
+
+		
+		//lorqu'on appui sur entre
+		$('#userrecherche_motcle').keypress(function(e) {
+	 		if(e.which == 13) {
+			        //appel ajax
+		 		loadSearchedUsers (urlAction, $('#userrecherche_motcle').val(), $('#user-list') );
+	    	}
+		    return false;
+		});
+
+
+		
+	});
+</script>
+<script>
+	$(function() {
+		
+		var url_desactive_user_action = "{{ path('user_desactive', { 'id': 'user_id_to_desactive' }) }}";
+		$(".user-to-desactive").click( function () {
+			url_desactive_user_action = url_desactive_user_action.update('user_id_to_desactive',$(this).attr('data-user-id'));
+			desactiveUser (url_desactive_user_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

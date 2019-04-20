@@ -1,0 +1,43 @@
+place:
+    menu:
+      moderate: Modérer les places
+      import: Importer des données
+      setLatLng: Saisir la latitude et la longitude
+      setPlaceDescription: Saisir description de places
+    import:
+        title: Importation de données de places
+        help: Uploader un fichier xls contenant des données sur un type d'endroit d'une ville donnée.
+        success: Importation des données terminées (%traited%/%total% coordonnées de place trouvées) : %imported% nouvelle(s) place(s) ajoutée(s) - %already% place(s) existe(nt) déjà
+        form:
+            city: Ville
+            placetype: Type de place
+            file: Sélectionner fichier xls de données
+            submit: Importer
+    list:
+        title: Liste des places ajoutées
+        table:
+            title: Titre
+            description: Description
+            latitude: Latitude
+            longitude: Longitude
+            adresse: Adresse
+            author: Auteur
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucune place trouvée
+    moderate:
+        form:
+            placeType: Type de place
+placeComment:
+    menu:
+      afficher: Commentaires des Places
+          
+    list:
+        title: Liste des Commentaires
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            action: Actions
+            no_result: Aucun commentaire trouvé    

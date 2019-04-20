@@ -1,0 +1,8 @@
+
+
+#services:
+#    user_registration.registration.form.type:
+#        class: CTRV\UserBundle\Form\Type\RegistrationFormType
+#        arguments: [%fos_user.model.user.class%]
+#        tags:
+#            - { name: form.type, alias: user_registration }

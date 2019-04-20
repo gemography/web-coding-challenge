@@ -1,0 +1,42 @@
+<?php
+
+namespace CTRV\PlaceBundle\Business;
+
+use CTRV\CommonBundle\DependencyInjection\Constants;
+
+class ImportPlace {
+	
+	
+	/**
+	 * @var string
+	 */	
+	public $city;
+	
+	/**
+	 * @var File()::
+	 */
+	public $file;
+	
+	/**
+	 * @var string
+	 */
+	public $placeType;
+	
+	
+	public function getCity()
+	{
+		return $this->city;
+	}
+	
+	public function getUploadRootDir()
+	{
+		return __DIR__.'/../../../../web/'.$this->getUploadDir();
+	}
+	
+	public 	function getUploadDir()
+	{
+		return  Constants::IMPORT_FILE_PATH;
+	}
+	
+
+}

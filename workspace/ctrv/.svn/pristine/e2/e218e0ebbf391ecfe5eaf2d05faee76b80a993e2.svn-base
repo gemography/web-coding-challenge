@@ -1,0 +1,112 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+<div id="resultats_recherche">
+<div class="loading"></div>
+<script>
+$(".loading").hide();
+$("#form_recherche").submit(function(){
+	$(".loading").show();
+	var motcle = $("#userrecherche_motcle").val();
+	var DATA = 'motcle=' + motcle;
+	$.ajax({
+	type: "POST",
+	url: "{{ path('utilisateur') }}",
+	data: DATA,
+	cache: false,
+	success: function(data){
+	$('#resultats_recherche').html(data);
+	$(".loading").hide();
+	}
+	});
+	return false;
+	});
+	</script>
+	
+</div>
+
+	{% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title{% endtrans %}&nbsp;{{ city|capitalize }}</h3>
+		<div class="right">Nombre total d'utilisateurs à {{ city|capitalize }} : {{ nb_entities }}</div><br>
+	    <form id="form_recherche" action="{{ path('utilisateur') }}" method="post">
+                    {{ form_widget(form) }}
+                    <div class="span40">
+                        <input type="submit" value="Rechercher" class="btn btn-unblock"/>
+                        <input type="reset" value="Reinitialiser" class="btn btn-unblock" />
+                        </div><br>
+        </form>	
+        
+	{% if entities is not empty  %}  
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}utilisateur.list.table.firstName{% endtrans %}</th>
+            <th>{% trans %}utilisateur.list.table.lastName{% endtrans %}</th>
+            
+            <th>{% trans %}utilisateur.list.table.addedDate{% endtrans %}</th>
+            <th>{% trans %}utilisateur.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+            
+            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+            <td>{{ entity.registrationDate|date(format)}}</td>
+            <td>
+                {% if entity.isActive == "0" %}
+		        <a class="user-to-active btn" data-user-id="{{entity.id}}">Activer</a>
+		        {% else %}
+		        <a class="user-to-desactive btn" data-user-id="{{entity.id}}">Désactiver</a>
+		        {% endif %}
+		        {% if entity.isBlocked == "0" %}
+		        <a class="user-to-block btn" data-user-id="{{entity.id}}">Bloguer</a>
+		        {% else %}
+		        <a class="user-to-deblock btn" data-user-id="{{entity.id}}">Débloguer</a>
+		        {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+			
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+
+	{% else%}
+		<div class="center">{% trans %}utilisateur.list.table.no_result{% endtrans %}</div>				
+	{% endif %}		
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+
+
+<script>
+	$(function() {
+		
+		var url_desactive_user_action = "{{ path('user_desactive', { 'id': 'user_id_to_desactive' }) }}";
+		$(".user-to-desactive").click( function () {
+			url_desactive_user_action = url_desactive_user_action.update('user_id_to_desactive',$(this).attr('data-user-id'));
+			desactiveUser (url_desactive_user_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

@@ -1,0 +1,60 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVMailBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}mail.list.titleTypeMail{% endtrans %}</h3>
+		<div align="right"><a class="btn btn-mini" href="{{ path("ajouterType_mail") }}">{% trans %}mail.menu.addType{% endtrans %}</a></div><br>
+		<div id="mails-list">
+		{% if entities is not empty  %}
+
+			<table class="table table-bordered">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}mail.list.table.code{% endtrans %}</th>
+			            <th>{% trans %}mail.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.code }}</td>
+			            <td>
+					        <a class="mailType-to-delete btn btn-mini" data-mailType-id="{{entity.id}}">{% trans %}mail.list.table.delete_action{% endtrans %}</a>
+					        <a href="{{ path ("modifierType_mail", { 'id': entity.id }) }}" class="mailType-to-update btn btn-mini" data-mailtype-id="{{entity.id}}">{% trans %}mail.list.table.edit_action{% endtrans %}</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'loadTypeMails' } %}
+
+{% else%}
+	<div class="center">{% trans %}mail.list.table.no_type_result{% endtrans %}</div>				
+{% endif %}	
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvmail/js/mail.js') }}"></script>
+<script>
+	$(function() {
+
+		var url_delete_mailType_action = "{{ path('mailType_delete', { 'id': 'mailType_id_to_delete' }) }}";
+		$(".mailType-to-delete").click( function () {
+			url_delete_mailType_action = url_delete_mailType_action.replace('mailType_id_to_delete',$(this).attr('data-mailType-id'));
+			deleteMailType (url_delete_mailType_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

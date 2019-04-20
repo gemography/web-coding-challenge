@@ -1,0 +1,41 @@
+<?php
+
+namespace CTRV\MailBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Doctrine\ORM\EntityRepository;
+
+class SendMailType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+        	->add('mailType', 'entity', array (
+    			'class' => 'CTRVMailBundle:MailType',
+    			'query_builder' => function(EntityRepository $er) {
+    					return $er->createQueryBuilder('u')
+    					->orderBy('u.code', 'ASC');
+    				},
+    			'label'=>'mail.sendMailform.type',
+    	))
+            ->add('mailTemplate','text',array('label'=>'mail.sendMailform.subject','attr'=> array('class'=>'input-xxlarge')))
+            ->add('content','textarea',array('label'=>'mail.sendMailform.content'))
+            ->add('destChoice', 'entity', array (
+    			'class' => 'CTRVCommonBundle:User',
+    			'query_builder' => function(EntityRepository $er) {
+    					return $er->createQueryBuilder('u')
+    					->orderBy('u.email', 'ASC');
+    				},
+    			'label'=>'mail.sendMailform.dest','required'=>false
+    	))
+            ->add('destField','textarea',array('label'=>'mail.sendMailform.content','required'=>false))
+        ;
+    }
+
+    public function getName()
+    {
+        return 'ctrv_mailbundle_sendMailtemplatetype';
+    }
+}

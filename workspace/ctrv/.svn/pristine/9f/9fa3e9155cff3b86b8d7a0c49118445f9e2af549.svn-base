@@ -1,0 +1,26 @@
+mail:
+    menu:
+        template: Templates de mail
+        send: Envoyer un email
+        add: Ajouter un template
+    form:
+        subject: Sujet
+        content: Contenu
+        type: Type de mail
+        submit: Sauvegarder
+    list:
+        title: Liste des mails template
+        table:
+            action: Action
+            subject: Sujet
+            content: Contenu
+            type: Type
+            delete_action: Supprimer
+            edit_action: Modifier
+            no_result : Aucun template de mail trouvé
+    addMailTemplate:
+        title: Ajouter un mail template
+    editMailTemplate:
+        title: Modifier un mail template
+    sendMailTemplate:
+        title: Envoi de mails     

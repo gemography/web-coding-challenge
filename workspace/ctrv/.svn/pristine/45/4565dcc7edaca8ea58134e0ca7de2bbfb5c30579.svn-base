@@ -1,0 +1,602 @@
+<html>
+<head>
+<title>Package PHPExcel_Chart Element Index</title>
+<link rel="stylesheet" type="text/css" href="media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">PHPExcel_Chart</td>
+  </tr>
+  <tr><td class="header_line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                          		  [ <a href="classtrees_PHPExcel_Chart.html" class="menu">class tree: PHPExcel_Chart</a> ]
+		  [ <a href="elementindex_PHPExcel_Chart.html" class="menu">index: PHPExcel_Chart</a> ]
+		  	    [ <a href="elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="todolist">
+			<p><a href="todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="li_PHPExcel.html">PHPExcel</a><br />
+              <a href="li_PHPExcel_CachedObjectStorage.html">PHPExcel_CachedObjectStorage</a><br />
+              <a href="li_PHPExcel_Calculation.html">PHPExcel_Calculation</a><br />
+              <a href="li_PHPExcel_Cell.html">PHPExcel_Cell</a><br />
+              <a href="li_PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+              <a href="li_PHPExcel_Chart_Renderer.html">PHPExcel_Chart_Renderer</a><br />
+              <a href="li_PHPExcel_Reader.html">PHPExcel_Reader</a><br />
+              <a href="li_PHPExcel_Reader_Excel5.html">PHPExcel_Reader_Excel5</a><br />
+              <a href="li_PHPExcel_Reader_Excel2007.html">PHPExcel_Reader_Excel2007</a><br />
+              <a href="li_PHPExcel_RichText.html">PHPExcel_RichText</a><br />
+              <a href="li_PHPExcel_Settings.html">PHPExcel_Settings</a><br />
+              <a href="li_PHPExcel_Shared.html">PHPExcel_Shared</a><br />
+              <a href="li_PHPExcel_Shared_Escher.html">PHPExcel_Shared_Escher</a><br />
+              <a href="li_JAMA.html">JAMA</a><br />
+              <a href="li_Math_Stats.html">Math_Stats</a><br />
+              <a href="li_PHPExcel_Shared_OLE.html">PHPExcel_Shared_OLE</a><br />
+              <a href="li_PHPExcel_Shared_Trend.html">PHPExcel_Shared_Trend</a><br />
+              <a href="li_PHPExcel_Shared_ZipArchive.html">PHPExcel_Shared_ZipArchive</a><br />
+              <a href="li_PHPExcel_Style.html">PHPExcel_Style</a><br />
+              <a href="li_PHPExcel_Worksheet.html">PHPExcel_Worksheet</a><br />
+              <a href="li_PHPExcel_Worksheet_Drawing.html">PHPExcel_Worksheet_Drawing</a><br />
+              <a href="li_PHPExcel_Writer.html">PHPExcel_Writer</a><br />
+              <a href="li_PHPExcel_Writer_Excel5.html">PHPExcel_Writer_Excel5</a><br />
+              <a href="li_PHPExcel_Writer_Excel2007.html">PHPExcel_Writer_Excel2007</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="PHPExcel_Chart/_PHPExcel---Chart.php.html">		Chart.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---DataSeries.php.html">		DataSeries.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---DataSeriesValues.php.html">		DataSeriesValues.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---Renderer---jpgraph.php.html">		jpgraph.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---Layout.php.html">		Layout.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---Legend.php.html">		Legend.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---PlotArea.php.html">		PlotArea.php
+		</a><br>
+			<a href="PHPExcel_Chart/_PHPExcel---Chart---Title.php.html">		Title.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="PHPExcel_Chart/PHPExcel_Chart.html">PHPExcel_Chart</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html">PHPExcel_Chart_DataSeries</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html">PHPExcel_Chart_DataSeriesValues</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_Exception.html">PHPExcel_Chart_Exception</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html">PHPExcel_Chart_Layout</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html">PHPExcel_Chart_Legend</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html">PHPExcel_Chart_PlotArea</a><br />
+	    		<a href="PHPExcel_Chart/PHPExcel_Chart_Title.html">PHPExcel_Chart_Title</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<a name="top"></a>
+<h1>Element index for package PHPExcel_Chart</h1>
+	[ <a href="elementindex_PHPExcel_Chart.html#c">c</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#d">d</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#e">e</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#g">g</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#i">i</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#j">j</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#l">l</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#m">m</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#p">p</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#r">r</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#s">s</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#t">t</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#x">x</a> ]
+	[ <a href="elementindex_PHPExcel_Chart.html#_">_</a> ]
+
+  <hr />
+	<a name="_"></a>
+	<div>
+		<h2>_</h2>
+		<dl>
+							<dt><b>__construct</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#method__construct">PHPExcel_Chart_PlotArea::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_PlotArea</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Title.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Title.html#method__construct">PHPExcel_Chart_Title::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_Title</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#method__construct">PHPExcel_Chart_Legend::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_Legend</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#method__construct">PHPExcel_Chart_Layout::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_Layout</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#method__construct">PHPExcel_Chart_DataSeries::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_DataSeries</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#method__construct">PHPExcel_Chart_DataSeriesValues::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart_DataSeriesValues object</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#method__construct">PHPExcel_Chart::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create a new PHPExcel_Chart</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="c"></a>
+	<div>
+		<h2>c</h2>
+		<dl>
+							<dt><b>Chart.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart.php.html">Chart.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="d"></a>
+	<div>
+		<h2>d</h2>
+		<dl>
+							<dt><b>DATASERIES_TYPE_NUMBER</b></dt>
+				<dd>in file DataSeriesValues.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#constDATASERIES_TYPE_NUMBER">PHPExcel_Chart_DataSeriesValues::DATASERIES_TYPE_NUMBER</a></dd>
+							<dt><b>DATASERIES_TYPE_STRING</b></dt>
+				<dd>in file DataSeriesValues.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#constDATASERIES_TYPE_STRING">PHPExcel_Chart_DataSeriesValues::DATASERIES_TYPE_STRING</a></dd>
+							<dt><b>DIRECTION_BAR</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constDIRECTION_BAR">PHPExcel_Chart_DataSeries::DIRECTION_BAR</a></dd>
+							<dt><b>DIRECTION_COL</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constDIRECTION_COL">PHPExcel_Chart_DataSeries::DIRECTION_COL</a></dd>
+							<dt><b>DIRECTION_COLUMN</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constDIRECTION_COLUMN">PHPExcel_Chart_DataSeries::DIRECTION_COLUMN</a></dd>
+							<dt><b>DIRECTION_HORIZONTAL</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constDIRECTION_HORIZONTAL">PHPExcel_Chart_DataSeries::DIRECTION_HORIZONTAL</a></dd>
+							<dt><b>DIRECTION_VERTICAL</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constDIRECTION_VERTICAL">PHPExcel_Chart_DataSeries::DIRECTION_VERTICAL</a></dd>
+							<dt><b>DataSeries.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---DataSeries.php.html">DataSeries.php</a></dd>
+							<dt><b>DataSeriesValues.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---DataSeriesValues.php.html">DataSeriesValues.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="e"></a>
+	<div>
+		<h2>e</h2>
+		<dl>
+							<dt><b>errorHandlerCallback</b></dt>
+				<dd>in file Exception.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Exception.html#methoderrorHandlerCallback">PHPExcel_Chart_Exception::errorHandlerCallback()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Error handler callback</dd>
+							<dt><b>Exception.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---Exception.php.html">Exception.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="g"></a>
+	<div>
+		<h2>g</h2>
+		<dl>
+							<dt><b>getBottomRightCell</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetBottomRightCell">PHPExcel_Chart::getBottomRightCell()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the cell address where the bottom right of the chart is fixed</dd>
+							<dt><b>getBottomRightOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetBottomRightOffset">PHPExcel_Chart::getBottomRightOffset()</a></dd>
+							<dt><b>getBottomRightPosition</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetBottomRightPosition">PHPExcel_Chart::getBottomRightPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the bottom right position of the chart</dd>
+							<dt><b>getBottomRightXOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetBottomRightXOffset">PHPExcel_Chart::getBottomRightXOffset()</a></dd>
+							<dt><b>getBottomRightYOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetBottomRightYOffset">PHPExcel_Chart::getBottomRightYOffset()</a></dd>
+							<dt><b>getCaption</b></dt>
+				<dd>in file Title.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Title.html#methodgetCaption">PHPExcel_Chart_Title::getCaption()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get caption</dd>
+							<dt><b>getDataSource</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetDataSource">PHPExcel_Chart_DataSeriesValues::getDataSource()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Series Data Source (formula)</dd>
+							<dt><b>getDataType</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetDataType">PHPExcel_Chart_DataSeriesValues::getDataType()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Series Data Type</dd>
+							<dt><b>getDataValue</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetDataValue">PHPExcel_Chart_DataSeriesValues::getDataValue()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the first Series Data value</dd>
+							<dt><b>getDataValues</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetDataValues">PHPExcel_Chart_DataSeriesValues::getDataValues()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Series Data Values</dd>
+							<dt><b>getDisplayBlanksAs</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetDisplayBlanksAs">PHPExcel_Chart::getDisplayBlanksAs()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Display Blanks as</dd>
+							<dt><b>getFormatCode</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetFormatCode">PHPExcel_Chart_DataSeriesValues::getFormatCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Series Format Code</dd>
+							<dt><b>getHeight</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetHeight">PHPExcel_Chart_Layout::getHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Height</dd>
+							<dt><b>getLayout</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodgetLayout">PHPExcel_Chart_PlotArea::getLayout()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Layout</dd>
+							<dt><b>getLayout</b></dt>
+				<dd>in file Title.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Title.html#methodgetLayout">PHPExcel_Chart_Title::getLayout()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Layout</dd>
+							<dt><b>getLayout</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodgetLayout">PHPExcel_Chart_Legend::getLayout()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Layout</dd>
+							<dt><b>getLayoutTarget</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetLayoutTarget">PHPExcel_Chart_Layout::getLayoutTarget()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Layout Target</dd>
+							<dt><b>getLegend</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetLegend">PHPExcel_Chart::getLegend()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Legend</dd>
+							<dt><b>getName</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetName">PHPExcel_Chart::getName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Name</dd>
+							<dt><b>getOverlay</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodgetOverlay">PHPExcel_Chart_Legend::getOverlay()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get allow overlay of other elements?</dd>
+							<dt><b>getPlotArea</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetPlotArea">PHPExcel_Chart::getPlotArea()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Area</dd>
+							<dt><b>getPlotCategories</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotCategories">PHPExcel_Chart_DataSeries::getPlotCategories()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Categories</dd>
+							<dt><b>getPlotCategoryByIndex</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotCategoryByIndex">PHPExcel_Chart_DataSeries::getPlotCategoryByIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Category by Index</dd>
+							<dt><b>getPlotDirection</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotDirection">PHPExcel_Chart_DataSeries::getPlotDirection()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Direction</dd>
+							<dt><b>getPlotGroup</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodgetPlotGroup">PHPExcel_Chart_PlotArea::getPlotGroup()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Series</dd>
+							<dt><b>getPlotGroupByIndex</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodgetPlotGroupByIndex">PHPExcel_Chart_PlotArea::getPlotGroupByIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Series by Index</dd>
+							<dt><b>getPlotGroupCount</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodgetPlotGroupCount">PHPExcel_Chart_PlotArea::getPlotGroupCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Number of Plot Groups</dd>
+							<dt><b>getPlotGrouping</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotGrouping">PHPExcel_Chart_DataSeries::getPlotGrouping()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Grouping Type</dd>
+							<dt><b>getPlotLabelByIndex</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotLabelByIndex">PHPExcel_Chart_DataSeries::getPlotLabelByIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Label by Index</dd>
+							<dt><b>getPlotLabels</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotLabels">PHPExcel_Chart_DataSeries::getPlotLabels()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Labels</dd>
+							<dt><b>getPlotOrder</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotOrder">PHPExcel_Chart_DataSeries::getPlotOrder()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Order</dd>
+							<dt><b>getPlotSeriesCount</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodgetPlotSeriesCount">PHPExcel_Chart_PlotArea::getPlotSeriesCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Number of Plot Series</dd>
+							<dt><b>getPlotSeriesCount</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotSeriesCount">PHPExcel_Chart_DataSeries::getPlotSeriesCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Number of Plot Series</dd>
+							<dt><b>getPlotStyle</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotStyle">PHPExcel_Chart_DataSeries::getPlotStyle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Style</dd>
+							<dt><b>getPlotType</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotType">PHPExcel_Chart_DataSeries::getPlotType()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Type</dd>
+							<dt><b>getPlotValues</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotValues">PHPExcel_Chart_DataSeries::getPlotValues()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Values</dd>
+							<dt><b>getPlotValuesByIndex</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetPlotValuesByIndex">PHPExcel_Chart_DataSeries::getPlotValuesByIndex()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Values by Index</dd>
+							<dt><b>getPlotVisibleOnly</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetPlotVisibleOnly">PHPExcel_Chart::getPlotVisibleOnly()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Plot Visible Only</dd>
+							<dt><b>getPointCount</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetPointCount">PHPExcel_Chart_DataSeriesValues::getPointCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Series Point Count</dd>
+							<dt><b>getPointMarker</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodgetPointMarker">PHPExcel_Chart_DataSeriesValues::getPointMarker()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Point Marker</dd>
+							<dt><b>getPosition</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodgetPosition">PHPExcel_Chart_Legend::getPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get legend position as an excel string value</dd>
+							<dt><b>getPositionXL</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodgetPositionXL">PHPExcel_Chart_Legend::getPositionXL()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get legend position as an Excel internal numeric value</dd>
+							<dt><b>getShowBubbleSize</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowBubbleSize">PHPExcel_Chart_Layout::getShowBubbleSize()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show bubble size</dd>
+							<dt><b>getShowCatName</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowCatName">PHPExcel_Chart_Layout::getShowCatName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show category name</dd>
+							<dt><b>getShowLeaderLines</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowLeaderLines">PHPExcel_Chart_Layout::getShowLeaderLines()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show leader lines</dd>
+							<dt><b>getShowLegendKey</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowLegendKey">PHPExcel_Chart_Layout::getShowLegendKey()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show legend key</dd>
+							<dt><b>getShowPercent</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowPercent">PHPExcel_Chart_Layout::getShowPercent()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show percentage</dd>
+							<dt><b>getShowSerName</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowSerName">PHPExcel_Chart_Layout::getShowSerName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show data series name</dd>
+							<dt><b>getShowVal</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetShowVal">PHPExcel_Chart_Layout::getShowVal()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get show value</dd>
+							<dt><b>getSmoothLine</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodgetSmoothLine">PHPExcel_Chart_DataSeries::getSmoothLine()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Smooth Line</dd>
+							<dt><b>getTitle</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTitle">PHPExcel_Chart::getTitle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Title</dd>
+							<dt><b>getTopLeftCell</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTopLeftCell">PHPExcel_Chart::getTopLeftCell()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the cell address where the top left of the chart is fixed</dd>
+							<dt><b>getTopLeftOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTopLeftOffset">PHPExcel_Chart::getTopLeftOffset()</a></dd>
+							<dt><b>getTopLeftPosition</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTopLeftPosition">PHPExcel_Chart::getTopLeftPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the top left position of the chart</dd>
+							<dt><b>getTopLeftXOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTopLeftXOffset">PHPExcel_Chart::getTopLeftXOffset()</a></dd>
+							<dt><b>getTopLeftYOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetTopLeftYOffset">PHPExcel_Chart::getTopLeftYOffset()</a></dd>
+							<dt><b>getWidth</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetWidth">PHPExcel_Chart_Layout::getWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Width</dd>
+							<dt><b>getWorksheet</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetWorksheet">PHPExcel_Chart::getWorksheet()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Worksheet</dd>
+							<dt><b>getXAxisLabel</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetXAxisLabel">PHPExcel_Chart::getXAxisLabel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get X-Axis Label</dd>
+							<dt><b>getXMode</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetXMode">PHPExcel_Chart_Layout::getXMode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get X-Mode</dd>
+							<dt><b>getXPosition</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetXPosition">PHPExcel_Chart_Layout::getXPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get X-Position</dd>
+							<dt><b>getYAxisLabel</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodgetYAxisLabel">PHPExcel_Chart::getYAxisLabel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Y-Axis Label</dd>
+							<dt><b>getYMode</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetYMode">PHPExcel_Chart_Layout::getYMode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Y-Mode</dd>
+							<dt><b>getYPosition</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodgetYPosition">PHPExcel_Chart_Layout::getYPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get Y-Position</dd>
+							<dt><b>GROUPING_CLUSTERED</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constGROUPING_CLUSTERED">PHPExcel_Chart_DataSeries::GROUPING_CLUSTERED</a></dd>
+							<dt><b>GROUPING_PERCENT_STACKED</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constGROUPING_PERCENT_STACKED">PHPExcel_Chart_DataSeries::GROUPING_PERCENT_STACKED</a></dd>
+							<dt><b>GROUPING_STACKED</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constGROUPING_STACKED">PHPExcel_Chart_DataSeries::GROUPING_STACKED</a></dd>
+							<dt><b>GROUPING_STANDARD</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constGROUPING_STANDARD">PHPExcel_Chart_DataSeries::GROUPING_STANDARD</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="i"></a>
+	<div>
+		<h2>i</h2>
+		<dl>
+							<dt><b>isMultiLevelSeries</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodisMultiLevelSeries">PHPExcel_Chart_DataSeriesValues::isMultiLevelSeries()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Identify if the Data Series is a multi-level or a simple series</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="j"></a>
+	<div>
+		<h2>j</h2>
+		<dl>
+							<dt><b>jpgraph.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---Renderer---jpgraph.php.html">jpgraph.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="l"></a>
+	<div>
+		<h2>l</h2>
+		<dl>
+							<dt><b>Layout.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---Layout.php.html">Layout.php</a></dd>
+							<dt><b>Legend.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---Legend.php.html">Legend.php</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="m"></a>
+	<div>
+		<h2>m</h2>
+		<dl>
+							<dt><b>multiLevelCount</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodmultiLevelCount">PHPExcel_Chart_DataSeriesValues::multiLevelCount()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return the level count of a multi-level Data Series</dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="p"></a>
+	<div>
+		<h2>p</h2>
+		<dl>
+							<dt><b>PlotArea.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---PlotArea.php.html">PlotArea.php</a></dd>
+							<dt><b>PHPExcel_Chart</b></dt>
+				<dd>in file Chart.php, class <a href="PHPExcel_Chart/PHPExcel_Chart.html">PHPExcel_Chart</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart</dd>
+							<dt><b>PHPExcel_Chart_DataSeries</b></dt>
+				<dd>in file DataSeries.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html">PHPExcel_Chart_DataSeries</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_DataSeries</dd>
+							<dt><b>PHPExcel_Chart_DataSeriesValues</b></dt>
+				<dd>in file DataSeriesValues.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html">PHPExcel_Chart_DataSeriesValues</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_DataSeriesValues</dd>
+							<dt><b>PHPExcel_Chart_Exception</b></dt>
+				<dd>in file Exception.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_Exception.html">PHPExcel_Chart_Exception</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_Exception</dd>
+							<dt><b>PHPExcel_Chart_Layout</b></dt>
+				<dd>in file Layout.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html">PHPExcel_Chart_Layout</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_Layout</dd>
+							<dt><b>PHPExcel_Chart_Legend</b></dt>
+				<dd>in file Legend.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html">PHPExcel_Chart_Legend</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_Legend</dd>
+							<dt><b>PHPExcel_Chart_PlotArea</b></dt>
+				<dd>in file PlotArea.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html">PHPExcel_Chart_PlotArea</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_PlotArea</dd>
+							<dt><b>PHPExcel_Chart_Title</b></dt>
+				<dd>in file Title.php, class <a href="PHPExcel_Chart/PHPExcel_Chart_Title.html">PHPExcel_Chart_Title</a><br>&nbsp;&nbsp;&nbsp;&nbsp;PHPExcel_Chart_Title</dd>
+							<dt><b>POSITION_BOTTOM</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constPOSITION_BOTTOM">PHPExcel_Chart_Legend::POSITION_BOTTOM</a></dd>
+							<dt><b>POSITION_LEFT</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constPOSITION_LEFT">PHPExcel_Chart_Legend::POSITION_LEFT</a></dd>
+							<dt><b>POSITION_RIGHT</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constPOSITION_RIGHT">PHPExcel_Chart_Legend::POSITION_RIGHT</a></dd>
+							<dt><b>POSITION_TOP</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constPOSITION_TOP">PHPExcel_Chart_Legend::POSITION_TOP</a></dd>
+							<dt><b>POSITION_TOPRIGHT</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constPOSITION_TOPRIGHT">PHPExcel_Chart_Legend::POSITION_TOPRIGHT</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="r"></a>
+	<div>
+		<h2>r</h2>
+		<dl>
+							<dt><b>refresh</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodrefresh">PHPExcel_Chart_PlotArea::refresh()</a></dd>
+							<dt><b>refresh</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodrefresh">PHPExcel_Chart_DataSeriesValues::refresh()</a></dd>
+							<dt><b>refresh</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodrefresh">PHPExcel_Chart_DataSeries::refresh()</a></dd>
+							<dt><b>refresh</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodrefresh">PHPExcel_Chart::refresh()</a></dd>
+							<dt><b>render</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodrender">PHPExcel_Chart::render()</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="s"></a>
+	<div>
+		<h2>s</h2>
+		<dl>
+							<dt><b>setBottomRightCell</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetBottomRightCell">PHPExcel_Chart::setBottomRightCell()</a></dd>
+							<dt><b>setBottomRightOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetBottomRightOffset">PHPExcel_Chart::setBottomRightOffset()</a></dd>
+							<dt><b>setBottomRightPosition</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetBottomRightPosition">PHPExcel_Chart::setBottomRightPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the Bottom Right position of the chart</dd>
+							<dt><b>setBottomRightXOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetBottomRightXOffset">PHPExcel_Chart::setBottomRightXOffset()</a></dd>
+							<dt><b>setBottomRightYOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetBottomRightYOffset">PHPExcel_Chart::setBottomRightYOffset()</a></dd>
+							<dt><b>setCaption</b></dt>
+				<dd>in file Title.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Title.html#methodsetCaption">PHPExcel_Chart_Title::setCaption()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set caption</dd>
+							<dt><b>setDataSource</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodsetDataSource">PHPExcel_Chart_DataSeriesValues::setDataSource()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Series Data Source (formula)</dd>
+							<dt><b>setDataType</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodsetDataType">PHPExcel_Chart_DataSeriesValues::setDataType()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Series Data Type</dd>
+							<dt><b>setDataValues</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodsetDataValues">PHPExcel_Chart_DataSeriesValues::setDataValues()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Series Data Values</dd>
+							<dt><b>setDisplayBlanksAs</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetDisplayBlanksAs">PHPExcel_Chart::setDisplayBlanksAs()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Display Blanks as</dd>
+							<dt><b>setFormatCode</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodsetFormatCode">PHPExcel_Chart_DataSeriesValues::setFormatCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Series Format Code</dd>
+							<dt><b>setHeight</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetHeight">PHPExcel_Chart_Layout::setHeight()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Height</dd>
+							<dt><b>setLayoutTarget</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetLayoutTarget">PHPExcel_Chart_Layout::setLayoutTarget()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Layout Target</dd>
+							<dt><b>setLegend</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetLegend">PHPExcel_Chart::setLegend()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Legend</dd>
+							<dt><b>setOverlay</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodsetOverlay">PHPExcel_Chart_Legend::setOverlay()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set allow overlay of other elements?</dd>
+							<dt><b>setPlotDirection</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodsetPlotDirection">PHPExcel_Chart_DataSeries::setPlotDirection()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Direction</dd>
+							<dt><b>setPlotGrouping</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodsetPlotGrouping">PHPExcel_Chart_DataSeries::setPlotGrouping()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Grouping Type</dd>
+							<dt><b>setPlotSeries</b></dt>
+				<dd>in file PlotArea.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_PlotArea.html#methodsetPlotSeries">PHPExcel_Chart_PlotArea::setPlotSeries()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Series</dd>
+							<dt><b>setPlotStyle</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodsetPlotStyle">PHPExcel_Chart_DataSeries::setPlotStyle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Style</dd>
+							<dt><b>setPlotType</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodsetPlotType">PHPExcel_Chart_DataSeries::setPlotType()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Type</dd>
+							<dt><b>setPlotVisibleOnly</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetPlotVisibleOnly">PHPExcel_Chart::setPlotVisibleOnly()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Plot Visible Only</dd>
+							<dt><b>setPointMarker</b></dt>
+				<dd>in file DataSeriesValues.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeriesValues.html#methodsetPointMarker">PHPExcel_Chart_DataSeriesValues::setPointMarker()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Point Marker</dd>
+							<dt><b>setPosition</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodsetPosition">PHPExcel_Chart_Legend::setPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get legend position using an excel string value</dd>
+							<dt><b>setPositionXL</b></dt>
+				<dd>in file Legend.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#methodsetPositionXL">PHPExcel_Chart_Legend::setPositionXL()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set legend position using an Excel internal numeric value</dd>
+							<dt><b>setShowBubbleSize</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowBubbleSize">PHPExcel_Chart_Layout::setShowBubbleSize()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show bubble size  Specifies that the bubble size should be shown in data labels.</dd>
+							<dt><b>setShowCatName</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowCatName">PHPExcel_Chart_Layout::setShowCatName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show cat name  Specifies that the category name should be shown in data labels.</dd>
+							<dt><b>setShowLeaderLines</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowLeaderLines">PHPExcel_Chart_Layout::setShowLeaderLines()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show leader lines  Specifies that leader lines should be shown in data labels.</dd>
+							<dt><b>setShowLegendKey</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowLegendKey">PHPExcel_Chart_Layout::setShowLegendKey()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show legend key  Specifies that legend keys should be shown in data labels.</dd>
+							<dt><b>setShowPercent</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowPercent">PHPExcel_Chart_Layout::setShowPercent()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show percentage  Specifies that the percentage should be shown in data labels.</dd>
+							<dt><b>setShowSerName</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowSerName">PHPExcel_Chart_Layout::setShowSerName()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show ser name  Specifies that the series name should be shown in data labels.</dd>
+							<dt><b>setShowVal</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetShowVal">PHPExcel_Chart_Layout::setShowVal()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set show val  Specifies that the value should be shown in data labels.</dd>
+							<dt><b>setSmoothLine</b></dt>
+				<dd>in file DataSeries.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#methodsetSmoothLine">PHPExcel_Chart_DataSeries::setSmoothLine()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Smooth Line</dd>
+							<dt><b>setTitle</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTitle">PHPExcel_Chart::setTitle()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Title</dd>
+							<dt><b>setTopLeftCell</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTopLeftCell">PHPExcel_Chart::setTopLeftCell()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the Top Left cell position for the chart</dd>
+							<dt><b>setTopLeftOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTopLeftOffset">PHPExcel_Chart::setTopLeftOffset()</a></dd>
+							<dt><b>setTopLeftPosition</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTopLeftPosition">PHPExcel_Chart::setTopLeftPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set the Top Left position for the chart</dd>
+							<dt><b>setTopLeftXOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTopLeftXOffset">PHPExcel_Chart::setTopLeftXOffset()</a></dd>
+							<dt><b>setTopLeftYOffset</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetTopLeftYOffset">PHPExcel_Chart::setTopLeftYOffset()</a></dd>
+							<dt><b>setWidth</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetWidth">PHPExcel_Chart_Layout::setWidth()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Width</dd>
+							<dt><b>setWorksheet</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetWorksheet">PHPExcel_Chart::setWorksheet()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Worksheet</dd>
+							<dt><b>setXAxisLabel</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetXAxisLabel">PHPExcel_Chart::setXAxisLabel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set X-Axis Label</dd>
+							<dt><b>setXMode</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetXMode">PHPExcel_Chart_Layout::setXMode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set X-Mode</dd>
+							<dt><b>setXPosition</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetXPosition">PHPExcel_Chart_Layout::setXPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set X-Position</dd>
+							<dt><b>setYAxisLabel</b></dt>
+				<dd>in file Chart.php, method <a href="PHPExcel_Chart/PHPExcel_Chart.html#methodsetYAxisLabel">PHPExcel_Chart::setYAxisLabel()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Y-Axis Label</dd>
+							<dt><b>setYMode</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetYMode">PHPExcel_Chart_Layout::setYMode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Y-Mode</dd>
+							<dt><b>setYPosition</b></dt>
+				<dd>in file Layout.php, method <a href="PHPExcel_Chart/PHPExcel_Chart_Layout.html#methodsetYPosition">PHPExcel_Chart_Layout::setYPosition()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set Y-Position</dd>
+							<dt><b>STYLE_FILLED</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constSTYLE_FILLED">PHPExcel_Chart_DataSeries::STYLE_FILLED</a></dd>
+							<dt><b>STYLE_LINEMARKER</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constSTYLE_LINEMARKER">PHPExcel_Chart_DataSeries::STYLE_LINEMARKER</a></dd>
+							<dt><b>STYLE_MARKER</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constSTYLE_MARKER">PHPExcel_Chart_DataSeries::STYLE_MARKER</a></dd>
+							<dt><b>STYLE_SMOOTHMARKER</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constSTYLE_SMOOTHMARKER">PHPExcel_Chart_DataSeries::STYLE_SMOOTHMARKER</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="t"></a>
+	<div>
+		<h2>t</h2>
+		<dl>
+							<dt><b>Title.php</b></dt>
+				<dd>procedural page <a href="PHPExcel_Chart/_PHPExcel---Chart---Title.php.html">Title.php</a></dd>
+							<dt><b>TYPE_AREACHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_AREACHART">PHPExcel_Chart_DataSeries::TYPE_AREACHART</a></dd>
+							<dt><b>TYPE_AREACHART_3D</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_AREACHART_3D">PHPExcel_Chart_DataSeries::TYPE_AREACHART_3D</a></dd>
+							<dt><b>TYPE_BARCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_BARCHART">PHPExcel_Chart_DataSeries::TYPE_BARCHART</a></dd>
+							<dt><b>TYPE_BARCHART_3D</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_BARCHART_3D">PHPExcel_Chart_DataSeries::TYPE_BARCHART_3D</a></dd>
+							<dt><b>TYPE_BUBBLECHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_BUBBLECHART">PHPExcel_Chart_DataSeries::TYPE_BUBBLECHART</a></dd>
+							<dt><b>TYPE_DONUTCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_DONUTCHART">PHPExcel_Chart_DataSeries::TYPE_DONUTCHART</a></dd>
+							<dt><b>TYPE_DOUGHTNUTCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_DOUGHTNUTCHART">PHPExcel_Chart_DataSeries::TYPE_DOUGHTNUTCHART</a></dd>
+							<dt><b>TYPE_LINECHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_LINECHART">PHPExcel_Chart_DataSeries::TYPE_LINECHART</a></dd>
+							<dt><b>TYPE_LINECHART_3D</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_LINECHART_3D">PHPExcel_Chart_DataSeries::TYPE_LINECHART_3D</a></dd>
+							<dt><b>TYPE_PIECHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_PIECHART">PHPExcel_Chart_DataSeries::TYPE_PIECHART</a></dd>
+							<dt><b>TYPE_PIECHART_3D</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_PIECHART_3D">PHPExcel_Chart_DataSeries::TYPE_PIECHART_3D</a></dd>
+							<dt><b>TYPE_RADARCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_RADARCHART">PHPExcel_Chart_DataSeries::TYPE_RADARCHART</a></dd>
+							<dt><b>TYPE_SCATTERCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_SCATTERCHART">PHPExcel_Chart_DataSeries::TYPE_SCATTERCHART</a></dd>
+							<dt><b>TYPE_STOCKCHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_STOCKCHART">PHPExcel_Chart_DataSeries::TYPE_STOCKCHART</a></dd>
+							<dt><b>TYPE_SURFACECHART</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_SURFACECHART">PHPExcel_Chart_DataSeries::TYPE_SURFACECHART</a></dd>
+							<dt><b>TYPE_SURFACECHART_3D</b></dt>
+				<dd>in file DataSeries.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_DataSeries.html#constTYPE_SURFACECHART_3D">PHPExcel_Chart_DataSeries::TYPE_SURFACECHART_3D</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+  <hr />
+	<a name="x"></a>
+	<div>
+		<h2>x</h2>
+		<dl>
+							<dt><b>xlLegendPositionBottom</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionBottom">PHPExcel_Chart_Legend::xlLegendPositionBottom</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Legend positions</dd>
+							<dt><b>xlLegendPositionCorner</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionCorner">PHPExcel_Chart_Legend::xlLegendPositionCorner</a></dd>
+							<dt><b>xlLegendPositionCustom</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionCustom">PHPExcel_Chart_Legend::xlLegendPositionCustom</a></dd>
+							<dt><b>xlLegendPositionLeft</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionLeft">PHPExcel_Chart_Legend::xlLegendPositionLeft</a></dd>
+							<dt><b>xlLegendPositionRight</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionRight">PHPExcel_Chart_Legend::xlLegendPositionRight</a></dd>
+							<dt><b>xlLegendPositionTop</b></dt>
+				<dd>in file Legend.php, class constant <a href="PHPExcel_Chart/PHPExcel_Chart_Legend.html#constxlLegendPositionTop">PHPExcel_Chart_Legend::xlLegendPositionTop</a></dd>
+					</dl>
+	</div>
+	<a href="elementindex_PHPExcel_Chart.html#top">top</a><br>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Fri, 12 Oct 2012 00:15:04 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.4</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

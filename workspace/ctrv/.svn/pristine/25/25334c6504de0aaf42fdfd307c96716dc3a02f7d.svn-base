@@ -1,0 +1,3 @@
+{% macro input(value) %}
+    <input class="btn" type="submit" value="{{ value|trans|e }}" />
+{% endmacro %}

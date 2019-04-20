@@ -1,0 +1,3 @@
+<form id="choose_city_form" action="{{ path('set_city_session') }}" class="form-horizontal" method="post" {{ form_enctype(form) }}>
+{{ form_widget(form) }}
+</form>

@@ -1,0 +1,74 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}place.list.title1{% endtrans %}</h3>
+		<div align="right"><a class="btn btn-mini" href="ajouter">{% trans %}place.menu.add{% endtrans %}</a></div><br>
+		
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}place.list.table.code{% endtrans %}</th>
+            <th>{% trans %}place.list.table.label{% endtrans %}</th>
+            <th>{% trans %}place.list.table.language{% endtrans %}</th>
+            <th>{% trans %}place.list.table.img_url{% endtrans %}</th>
+            <th>{% trans %}place.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.code }}</td>
+            <td>{{ entity.label }}</td>
+            <td>{{ entity.language }}</td>
+            <td></td>
+            <td>
+		        <a class="placetype-to-delete btn btn-mini" data-placetype-id="{{entity.id}}">{% trans %}place.list.table.delete_action{% endtrans %}</a>
+		        <a class="placetype-to-update btn btn-mini" data-placetype-id="{{entity.id}}">{% trans %}place.list.table.update_action{% endtrans %}</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'loadTypePlaces' } %}
+
+{% else%}
+	<div class="center">{% trans %}place.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+			
+		<div id="places-list"></div>
+	</div>
+</div>
+
+
+<script>
+	$(function() {
+
+		var url_load_typeplaces_action = "{{ path('loadTypePlaces') }}";
+		//si on chnage de page avec la select boxe
+		$("#choose_page").change( function () {
+			placeTypeId = $("#choose_place_type_placeType").val();
+			var selectedPage = $(this).val();
+			loadPlacesByType (url_load_places_action,placeTypeId,selectedPage,$("#places-list"));
+		});
+
+		
+		var url_delete_placetype_action = "{{ path('placetype_delete', { 'id': 'placetype_id_to_delete' }) }}";
+		$(".placetype-to-delete").click( function () {
+			url_delete_placetype_action = url_delete_place_action.replace('placetype_id_to_delete',$(this).attr('data-placetype-id'));
+			deletePlaceType (url_delete_placetype_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

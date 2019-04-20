@@ -1,0 +1,75 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVFlowBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}groupe.list.title{% endtrans %}&nbsp;{{ city }}</h3>
+		<div class="right">Nombre total de groupes à {{ city }} : {{ nb_entities }}</div><br>
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}groupe.list.table.noms{% endtrans %}</th>
+        	<th>{% trans %}groupe.list.table.description{% endtrans %}</th>
+            <th>{% trans %}groupe.list.table.addedDate{% endtrans %}</th>
+            <th>{% trans %}groupe.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.name }}</td>
+			<td>{{ entity.description }}</td>
+            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+            <td>{{ entity.addedDate|date(format) }}</td>
+            <td>
+		        <a class="groupe-to-delete btn" data-groupe-id="{{entity.id}}">Désactiver</a>
+		        <a class="groupe-to-block btn" data-groupe-id="{{entity.id}}">Bloguer</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'groupe' } %}
+
+{% else%}
+	<div class="center">{% trans %}groupe.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+		
+		<div id="groupe-list"> <!-- le tableau sera affiché ici en js --></div>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/groupUser.js') }}"></script>
+
+
+<script>
+	$(function() {
+
+		var url_load_groupe_action = "{{ path('groupe') }}";
+		//si on change de page
+		$(".pagination li a").click (function () {
+			page = $(this).parent().attr("data-page");
+			loadGroupe (url_load_groupe_action,page,$("#groupe-list"));
+		});
+
+		
+		var url_delete_groupe_action = "{{ path('groupe_delete', { 'id': 'groupe_id_to_delete' }) }}";
+		$(".groupe-to-delete").click( function () {
+			url_delete_groupe_action = url_delete_groupe_action.replace('groupe_id_to_delete',$(this).attr('data-groupe-id'));
+			deleteGroupe (url_delete_groupe_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

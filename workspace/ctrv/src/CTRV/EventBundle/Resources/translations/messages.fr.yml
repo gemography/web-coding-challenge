@@ -1,0 +1,102 @@
+agenda:
+    menu:
+      currentAgenda: Liste des agendas en cours
+      passedAgenda : Liste des agendas passés
+    list:
+        title: Liste des évènements publics futur ajoutés
+        titlePassed: Liste des évènements publics futur dépassés
+        titleAllAgendaAt : Nombre total d'événements publics futurs à
+        titleAllAgendaPassedAt : Nombre d'événements passés à
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            start_date : Date de début
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun agenda trouvé
+
+event:
+    menu:
+      currentEvent: Liste des événements en cours
+      passedEvent : Liste des événements passés
+      eventUpdated : Liste des événements mis à jour
+      add : Ajouter
+      type : Types d'évenements
+    list:
+        titlePublicEvent: Liste des événements publics temps rééls ajoutés
+        titlePublicEventUpdated : Liste des événements avec mis à jour
+        titlePublicEventPassed: Liste des événements publics passés
+        titleTypeEvent: Liste des types d'évenements
+        titleAllEventAt : Nombre total d'événements à
+        titleAllEventPassedAt : Nombre d'événements passés à
+        titleEventUpdatedAt : Nombre d'événements mis à jour à
+        titleUpdatePerEvent: Liste des mis à jours de l'événement 
+        LastValues : Anciennes valeurs
+        titleAllUpdate : Nombre total de mis à jour
+        table:
+            title: Titre
+            description: Description
+            adresse: Adresse
+            author: Auteur
+            duration : Durée
+            update_number : Nombre de mis à jour
+            addedDate: Date d'ajout
+            action: Actions
+            delete_action: Supprimer
+            update_action: Modifier
+            view_action : Afficher
+            validate_action : Valider
+            back_action : Retour
+            code: Code
+            label: Libellé
+            language: Langue
+            img_url: Icône
+            no_result: Aucun événement trouvé
+    ajouterForm: 
+        titleAddEventType : Ajouter un type d'évenement
+        titleUpdateEventType: Modifier un type d'évenement
+        select_file : Selectionner un fichier
+        libelle: Libellé
+        code : Code
+        langue: Langue
+        fr : French
+        en : English
+        es : Spanish
+        save : Sauvegarder
+    rechercheForm:
+        title : Liste des évenements correspondant à votre recherche
+        rechercher: Entrer le nom d'un évenement        
+
+agendaComment:
+    menu:
+      afficher: Commentaires des agendas
+          
+    list:
+        title: Liste des commentaires des évènements publics futur
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé
+
+eventComment:
+    menu:
+      afficher: Commentaires des évènements
+    list:
+        title: Liste des commentaires des évènements publics temps rééls
+        table:
+            author: Auteur
+            content: Contenu
+            typeEntity: Type
+            addedDate: Date d'ajout
+            event: Evènement
+            action: Actions
+            delete_action: Supprimer
+            no_result: Aucun commentaire trouvé

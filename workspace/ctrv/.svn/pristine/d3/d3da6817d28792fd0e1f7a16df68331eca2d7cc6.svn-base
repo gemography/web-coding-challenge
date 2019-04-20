@@ -1,0 +1,78 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVCommonBundle::menu.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}utilisateur.list.title{% endtrans %}&nbsp;{{ city }}</h3>
+		<div class="right">Nombre total d'utilisateurs à {{ city }} : {{ nb_entities }}</div><br>
+		{% if entities is not empty  %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        	<th>{% trans %}utilisateur.list.table.firstName{% endtrans %}</th>
+            <th>{% trans %}utilisateur.list.table.lastName{% endtrans %}</th>
+            
+            <th>{% trans %}utilisateur.list.table.addedDate{% endtrans %}</th>
+            <th>{% trans %}utilisateur.list.table.action{% endtrans %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+			<td>{{ entity.firstName }}</td>
+            <td>{{ entity.lastName }}</td>
+            
+            {% set format =  constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')%}
+            <td>{{ entity.registrationDate|date(format)}}</td>
+            <td>
+		        <a class="user-to-delete btn" data-agenda-id="{{entity.id}}">Supprimer</a>
+		        <a class="user-to-block btn" data-agenda-id="{{entity.id}}">Bloquer</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'utilisateur' } %}
+
+{% else%}
+	<div class="center">{% trans %}utilisateur.list.table.no_result{% endtrans %}</div>				
+{% endif %}		
+		
+		
+		<div id="user-list"> <!-- le tableau sera affiché ici en js --></div>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/user.js') }}"></script>
+
+
+<script>
+	$(function() {
+
+		var url_load_user_action = "{{ path('utilisateur') }}";
+		//si on change de page
+		$(".pagination li a").click (function () {
+			page = $(this).parent().attr("data-page");
+			loadUser (url_load_user_action,page,$("#user-list"));
+		});
+
+		
+		var url_delete_user_action = "{{ path('user_delete', { 'id': 'user_id_to_delete' }) }}";
+		$(".user-to-delete").click( function () {
+			url_delete_user_action = url_delete_user_action.replace('user_id_to_delete',$(this).attr('data-user-id'));
+			deleteUser (url_delete_user_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

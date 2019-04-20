@@ -1,0 +1,26 @@
+<?php
+
+namespace CTRV\MailBundle\Form;
+
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+class SendMailType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+        	->add('mailModeleChoice','text',array('label'=>'mail.sendMailform.type'))
+            ->add('subject','text',array('label'=>'mail.sendMailform.subject','attr'=> array('class'=>'input-xxlarge')))
+            ->add('content','textarea',array('label'=>'mail.sendMailform.content'))
+            ->add('destChoice','text',array('label'=>'mail.sendMailform.content'))
+            ->add('destField','textarea',array('label'=>'mail.sendMailform.content'))
+        ;
+    }
+
+    public function getName()
+    {
+        return 'ctrv_mailbundle_sendMailtemplatetype';
+    }
+}
