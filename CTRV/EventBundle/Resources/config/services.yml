@@ -1,0 +1,14 @@
+services:
+    event_service:
+        class: CTRV\EventBundle\Service\EventService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+    agenda_service:
+        class: CTRV\EventBundle\Service\AgendaService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator] 
+    agendaComment_service:
+        class: CTRV\EventBundle\Service\AgendaCommentService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator] 
+    eventComment_service:
+        class: CTRV\EventBundle\Service\EventCommentService
+        arguments: [@mailer,@doctrine,@service_container,@templating,@translator]
+              

@@ -1,0 +1,58 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}event.list.titlePublicEventUpdated{% endtrans %}</h3>
+		<div class="right"><h4>{% trans %}event.list.titleEventUpdatedAt{% endtrans %} {{ city|capitalize }} : {{ nb_entities }}</h4></div><br>
+		<div id="events-list">
+		{% if entities is not empty  %}
+			<table class="table table-bordered table-condensed table-hover">
+			    <thead>
+			        <tr>
+			        	<th>{% trans %}event.list.table.title{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.description{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.adresse{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.duration{% endtrans %}</th>
+						<th>{% trans %}event.list.table.author{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.update_number{% endtrans %}</th>
+			            <th>{% trans %}event.list.table.action{% endtrans %}</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			    {% for entity in entities %}
+			        <tr>
+						<td>{{ entity.title }}</td>
+			            <td>{{ entity.description }}</td>
+			            <td>{{ entity.street }}</td>
+			            <td>{{ entity.duration }}</td>
+			            <td>{{ entity.auteur }}</td>
+			            <td> {{ update_per_event[entity.id]}}</td>
+			            <td>
+					        <a href="{{ path ("updatePerEvent", { 'id': entity.id }) }}" class="event-to-view btn btn-mini" data-event-id="{{entity.id}}">{% trans %}event.list.table.view_action{% endtrans %}</a>
+			            </td>
+			        </tr>
+			    {% endfor %}
+			    </tbody>
+			</table>
+				
+			{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'eventUpdated' } %}
+		
+		{% else %}
+			<div class="center">{% trans %}event.list.table.no_result{% endtrans %}</div>				
+		{% endif %}
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvevent/js/event.js') }}"></script>
+
+{% endblock body %}

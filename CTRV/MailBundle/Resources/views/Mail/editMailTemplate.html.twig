@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+<div class="row">
+
+	{% include "CTRVMailBundle::menu.html.twig" %}
+	<div class="span90">
+		
+		<h3>{% trans %}mail.editMailTemplate.title{% endtrans %}</h3>
+		<form class="form-vertical" action="{{ path('edit_mail',{'id': form.vars.value.id})}}" method="post" {{ form_enctype(form) }}>
+		    {{ form_widget(form) }}
+		    {{ forms.input('mail.form.submit','mail') }}
+		</form>
+		
+	</div>
+	
+</div>
+<script type="text/javascript">
+
+$(function() { 
+
+});
+</script>
+{% endblock body %}

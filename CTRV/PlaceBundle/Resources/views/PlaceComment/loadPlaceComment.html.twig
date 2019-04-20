@@ -1,0 +1,70 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+<div class="row">
+
+	{% include "CTRVPlaceBundle::menuPlace.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}placeComment.list.title{% endtrans %}</h3>
+		
+		{% if entities is not empty  %}
+		<table class="table table-bordered table-condensed table-hover">
+		    <thead>
+		        <tr>
+		        	<th>{% trans %}placeComment.list.table.author{% endtrans %}</th>
+		            <th>{% trans %}placeComment.list.table.content{% endtrans %}</th>
+		            <th>{% trans %}placeComment.list.table.addedDate{% endtrans %}</th>
+		            <th>{% trans %}placeComment.list.table.place{% endtrans %}</th>
+		            <th>{% trans %}placeComment.list.table.action{% endtrans %}</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    {% for entity in entities %}
+		        <tr>
+					<td>{{ entity['comment'].auteur }}</td>
+		            <td>{{ entity['comment'].content }}</td>
+		            <td>{{ entity['comment'].date|date( constant('CTRV\\CommonBundle\\DependencyInjection\\Constants::DATE_FORMAT')) }}</td>
+		            <td>{{ entity['title'] }}</td>
+		            <td>
+				        <a class="placeComment-to-delete btn btn-mini" data-placeComment-id="{{entity['comment'].id}}">{% trans %}placeComment.list.table.delete_action{% endtrans %}</a>
+		            </td>
+		        </tr>
+		    {% endfor %}
+		    </tbody>
+		</table>
+		
+		{% render "CTRVCommonBundle:Common:renderPagination" with { 'href_active':'true', 'nb_pages' : nb_pages, 'page' : page,'url_path' : 'placeComment' } %}
+		
+		{% else %}
+			<div class="center">{% trans %}placeComment.list.table.no_result{% endtrans %}</div>				
+		{% endif %}
+	</div>
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvcommon/js/placeComment.js') }}"></script>
+		
+<script>
+	$(function() {
+
+		var url_load_placeComment_action = "{{ path('placeComment') }}";
+		//si on change de page
+		$(".pagination li a").click (function () {
+			placeCommentId = $("#choose_placeComment").val();
+			page = $(this).parent().attr("data-page");
+			loadPlaceComment (url_load_placeComment_action,placeCommentId,page,$("#placeComment-list"));
+		});
+
+		
+		var url_delete_placeComment_action = "{{ path('comment_delete', { 'id': 'placeComment_id_to_delete' }) }}";
+		$(".placeComment-to-delete").click( function () {
+			url_delete_placeComment_action = url_delete_placeComment_action.replace('placeComment_id_to_delete',$(this).attr('data-placeComment-id'));
+			deletePlaceComment (url_delete_placeComment_action, $(this).parent().parent());
+		});
+		
+	});
+</script>
+{% endblock body %}

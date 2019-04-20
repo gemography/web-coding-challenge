@@ -1,0 +1,7 @@
+user:
+    register:
+        form:
+            login_already_exist: Ce login est déjà utilisé
+            email_already_exist: Cet adresse e-mail est déjà utilisée
+            
+            

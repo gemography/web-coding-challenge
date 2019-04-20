@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="center">
+	{% trans %} common.insufficient_right.text {% endtrans %} 
+</div>
+
+<br/>
+
+<div class="center">
+	<a class="btn" href="{{ url }}">{% trans %} common.insufficient_right.back {% endtrans %}</a>
+	{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+		<a class="btn" href="{{ path('_security_logout') }}">{% trans %}common.insufficient_right.logout{% endtrans %}</a></li>
+	{% else %}
+		<li><a href="{{ path('_security_login') }}">{% trans %}menu.login{% endtrans %}</a></li>
+	{% endif %}
+</div>
+
+{% endblock body %}
