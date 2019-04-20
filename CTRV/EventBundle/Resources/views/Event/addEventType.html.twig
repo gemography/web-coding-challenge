@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVEventBundle::menuEvent.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}event.ajouterForm.titleAddEventType{% endtrans %}</h3>
+		<br/>
+	
+		<div>
+			<form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+				{{ form_widget(form) }}
+				{{ forms.input('event.ajouterForm.save','loadTypeEvents') }}
+				</form>
+		</div>
+	</div>
+</div>
+
+{% endblock body %}

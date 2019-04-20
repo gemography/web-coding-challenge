@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" %}
+{% import '::macro.html.twig' as forms %}
+
+{% block body %}
+
+
+<div class="row">
+
+	{% include "CTRVFlowBundle:PublicMessage:menuPublicMessage.html.twig" %}
+	
+	<div class="span90">
+	
+		<h3>{% trans %}publicMessage.list.title{% endtrans %}</h3>
+		
+	</div>
+
+</div>
+
+<script type="text/javascript" src="{{ asset('bundles/ctrvflow/js/messagePublic.js') }}"></script>
+
+
+{% endblock body %}
